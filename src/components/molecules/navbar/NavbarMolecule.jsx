@@ -1,12 +1,22 @@
 import Isotipo from "../../../assets/isologo.png";
 import { Link } from "react-router-dom";
+
 export function NavbarMolecule() {
   return (
     <>
       <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div className="flex flex-row items-center">
-            <div>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-start md:justify-between mx-auto p-4">
+          <div className="flex flex-row justify-between items-center md:flex-row md:justify-between w-full">
+            <div className="order-1 md:order-0 isologo">
+              <Link to="/">
+                <img
+                  src={Isotipo}
+                  alt="La Sonrisa de Deva Isologo"
+                  className="h-20"
+                />
+              </Link>
+            </div>
+            <div className="order-0 md:order-1 hamburguerMenu">
               <button
                 data-collapse-toggle="navbar-default"
                 type="button"
@@ -80,19 +90,9 @@ export function NavbarMolecule() {
                 </ul>
               </div>
             </div>
-            <div>
-              <Link to="/">
-                <img
-                  src={Isotipo}
-                  alt="La Sonrisa de Deva Isologo"
-                  className="h-20"
-                />
-              </Link>
+            <div className="order-2 md:order-2 cart ml-auto">
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i>{" "}
             </div>
-          </div>
-
-          <div>
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>{" "}
           </div>
         </div>
       </nav>

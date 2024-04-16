@@ -4,9 +4,6 @@ export function NavbarMolecule() {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex flex-row">
-            <div>
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </div>
             <button
               data-collapse-toggle="navbar-default"
               type="button"
@@ -92,6 +89,9 @@ export function NavbarMolecule() {
                 </li>
               </ul>
             </div>
+          </div>
+          <div>
+            <i className="fa fa-shopping-cart" aria-hidden="true"></i>{" "}
           </div>
         </div>
       </nav>

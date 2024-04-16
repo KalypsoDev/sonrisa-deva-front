@@ -1,11 +1,18 @@
+import React, { useState } from "react";
 import Isotipo from "../../../assets/isologo.png";
 import { Link } from "react-router-dom";
 
 export function NavbarMolecule() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-start md:justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
           <div className="flex flex-row justify-between items-center md:flex-row md:justify-between w-full">
             <div className="order-1 md:order-0 isologo">
               <Link to="/">
@@ -18,7 +25,7 @@ export function NavbarMolecule() {
             </div>
             <div className="order-0 md:order-1 hamburguerMenu">
               <button
-                data-collapse-toggle="navbar-default"
+                onClick={toggleMenu}
                 type="button"
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="navbar-default"
@@ -42,7 +49,9 @@ export function NavbarMolecule() {
                 </svg>
               </button>
               <div
-                className="hidden w-full md:block md:w-auto"
+                className={`${
+                  isOpen ? "block" : "hidden"
+                } w-full md:block md:w-auto absolute top-full left-0 z-20 bg-white md:relative md:mt-0 md:bg-transparent`}
                 id="navbar-default"
               >
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { HomePage } from '../components/pages/homepage/HomePage';
+import { HomePage } from '../components/pages/homePage/HomePage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 
 const Router = () => {

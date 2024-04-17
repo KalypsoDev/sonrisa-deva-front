@@ -1,5 +1,8 @@
 import React from 'react'
 import sonrisaDevaSmallLogo from "../../../assets/img/smallLogo.jpg";
+import { FaGlobe } from "react-icons/fa";
+import { MdOutlineDashboard } from "react-icons/md";
+
 
 const Sidebar = () => {
     return (
@@ -11,21 +14,12 @@ const Sidebar = () => {
                 </svg>
             </button>
 
-            <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-46 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+            <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
 
-                <div class="h-full px-4 py-3 overflow-y-auto bg-primaryLila dark:bg-gray-800">
+                <div class="h-full px-4 py-3 overflow-y-auto bg-primaryLila">
 
-                    {/* <div class="flex items-center p-2 text-white font-bold">
-                        <a href="#" class="flex items-center p-2 text-white">
-                            <span class="flex flex-col items-center">
-                                <span class="whitespace-nowrap">Panel de</span>
-                                <span class="whitespace-nowrap ml-3">Administración</span>
-                            </span>
-                        </a>
-                    </div> */}
-
-                    <div class="flex items-center p-2">
-                        <a href="#" class="flex items-center p-2 text-white font-bold">
+                    <div class="flex justify-center p-3">
+                        <a href="#" class="flex items-center p-3 text-white font-bold text-lg">
                             <span class="flex flex-col items-center">
                                 <span class="whitespace-nowrap">Panel de</span>
                                 <span class="whitespace-nowrap ml-3">Administración</span>
@@ -33,51 +27,57 @@ const Sidebar = () => {
                         </a>
                     </div>
 
-                    <a href="#" class="flex items-center justify-center ps-2.5 mb-5">
-                        <img class="rounded-full w-20 h-20 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
+                    <a href="#" class="flex justify-center mb-6">
+                        <img class="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
                     </a>
 
-                    <ul class="space-y-2 font-normal">
-                        <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-                                <span class="ms-3">Gestión de la página</span>
-                            </a>
-                        </li>
+                    <div>
+                        <a href="#" class="flex items-center p-4 text-white">
+                            <MdOutlineDashboard />
+                            <span class="ms-3">Gestión de la página</span>
+                        </a>
+                    </div>
 
+                    <ul class="space-y-0 font-normal">
+                    
                         <li>
                             <a href="#" class="flex items-center p-1 text-white">
-
-                                <span class="flex-1 ms-3 whitespace-nowrap">Productos solicitados</span>
+                                <span class="flex-1 ms-6 whitespace-nowrap">Productos solicitados</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-3 whitespace-nowrap">Agenda de eventos</span>
+                                <span class="flex-1 ms-6 whitespace-nowrap">Agenda de eventos</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-3 whitespace-nowrap">Agregar productos</span>
+                                <span class="flex-1 ms-6 whitespace-nowrap">Agregar productos</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-3 whitespace-nowrap">Gestión de productos</span>
+                                <span class="flex-1 ms-6 whitespace-nowrap">Gestión de productos</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-
-                                <span class="flex-1 ms-3 whitespace-nowrap">Ir a mi página</span>
-                            </a>
-                        </li>
-
+    
                     </ul>
 
-                    <button type="button" class="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mx-auto">
-                        Cerrar sesión
-                    </button>
+                    <div>
+                        <a href="#" class="flex items-center p-4 text-white">
+                            <FaGlobe />
+                            <span class="flex-1 ms-3 whitespace-nowrap">Ir a mi página</span>
+                        </a>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <button type="button" class="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                            Cerrar sesión
+                        </button>
+                    </div>
+                    
                 </div>
+
             </aside>
         </>
     )

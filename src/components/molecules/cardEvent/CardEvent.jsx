@@ -4,7 +4,6 @@ import { FaClock } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
-import { FaMagnifyingGlassPlus } from "react-icons/fa6";
 
 const CardEvent = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -15,7 +14,7 @@ const CardEvent = () => {
 
   return (
     <div
-      className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4 ml-12"
+      className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4 "
     >
       <img
         className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none cursor-pointer"

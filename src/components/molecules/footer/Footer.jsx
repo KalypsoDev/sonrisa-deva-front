@@ -1,4 +1,4 @@
-export function FooterMolecule() {
+export function Footer() {
     return (
       <>
         <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">

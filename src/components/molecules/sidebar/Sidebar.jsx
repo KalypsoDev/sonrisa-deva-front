@@ -32,7 +32,7 @@ const Sidebar = () => {
                     </a>
 
                     <div>
-                        <a href="#" class="flex items-center p-4 text-white">
+                        <a href="#" class="flex items-center p-4 text-white text-base">
                             <MdOutlineDashboard />
                             <span class="ms-3">Gestión de la página</span>
                         </a>
@@ -41,30 +41,30 @@ const Sidebar = () => {
                     <ul class="space-y-0 font-normal">
                     
                         <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-6 whitespace-nowrap">Productos solicitados</span>
+                            <a href="#" class="flex items-center p-1 text-white text-sm">
+                                <span class="flex-1 ms-8 whitespace-nowrap">Productos solicitados</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-6 whitespace-nowrap">Agenda de eventos</span>
+                            <a href="#" class="flex items-center p-1 text-white text-sm">
+                                <span class="flex-1 ms-8 whitespace-nowrap">Agenda de eventos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-6 whitespace-nowrap">Agregar productos</span>
+                            <a href="#" class="flex items-center p-1 text-white text-sm">
+                                <span class="flex-1 ms-8 whitespace-nowrap">Agregar productos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-1 text-white">
-                                <span class="flex-1 ms-6 whitespace-nowrap">Gestión de productos</span>
+                            <a href="#" class="flex items-center p-1 text-white text-sm">
+                                <span class="flex-1 ms-8 whitespace-nowrap">Gestión de productos</span>
                             </a>
                         </li>
     
                     </ul>
 
                     <div>
-                        <a href="#" class="flex items-center p-4 text-white">
+                        <a href="#" class="flex items-center p-4 text-white text-base">
                             <FaGlobe />
                             <span class="flex-1 ms-3 whitespace-nowrap">Ir a mi página</span>
                         </a>

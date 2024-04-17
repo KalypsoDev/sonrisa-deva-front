@@ -14,12 +14,24 @@ const Sidebar = () => {
             <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-46 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
 
                 <div class="h-full px-4 py-3 overflow-y-auto bg-primaryLila dark:bg-gray-800">
-                    <a href="#" class="flex items-center p-2 text-white">
-                        <span class="flex flex-col items-center">
-                            <span class="whitespace-nowrap font-bold">Panel de</span>
-                            <span class="whitespace-nowrap ml-3 font-bold">Administración</span>
-                        </span>
-                    </a>
+
+                    {/* <div class="flex items-center p-2 text-white font-bold">
+                        <a href="#" class="flex items-center p-2 text-white">
+                            <span class="flex flex-col items-center">
+                                <span class="whitespace-nowrap">Panel de</span>
+                                <span class="whitespace-nowrap ml-3">Administración</span>
+                            </span>
+                        </a>
+                    </div> */}
+
+                    <div class="flex items-center p-2">
+                        <a href="#" class="flex items-center p-2 text-white font-bold">
+                            <span class="flex flex-col items-center">
+                                <span class="whitespace-nowrap">Panel de</span>
+                                <span class="whitespace-nowrap ml-3">Administración</span>
+                            </span>
+                        </a>
+                    </div>
 
                     <a href="#" class="flex items-center justify-center ps-2.5 mb-5">
                         <img class="rounded-full w-20 h-20 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />

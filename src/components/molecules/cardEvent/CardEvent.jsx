@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHandHoldingHeart } from "react-icons/fa";
 
 const CardEvent = () => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const handleImageClick = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   return (
     <div
-      className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4" 
+      className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4"
     >
       <img
-        className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg hover:scale-150"
+        className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none cursor-pointer"
         src="https://monpetitparapluie.s3.eu-west-3.amazonaws.com/upload/mafalda.jpg"
         alt=""
+        onClick={handleImageClick}
       />
       <div className="flex flex-col justify-between p-4 leading-normal w-full">
         <div className="text-center mb-4">
@@ -42,8 +49,26 @@ const CardEvent = () => {
           </div>
         </div>
       </div>
+      {isZoomed && (
+        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-75 z-50">
+          <img
+            className="object-contain fixed top-0 left-0 w-full h-full mx-auto"
+            src="https://monpetitparapluie.s3.eu-west-3.amazonaws.com/upload/mafalda.jpg"
+            alt=""
+            onClick={handleImageClick}
+          />
+          <button
+            className="absolute top-4 right-4 text-2xl font-bold text-white hover:text-gray-200"
+            onClick={handleImageClick}
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
 export default CardEvent;
+
+

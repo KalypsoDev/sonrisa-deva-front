@@ -3,6 +3,8 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { IoCloseCircle } from "react-icons/io5";
+import { FaMagnifyingGlassPlus } from "react-icons/fa6";
 
 const CardEvent = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -61,7 +63,7 @@ const CardEvent = () => {
             className="absolute top-4 right-4 text-2xl font-bold text-white hover:text-gray-200"
             onClick={handleImageClick}
           >
-            &times;
+           <IoCloseCircle className="w-8 h-6 mr-2 text-primaryBlue" />
           </button>
         </div>
       )}

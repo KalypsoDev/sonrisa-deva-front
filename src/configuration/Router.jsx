@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { HomePage } from '../components/pages/homepage/HomePage';
-import EventPage from '../components/pages/eventpage/EventPage';
+import EventPage from '../components/pages/eventPage/EventPage';
 
 const Router = () => {
     return (

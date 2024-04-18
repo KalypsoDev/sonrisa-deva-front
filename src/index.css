@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: "Montserrat";
-    src: url("/src/assets/fonts/Montserrat-Regular.ttf") format("truetype");
-    font-weight: 400;
-  }
 
-  @font-face {
-    font-family: "Montserrat";
-    src: url("/src/assets/fonts/Montserrat-Bold.ttf") format("truetype");
-    font-weight: 700;
-  }
+@layer base {
+
+    @font-face {
+        font-family: 'Montserrat-Bold';
+        src: url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: 'Montserrat-Regular';
+        src: url(/src/assets/fonts/Montserrat-Regular.ttf) format('truetype');
+        font-weight: 400;
+    }
 }

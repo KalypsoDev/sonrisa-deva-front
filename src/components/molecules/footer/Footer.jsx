@@ -1,6 +1,6 @@
 import sonrisaDevaSmallLogo from "../../../assets/img/smallLogo.jpg";
 
-export function Footer() {
+const Footer = () => {
     return (
       <>
         <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
@@ -31,3 +31,5 @@ export function Footer() {
       </>
   );
 }
+
+export default Footer;

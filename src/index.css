@@ -7,7 +7,7 @@
 
     @font-face {
         font-family: 'Montserrat-Bold';
-        src: url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
+        src: url(/src/assets/fonts/Montserrat-Bold.ttf) format('truetype');
         font-weight: 700;
     }
 

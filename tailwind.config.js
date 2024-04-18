@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -15,6 +16,11 @@ export default {
         greenPen: '#3DB39E',
         redBin: '#BA0000',
         mustardBox: '#DD8F19',
+        darkGrey: '#222222'
+      },
+      fontFamily: {
+        montserratRegular: ["Montserrat-Regular", "sans-serif"],
+        montserratBold: ["Montserrat-Bold", "sans-serif"],
       },
     },
   },
@@ -22,4 +28,3 @@ export default {
     require('flowbite/plugin')
   ],
 }
-

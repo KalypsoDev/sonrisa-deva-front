@@ -19,53 +19,53 @@ const ProductForm = () => {
               />
             </div>
             <div className="w-full">
-              <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
               <input
                 type="text"
-                name="name"
-                id="name"
+                name="email"
+                id="email"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Nombre"
                 required
               />
             </div>
             <div className="w-full">
-              <label htmlFor="brand" className="block mb-2 text-sm font-medium text-white dark:text-white">Apellido</label>
+              <label htmlFor="apellido" className="block mb-2 text-sm font-medium text-white dark:text-white">Apellido</label>
               <input
                 type="text"
-                name="brand"
-                id="brand"
+                name="apellido"
+                id="apellido"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Apellido"
                 required
               />
             </div>
             <div className="w-full">
-              <label htmlFor="price" className="block mb-2 text-sm font-medium text-white dark:text-white">Teléfono</label>
+              <label htmlFor="telefono" className="block mb-2 text-sm font-medium text-white dark:text-white">Teléfono</label>
               <input
                 type="number"
-                name="price"
-                id="price"
+                name="telefono"
+                id="telefono"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Email"
+                placeholder="Teléfono"
                 required
               />
             </div>
             <div>
-              <label htmlFor="item-weight" className="block mb-2 text-sm font-medium text-white dark:text-white">Dirección</label>
+              <label htmlFor="direccion" className="block mb-2 text-sm font-medium text-white dark:text-white">Dirección</label>
               <input
-                type="number"
-                name="item-weight"
-                id="item-weight"
+                type="text"
+                name="direccion"
+                id="direccion"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Dirección"
                 required
               />
             </div>
             <div className="w-full">
-              <label htmlFor="description" className="block mb-2 text-sm font-medium text-white dark:text-white">Mensaje (Requerido)</label>
+              <label htmlFor="mensaje" className="block mb-2 text-sm font-medium text-white dark:text-white">Mensaje (Requerido)</label>
               <textarea
-                id="description"
+                id="mensaje"
                 rows="4"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Especifica talla o color deseado"

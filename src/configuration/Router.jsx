@@ -5,6 +5,7 @@ import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProd
 import EventPage from '../components/pages/eventPage/EventPage';
 import ProductPage from '../components/pages/productPage/ProductPage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
+import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
 
 const Router = () => {
     return (
@@ -16,6 +17,7 @@ const Router = () => {
                   <Route path='/eventos' element={<EventPage/>}></Route>
                   <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
                   <Route path='/contact-form' element={<ContactFormPage/>}></Route>
+                  <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

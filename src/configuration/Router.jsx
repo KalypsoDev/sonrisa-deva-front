@@ -17,7 +17,7 @@ const Router = () => {
                   <Route path='/eventos' element={<EventPage/>}></Route>
                   <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
                   <Route path='/contact-form' element={<ContactFormPage/>}></Route>
-                  <Route path='/login-form' element={<LoginFormAdmin/>}></Route>
+                  <Route path='/login-form' element={<LoginAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

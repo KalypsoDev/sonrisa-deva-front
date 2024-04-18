@@ -2,13 +2,9 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
+        <form action="#" className="bg-darkBlue max-w-4xl mx-auto rounded-lg p-6 px-10">
 
-    <div className="bg-greenPen dark:bg-gray-800 rounded-2xl shadow-lg p-4 max-w-screen-lg mx-auto my-8">
-    <section className="bg-darkBlue dark:bg-gray-900">
-  
-        <form action="#">
-
-          <div className="grid justify-items-center sm:grid-cols-2 gap-2 p-6">
+          <div className="grid justify-items-center sm:grid-cols-2 gap-16 p-6">
 
             <div className="inputsRightSide">
               <div className="w-96 mb-4">
@@ -57,7 +53,7 @@ const ContactForm = () => {
                   id="message"
                   rows="6"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  placeholder="Descríbenos aquí la razón por la que te comunicas con nosotros"
+                  placeholder="Déjamos aquí tu mensaje"
                 ></textarea>
               </div>
             </div>
@@ -73,8 +69,8 @@ const ContactForm = () => {
             </div>
         </form>
      
-    </section>
-    </div>
+    // </section>
+    // </div>
 
   )
 }

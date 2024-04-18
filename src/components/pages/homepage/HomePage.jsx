@@ -6,7 +6,7 @@ export function HomePage() {
   return (
     <>
         <NavbarMolecule></NavbarMolecule>
-        <h1>Ésta es la home page</h1>
+        <h1 className="font-montserratBold">Ésta es la home page</h1>
         <Footer></Footer>
     </>
   );

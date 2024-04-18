@@ -3,6 +3,7 @@ import { HomePage } from '../components/pages/homePage/HomePage';
 import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';
+import ProductPage from '../components/pages/productPage/ProductPage';
 
 const Router = () => {
     return (
@@ -10,8 +11,9 @@ const Router = () => {
           <Routes>
                   <Route path='/' element={<HomePage/>}></Route>
                   <Route path='/admin' element={<PanelAdminPage/>}></Route>
-                  <Route path='/create-product' element={<NewProductAdminPage/>}></Route>
+                  <Route path='/admin/agregar-producto' element={<NewProductAdminPage/>}></Route>
                   <Route path='/eventos' element={<EventPage/>}></Route>
+                  <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

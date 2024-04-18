@@ -79,7 +79,7 @@ const ProductFormAdmin = ({ title, onSubmit, onCancel, product }) => {
                     <h2 className="text-center text-lg text-white mb-2">Imagen</h2>
                     <img
                         className="w-full h-60 mb-5 rounded-lg"
-                        src={formData.image_url ? URL.createObjectURL(formData.image_url) : 'https://via.placeholder.com/150'}
+                        src={formData.image_url ? URL.createObjectURL(formData.image_url) : 'https://via.placeholder.com/250'}
                         alt="Imagen de Producto"
                     />
                     <label htmlFor="image_url" className="block text-sm font-medium text-white text-center"></label>

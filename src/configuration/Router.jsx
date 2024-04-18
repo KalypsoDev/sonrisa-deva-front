@@ -4,7 +4,6 @@ import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';
 import ProductPage from '../components/pages/productPage/ProductPage';
-import { HomePage } from '../components/pages/homePage/HomePage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 
 const Router = () => {

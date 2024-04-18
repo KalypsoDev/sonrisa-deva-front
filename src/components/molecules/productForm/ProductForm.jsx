@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductForm = () => {
   return (
-    <div className="bg-darkBlue dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-8">
+    <div className="bg-darkBlue font-montserratRegular dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-8">
       <div className="p-4">
         <form action="#">
           <div className="grid gap-4 sm:grid-cols-2">

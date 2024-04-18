@@ -11,7 +11,7 @@ const Router = () => {
           <Routes>
                   <Route path='/' element={<HomePage/>}></Route>
                   <Route path='/admin' element={<PanelAdminPage/>}></Route>
-                  <Route path='/create-product' element={<NewProductAdminPage/>}></Route>
+                  <Route path='/admin/agregar-producto' element={<NewProductAdminPage/>}></Route>
                   <Route path='/eventos' element={<EventPage/>}></Route>
                   <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
           </Routes>

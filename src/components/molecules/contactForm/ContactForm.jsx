@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <form action="#" className="bg-darkBlue max-w-4xl mx-auto rounded-lg p-6 px-10">
       <div className="grid justify-items-center sm:grid-cols-2 gap-16 p-6">
-        <div className="inputsRightSide">
+        <div className="inputsRightSide font-montserratRegular text-base">
           <div className="w-96 mb-4">
             <label htmlFor="name" className="block mb-4 text-sm font-medium text-white dark:text-white">Nombre</label>
             <input
@@ -33,7 +33,7 @@ const ContactForm = () => {
           </div>
         </div >
 
-        <div className="inputsLeftSide">
+        <div className="inputsLeftSide font-montserratRegular text-base">
           <div className="w-96 mb-4">
             <label htmlFor="name" className="block mb-4 text-sm font-medium text-white dark:text-white">Asunto</label>
             <input
@@ -60,7 +60,7 @@ const ContactForm = () => {
       <div className="text-center">
         <button
           type="submit"
-          className="inline-flex items-center ml-0 px-6 py-2.5 mt-0 sm:mt-0 text-sm font-medium text-center text-primaryBlue bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+          className="inline-flex items-center ml-0 px-6 py-2.5 mt-0 sm:mt-0 text-sm font-montserratBold text-center text-primaryBlue bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
         >
           Enviar
         </button>

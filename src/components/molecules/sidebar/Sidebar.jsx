@@ -14,15 +14,15 @@ const Sidebar = () => {
                 </svg>
             </button>
 
-            <aside id="logo-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+            <aside id="logo-sidebar" className="fixed top-0 z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
 
-                <div className="h-full px-4 py-3 overflow-y-auto bg-primaryLila">
+                <div className="h-full px-2 py-3 overflow-y-auto bg-primaryLila">
 
                     <div className="flex justify-center p-3">
-                        <a href="#" className="flex items-center p-3 text-white font-bold text-lg">
+                        <a href="#" className="flex items-center p-3 text-white font-montserratBold text-lg">
                             <span className="flex flex-col items-center">
                                 <span className="whitespace-nowrap">Panel de</span>
-                                <span className="whitespace-nowrap ml-3">Administración</span>
+                                <span className="whitespace-nowrap">Administración</span>
                             </span>
                         </a>
                     </div>
@@ -32,31 +32,31 @@ const Sidebar = () => {
                     </a>
 
                     <div>
-                        <a href="#" className="flex items-center p-4 text-white text-base">
+                        <a href="#" className="flex items-center mb-2 p-2 text-white font-montserratRegular text-base">
                             <MdOutlineDashboard />
-                            <span className="ms-3">Gestión de la página</span>
+                            <span className="flex-1 ms-2 whitespace-nowrap">Gestión de la página</span>
                         </a>
                     </div>
 
-                    <ul className="space-y-0 font-normal">
+                    <ul className="font-montserratRegular text-sm">
                     
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white text-sm">
+                            <a href="#" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Productos solicitados</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white text-sm">
+                            <a href="#" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Agenda de eventos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white text-sm">
+                            <a href="#" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Agregar productos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white text-sm">
+                            <a href="#" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Gestión de productos</span>
                             </a>
                         </li>
@@ -64,14 +64,14 @@ const Sidebar = () => {
                     </ul>
 
                     <div>
-                        <a href="#" className="flex items-center p-4 text-white text-base">
+                        <a href="#" className="flex items-center mt-2 p-2 text-white font-montserratRegular text-base">
                             <FaGlobe />
-                            <span className="flex-1 ms-3 whitespace-nowrap">Ir a mi página</span>
+                            <span className="flex-1 ms-2 whitespace-nowrap">Ir a mi página</span>
                         </a>
                     </div>
 
                     <div className="flex justify-center">
-                        <button type="button" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                        <button type="button" className="text-white font-montserratBold text-sm bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 mt-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                             Cerrar sesión
                         </button>
                     </div>

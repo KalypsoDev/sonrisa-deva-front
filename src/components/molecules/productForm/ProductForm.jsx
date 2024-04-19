@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductForm = () => {
   return (
-    <div className="bg-darkBlue font-montserratRegular dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-8">
+    <div className="bg-darkBlue font-montserratRegular dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-4">
       <div className="p-4">
         <form action="#">
           <div className="grid gap-4 sm:grid-cols-2">
@@ -30,18 +30,21 @@ const ProductForm = () => {
               />
             </div>
             <div className="w-full">
-              <label htmlFor="direccion" className="block mb-2 mt-2 text-sm font-medium text-white dark:text-white">Dirección</label>
-              <input
+              <label htmlFor="direccion" className="block mb-2 mt-4 text-sm font-medium text-white dark:text-white">Dirección</label>
+              <textarea
                 type="text"
                 name="direccion"
                 id="direccion"
+                rows="2"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Dirección"
                 required
               />
             </div>
+            </div>
+            <div>
             <div className="w-full">
-              <label htmlFor="telefono" className="block mb-2 mt-2 text-sm font-medium text-white dark:text-white">Teléfono</label>
+              <label htmlFor="telefono" className="block mb-2 text-sm font-medium text-white dark:text-white">Teléfono</label>
               <input
                 type="number"
                 name="telefono"
@@ -51,10 +54,8 @@ const ProductForm = () => {
                 required
               />
             </div>
-            </div>
-            <div>
-            <div>
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
+            <div className="w-full">
+              <label htmlFor="email" className="block mb-2 mt-2 text-sm font-medium text-white dark:text-white">Email</label>
               <input
                 type="text"
                 name="email"
@@ -65,10 +66,10 @@ const ProductForm = () => {
               />
             </div>
             <div className="w-full">
-              <label htmlFor="mensaje" className="block mb-2 mt-8 text-sm font-medium text-white dark:text-white">Mensaje (Requerido)</label>
+              <label htmlFor="mensaje" className="block mb-2 mt-2 text-sm font-medium text-white dark:text-white">Mensaje (Requerido)</label>
               <textarea
                 id="mensaje"
-                rows="6"
+                rows="3"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Especifica talla o color del producto seleccionado según sea el caso"
               ></textarea>

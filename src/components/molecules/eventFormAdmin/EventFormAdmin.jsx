@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const EventFormAdmin = ({ title = 'AGREGAR EVENTO', onSubmit, onCancel, event }) => {
+const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
     const [formData, setFormData] = useState({
         title: '',
         image_url: null,
@@ -40,9 +40,9 @@ const EventFormAdmin = ({ title = 'AGREGAR EVENTO', onSubmit, onCancel, event })
 
     return (
         <form onSubmit={handleSubmit} className="max-w-4xl mx-auto rounded-lg p-6 px-10 bg-primaryLila shadow-2xl sm:rounded-xl border-gray-600 my-7 flex flex-col items-center">
-            <h1 className="text-center text-2xl font-semibold text-white rounded-lg p-3">{title}</h1>
+            <h1 className="text-center text-2xl font-montserratBold text-white rounded-lg p-1">{title}</h1>
             <hr className="w-full my-3 border-gray-300" />
-            <div className="flex flex-col sm:flex-row w-full">
+            <div className="flex flex-col sm:flex-row w-full font-montserratRegular">
                 <div className="flex flex-col w-full sm:w-2/3 justify-center">
                     <div className="mb-1 w-full sm:w-4/5 text-center">
                         <label htmlFor="title" className="block mb-1 text-lg text-white">Título del evento</label>
@@ -94,18 +94,7 @@ const EventFormAdmin = ({ title = 'AGREGAR EVENTO', onSubmit, onCancel, event })
                             />
                         </div>
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
-                        <label htmlFor="collection" className="block mb-1 text-lg text-white">Recaudación total</label>
-                        <input
-                            type="number"
-                            id="collection"
-                            name="collection"
-                            value={formData.collection}
-                            onChange={handleChange}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
-                            required
-                        />
-                    </div>
+                    
                     <div className="mb-1 w-full sm:w-4/5 text-center">
                         <label htmlFor="description" className="block mb-1 text-lg text-white">Descripción del evento</label>
                         <textarea
@@ -134,11 +123,24 @@ const EventFormAdmin = ({ title = 'AGREGAR EVENTO', onSubmit, onCancel, event })
                         className="block w-full mb-3 mt-2 text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-white border-gray-500 placeholder-gray-400"
                         accept="image/*"
                     />
+                    <div className="mb-1 w-full text-center">
+                        <label htmlFor="collection" className="block mb-1 text-lg text-white">Recaudación total</label>
+                        <input
+                            type="number"
+                            id="collection"
+                            name="collection"
+                            value={formData.collection}
+                            onChange={handleChange}
+                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
+                            required
+                        />
+                    </div>
                 </div>
+                
             </div>
             <div>
-                <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5">{title === 'AGREGAR EVENTO' ? 'Agregar' : 'Editar'}</button>
-                <button type="button" onClick={onCancel} className="text-primaryLila bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
+                <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5 mr-5">{title === 'AGREGAR EVENTO' ? 'Agregar' : 'Editar'}</button>
+                <button type="button" onClick={onCancel} className="text-primaryLila bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
             </div>
         </form>
     );

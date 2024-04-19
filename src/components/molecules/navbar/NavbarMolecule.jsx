@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Isotipo from "../../../assets/isologo.png";
 import { Link } from "react-router-dom";
 
+import "../../../../src/App.css";
+
 export function NavbarMolecule() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +25,7 @@ export function NavbarMolecule() {
                 />
               </Link>
             </div>
-            <div className="order-0 md:order-1 hamburguerMenu">
+            <div className="order-0 md:order-1 hamburguerMenu text-md md:text-center">
               <button
                 onClick={toggleMenu}
                 type="button"
@@ -54,7 +56,7 @@ export function NavbarMolecule() {
                 } w-full md:block md:w-auto absolute top-full left-0 z-20 bg-white md:relative md:mt-0 md:bg-transparent`}
                 id="navbar-default"
               >
-                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
                   <li>
                     <a
                       href="#"
@@ -98,7 +100,7 @@ export function NavbarMolecule() {
                   </li>
                   <button
                     type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="buttonColor text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
                   >
                     Colabora
                   </button>
@@ -106,7 +108,7 @@ export function NavbarMolecule() {
               </div>
             </div>
             <div className="order-2 md:order-2 cart ml-auto">
-              <i className="fa fa-shopping-cart" aria-hidden="true"></i>{" "}
+              <i className="fa fa-shopping-cart text-xl" aria-hidden="true"></i>{" "}
             </div>
           </div>
         </div>

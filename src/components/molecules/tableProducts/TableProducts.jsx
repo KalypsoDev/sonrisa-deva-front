@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import InputSearch from '../../atoms/pagination/InputSearch';
+import Pagination from '../../atoms/pagination/Pagination';
 
 const TableProducts = () => {
     return (
+        <>
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
         <InputSearch />
             <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
@@ -78,6 +80,9 @@ const TableProducts = () => {
                 </tbody>
             </table>
         </div>
+        <Pagination />
+        </>
+       
     );
 };
 

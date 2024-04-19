@@ -8,15 +8,15 @@ const Footer = () => {
         <div className="flex justify-center sm:flex sm:justify-between sm:items-center">
           <div className="flex justify-center sm:justify-start">
             <div className="flex flex-col text-center sm:text-left">
-              <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Aviso legal</a>
-              <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Políticas de privacidad</a>
+              <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Aviso legal</a>
+              <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Políticas de privacidad</a>
             </div>
           </div>
           <div className="flex flex-col items-center mt-4 sm:mt-0">
             <a href="#" className="flex justify-center items-center mx-auto mb-4">
                 <img className="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
             </a>
-            <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Copyright © 2024 La Sonrisa de Deva</a>
+            <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Copyright © 2024 La Sonrisa de Deva</a>
           </div>
           <div className="flex flex-col justify-center sm:justify-end mt-4 sm:mt-0">
             <div className="flex items-center mt-4 sm:mt-0">
@@ -31,7 +31,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="flex flex-col items-center mt-4 sm:mt-0">
-                <a href="#" className="text-darkGrey hover:text-primaryBlue mt-2">Acceso Administración</a>
+                <a href="#" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Acceso Administración</a>
             </div>
           </div>
         </div>

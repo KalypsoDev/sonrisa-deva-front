@@ -6,6 +6,7 @@ import EventPage from '../components/pages/eventPage/EventPage';
 import ProductPage from '../components/pages/productPage/ProductPage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdminPage';
+import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
 
 const Router = () => {
     return (
@@ -18,6 +19,7 @@ const Router = () => {
                   <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
                   <Route path='/contact-form' element={<ContactFormPage/>}></Route>
                   <Route path='/admin/agregar-evento' element={<NewEventAdminPage/>}></Route>
+                  <Route path='/login-form' element={<LoginAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

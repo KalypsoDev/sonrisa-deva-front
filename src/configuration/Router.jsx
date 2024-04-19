@@ -17,9 +17,9 @@ const Router = () => {
                   <Route path='/admin/agregar-producto' element={<NewProductAdminPage/>}></Route>
                   <Route path='/eventos' element={<EventPage/>}></Route>
                   <Route path='/tienda-solidaria' element={<ProductPage/>}></Route>
-                  <Route path='/contact-form' element={<ContactFormPage/>}></Route>
+                  <Route path='/formulario-contacto' element={<ContactFormPage/>}></Route>
                   <Route path='/admin/agregar-evento' element={<NewEventAdminPage/>}></Route>
-                  <Route path='/login-form' element={<LoginAdminPage/>}></Route>
+                  <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

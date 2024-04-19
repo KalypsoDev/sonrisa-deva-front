@@ -7,6 +7,7 @@ import ProductPage from '../components/pages/productPage/ProductPage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdminPage';
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
+import AngelmanSyndromePage from '../components/pages/angelmanSyndromePage/AngelmanSyndromePage';
 
 const Router = () => {
     return (
@@ -20,6 +21,7 @@ const Router = () => {
                   <Route path='/formulario-contacto' element={<ContactFormPage/>}></Route>
                   <Route path='/admin/agregar-evento' element={<NewEventAdminPage/>}></Route>
                   <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
+                  <Route path='/sindrome-angelman' element={<AngelmanSyndromePage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

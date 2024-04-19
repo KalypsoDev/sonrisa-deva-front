@@ -4,7 +4,7 @@ import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 const TableProducts = () => {
     return (
         <div className="w-3/4 mx-auto relative overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
-            <table className="w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400">
+            <table className="w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
                 <thead className="text-xs text-white bg-primaryLila dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" className="px-16 py-3">
@@ -30,7 +30,7 @@ const TableProducts = () => {
                             <a href="#" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
                             <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center"><FaTrashAlt /></a>
                         </td>
-                        <td className="px-4 py-2 font-semibold text-gray-900 dark:text-white">
+                        <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
                             Apple Watch
                         </td>
                         <td className="py-2">
@@ -45,7 +45,7 @@ const TableProducts = () => {
                                 <div>1</div>
                             </div>
                         </td>
-                        <td className="px-4 py-2 font-semibold text-gray-900 dark:text-white">
+                        <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
                             $599
                         </td>
                     </tr>
@@ -54,7 +54,7 @@ const TableProducts = () => {
                             <a href="#" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
                             <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center"><FaTrashAlt /></a>
                         </td>
-                        <td className="px-4 py-2 font-semibold text-gray-900 dark:text-white">
+                        <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
                             Apple Watch
                         </td>
                         <td className="py-2">
@@ -65,11 +65,11 @@ const TableProducts = () => {
                             />
                         </td>
                         <td className="px-4 py-2">
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-center text-darkGrey">
                                 <div>1</div>
                             </div>
                         </td>
-                        <td className="px-4 py-2 font-semibold text-gray-900 dark:text-white">
+                        <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
                             $599
                         </td>
                     </tr>

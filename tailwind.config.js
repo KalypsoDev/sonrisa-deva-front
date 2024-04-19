@@ -16,10 +16,13 @@ export default {
         redBin: '#BA0000',
         mustardBox: '#DD8F19',
       },
+      fontFamily: {
+        montserratBold: ["Montserrat-Bold", "sans-serif"],
+        montserratRegular: ["Montserrat-Regular", "sans-serif"],
+      },
     },
   },
   plugins: [
     require('flowbite/plugin')
   ],
 }
-

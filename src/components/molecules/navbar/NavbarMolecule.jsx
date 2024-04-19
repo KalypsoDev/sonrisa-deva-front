@@ -15,7 +15,7 @@ export function NavbarMolecule() {
     <>
       <nav className="bg-white border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
-          <div className="flex flex-row justify-between items-center md:flex-row md:justify-between w-full">
+          <div className="flex flex-row justify-between items-center md:flex-row md:justify-between w-full xl:flex xl:flex-row">
             <div className="order-1 md:order-0 isologo">
               <Link to="/">
                 <img
@@ -107,7 +107,7 @@ export function NavbarMolecule() {
                 </ul>
               </div>
             </div>
-            <div className="order-2 md:order-2 cart ml-auto">
+            <div className="order-2 md:order-2 cart ml-auto xl:ml-0">
               <i className="fa fa-shopping-cart text-xl" aria-hidden="true"></i>{" "}
             </div>
           </div>

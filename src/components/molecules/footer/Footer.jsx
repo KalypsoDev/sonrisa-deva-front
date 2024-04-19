@@ -1,35 +1,43 @@
 import sonrisaDevaSmallLogo from "../../../assets/img/smallLogo.jpg";
+import { FaRegEnvelope, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-      <>
-        <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" className="flex justify-center mb-6">
-                        <img className="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
-                    </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">About</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+  return (
+    <footer className="bg-white relative pt-4 drop-shadow-[0-6px_6px_rgba(0,130,202,0.3)]">
+      <div className="container flex flex-row justify-evenly mx-auto px-6">
+        <div className="flex justify-center sm:flex sm:justify-between sm:items-center">
+          <div className="flex justify-center sm:justify-start">
+            <div className="flex flex-col text-center sm:text-left">
+              <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Aviso legal</a>
+              <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Políticas de privacidad</a>
             </div>
-        </footer>
-      </>
+          </div>
+          <div className="flex flex-col items-center mt-4 sm:mt-0">
+            <a href="#" className="flex justify-center items-center mx-auto mb-4">
+                <img className="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
+            </a>
+            <a href="#" className=" text-darkGrey text-md hover:text-primaryBlue">Copyright © 2024 La Sonrisa de Deva</a>
+          </div>
+          <div className="flex flex-col justify-center sm:justify-end mt-4 sm:mt-0">
+            <div className="flex items-center mt-4 sm:mt-0">
+                <a href="#" className="mx-1">
+                <FaRegEnvelope className="text-lg text-darkGrey hover:text-primaryBlue" />
+                </a>
+                <a href="#" className="mx-1">
+                <FaFacebookF className="text-lg text-darkGrey hover:text-primaryBlue" />
+                </a>
+                <a href="#" className="mx-1">
+                <FaInstagram className="text-lg text-darkGrey hover:text-primaryBlue" />
+                </a>
+            </div>
+            <div className="flex flex-col items-center mt-4 sm:mt-0">
+                <a href="#" className="text-darkGrey hover:text-primaryBlue mt-2">Acceso Administración</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;

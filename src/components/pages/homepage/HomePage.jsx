@@ -1,6 +1,6 @@
 import  {NavbarMolecule}  from "../../molecules/navbar/NavbarMolecule";
 import  {Footer}  from "../../molecules/footer/Footer";
-import  {Carousel}  from "../../molecules/carousel/Carousel";
+import  Carousel  from "../../molecules/carousel/Carousel";
 
 
 export function HomePage() {

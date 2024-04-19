@@ -15,6 +15,7 @@ export default {
         greenPen: '#3DB39E',
         redBin: '#BA0000',
         mustardBox: '#DD8F19',
+        darkGrey: '#222222',
       },
       fontFamily: {
         montserratBold: ["Montserrat-Bold", "sans-serif"],

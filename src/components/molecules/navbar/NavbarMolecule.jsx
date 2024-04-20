@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Isotipo from "../../../assets/isologo.png";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import "../../../../src/App.css";
@@ -56,7 +57,7 @@ export function NavbarMolecule() {
                 } w-full md:block md:w-auto absolute top-full left-0 z-20 bg-white md:relative md:mt-0 md:bg-transparent`}
                 id="navbar-default"
               >
-                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
+                <ul className="font-medium flex flex-col p-4  rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
                   <li>
                     <a
                       href="#"
@@ -107,8 +108,8 @@ export function NavbarMolecule() {
                 </ul>
               </div>
             </div>
-            <div className="order-2 md:order-2 cart ml-auto xl:ml-0">
-              <i className="fa fa-shopping-cart text-xl" aria-hidden="true"></i>{" "}
+            <div className="order-2 md:order-2 md:ml-4 cart">
+              <FaShoppingCart className="text-xl " />
             </div>
           </div>
         </div>

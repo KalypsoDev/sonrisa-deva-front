@@ -7,6 +7,8 @@ import ProductPage from '../components/pages/productPage/ProductPage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdminPage';
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
+import ProductFormPage from '../components/pages/productFormPage/ProductFormPage';
+import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
 
 const Router = () => {
     return (
@@ -20,6 +22,8 @@ const Router = () => {
                   <Route path='/formulario-contacto' element={<ContactFormPage/>}></Route>
                   <Route path='/admin/agregar-evento' element={<NewEventAdminPage/>}></Route>
                   <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
+                  <Route path='/solicitar-producto' element={<ProductFormPage/>}></Route>
+                  <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

@@ -57,15 +57,13 @@ const EventPage = () => {
     return (
       <div className={`flex flex-wrap justify-center sm:justify-start -mx-4`}>
         {slicedUpcoming.map(event => (
-          <div key={event.id} className={`w-full sm:w-1/2 lg:w-1/2 px-4 mb-4 ${cardCount === 1 ? 'sm:w-full' : ''}`}>
+          <div key={event.id} className={`w-full sm:w-1/2 px-4 mb-4 ${cardCount === 1 ? 'mx-auto sm:w-full' : ''}`}>
             <CardEvent event={event} />
           </div>
         ))}
       </div>
     );
   };
-  
-
   
   const renderPastEvents = () => {
     const slicedPast = visiblePastEvents.slice(pastIndex, pastIndex + 2);

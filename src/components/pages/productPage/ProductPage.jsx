@@ -24,7 +24,7 @@ const ProductPage = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [perPage] = useState(12);
+  const [perPage] = useState(8);
 
   const totalProducts = products.length;
   const indexOfLastProduct = currentPage * perPage;

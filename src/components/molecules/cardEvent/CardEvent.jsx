@@ -25,47 +25,47 @@ const CardEvent = ({ event }) => {
   const formattedDate = formatDate(date);
 
   return (
-    <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4 ">
-      <img
-        className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none cursor-pointer"
-        src={imageSrc}
-        alt=""
-        onClick={handleImageClick}
-      />
-      <div className="flex flex-col justify-between p-4 leading-normal w-full">
-        <div className="text-center mb-4">
-          <h5 className="text-2xl justify-center font-bold text-darkBlue dark:text-white">
-            {title}
-          </h5>
-        </div>
-        <div className="mb-4">
-          <div className="flex items-center my-2">
-            <FaCalendarAlt className="w-8 h-6 mr-2 text-darkBlue" />
-            <p className="font-bold text-darkBlue dark:text-blue-950">Fecha: {formattedDate}</p>
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4">
+      <div className="flex flex-col md:flex-row">
+        <img
+          className="object-cover w-1/2 h-72 cursor-pointer"
+          src={imageSrc}
+          alt=""
+          onClick={handleImageClick}
+        />
+        <div className="flex flex-col justify-between p-4 w-1/2">
+          <div className="text-center mb-4">
+            <h5 className="text-xl mt-4 font-montserratBold text-darkBlue dark:text-white">{title}</h5>
           </div>
-          <div className="flex items-center my-2">
-            <FaClock className="w-8 h-6 mr-2 text-darkBlue" />
-            <p className="font-bold text-darkBlue dark:text-blue-950">Hora: {hour}</p>
-          </div>
-          <div className="flex items-center my-2">
-            <FaLocationDot className="w-8 h-6 mr-2 text-darkBlue" />
-            <p className="font-bold text-darkBlue dark:text-blue-950">Lugar: {location}</p>
-          </div>
-          {collection && (
-            <div className="flex items-center justify-center my-2">
-              <FaHandHoldingHeart className="w-10 h-10 mr-2 text-darkBlue" />
-              <div className="font-bold text-darkBlue dark:text-blue-950 flex flex-col items-center">
-                <p>Recaudación</p>
-                <p className="text-3xl">{collection}€</p>
-              </div>
+          <div className="mb-4">
+            <div className="flex items-center my-2">
+              <FaCalendarAlt className="w-6 h-6 mr-2 text-darkBlue" />
+              <p className="font-montserratBold text-darkBlue dark:text-blue-950">Fecha: {formattedDate}</p>
             </div>
-          )}
+            <div className="flex items-center my-2">
+              <FaClock className="w-6 h-6 mr-2 text-darkBlue" />
+              <p className="font-montserratBold text-darkBlue dark:text-blue-950">Hora: {hour}</p>
+            </div>
+            <div className="flex items-center my-2">
+              <FaLocationDot className="w-6 h-6 mr-2 text-darkBlue" />
+              <p className="font-montserratBold text-darkBlue dark:text-blue-950">Lugar: {location}</p>
+            </div>
+            {collection && (
+              <div className="flex items-center justify-center my-2">
+                <FaHandHoldingHeart className="w-10 h-10 mr-2 text-darkBlue" />
+                <div className="font-montserratBold text-darkBlue dark:text-blue-950 flex flex-col items-center">
+                  <p>Recaudación</p>
+                  <p className="text-lg">{collection}€</p>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       {isZoomed && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-75 z-50">
+        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-75 z-50 flex items-center justify-center">
           <img
-            className="object-contain fixed top-0 left-0 w-full h-full mx-auto"
+            className="object-contain max-h-full mx-auto"
             src={imageSrc}
             alt=""
             onClick={handleImageClick}
@@ -74,7 +74,7 @@ const CardEvent = ({ event }) => {
             className="absolute top-4 right-4 text-2xl font-bold text-white hover:text-gray-200"
             onClick={handleImageClick}
           >
-            <IoCloseCircle className="w-8 h-6 mr-2 text-primaryBlue" />
+            <IoCloseCircle className="w-8 h-8 mr-2 text-primaryBlue" />
           </button>
         </div>
       )}
@@ -83,5 +83,3 @@ const CardEvent = ({ event }) => {
 };
 
 export default CardEvent;
-
-

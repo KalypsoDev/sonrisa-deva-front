@@ -9,6 +9,31 @@ const TableProducts = () => {
         setProducts([...products, newProduct]);
     };
 
+    const sampleProducts = [
+        {
+            name: 'Producto 1',
+            image_url: 'https://via.placeholder.com/250',
+            stock: 10,
+            price: 25.99
+        },
+        {
+            name: 'Producto 2',
+            image_url: 'https://via.placeholder.com/250',
+            stock: 5,
+            price: 15.99
+        },
+        {
+            name: 'Producto 3',
+            image_url: 'https://via.placeholder.com/250',
+            stock: 20,
+            price: 39.99
+        }
+    ];
+
+    useState(() => {
+        setProducts(sampleProducts);
+    }, []);
+
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
             <InputSearch />
@@ -66,5 +91,6 @@ const TableProducts = () => {
 };
 
 export default TableProducts;
+
 
 

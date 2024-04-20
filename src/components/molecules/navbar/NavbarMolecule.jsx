@@ -15,14 +15,14 @@ export function NavbarMolecule() {
   return (
     <>
       <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
-          <div className="flex flex-row justify-between items-center md:flex-row md:justify-between w-full xl:flex xl:flex-row">
+        <div className="flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
+          <div className="flex flex-row justify-around items-center md:flex-row md:justify-between w-full xl:flex xl:flex-row">
             <div className="order-1 md:order-0 isologo">
               <Link to="/">
                 <img
                   src={Isotipo}
                   alt="La Sonrisa de Deva Isologo"
-                  className="h-20"
+                  className="h-24"
                 />
               </Link>
             </div>
@@ -57,11 +57,11 @@ export function NavbarMolecule() {
                 } w-full md:block md:w-auto absolute top-full left-0 z-20 bg-white md:relative md:mt-0 md:bg-transparent`}
                 id="navbar-default"
               >
-                <ul className="font-medium flex flex-col p-4  rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
+                <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
                   <li>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                       aria-current="page"
                     >
                       ¿Quién soy?
@@ -109,7 +109,7 @@ export function NavbarMolecule() {
               </div>
             </div>
             <div className="order-2 md:order-2 md:ml-4 cart">
-              <FaShoppingCart className="text-xl " />
+              <FaShoppingCart className="text-2xl " />
             </div>
           </div>
         </div>

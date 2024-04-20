@@ -14,7 +14,7 @@ const CardEvent = ({ event }) => {
   };
 
   const formatDate = (dateString) => {
-    if (dateString.trim() === '') {
+    if (!dateString.trim()) {
       return 'Por determinar';
     } else {
       const dateObj = new Date(dateString);
@@ -24,18 +24,22 @@ const CardEvent = ({ event }) => {
 
   const formattedDate = formatDate(date);
 
+  const shadowStyle = {
+    boxShadow: '11px 10px 4px rgba(233, 241, 245, 0.7)'
+  };
+
   return (
-    <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-4" style={shadowStyle}>
       <div className="flex flex-col md:flex-row">
         <img
-          className="object-cover w-1/2 h-72 cursor-pointer"
+          className="object-cover w-full md:w-1/2 h-72 md:h-auto max-h-80 cursor-pointer"
           src={imageSrc}
           alt=""
           onClick={handleImageClick}
         />
-        <div className="flex flex-col justify-between p-4 w-1/2">
+        <div className="flex flex-col justify-between p-4 w-full md:w-1/2 max-w-lg">
           <div className="text-center mb-4">
-            <h5 className="text-xl mt-4 font-montserratBold text-darkBlue dark:text-white">{title}</h5>
+            <h5 className="text-xl mt-10 font-montserratBold text-darkBlue dark:text-white">{title}</h5>
           </div>
           <div className="mb-4">
             <div className="flex items-center my-2">

@@ -13,21 +13,21 @@ const Footer = () => {
               <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Políticas de privacidad</a>
             </div>
           </div>
-          <div className="flex flex-col items-center mt-4 sm:mt-0">
-            <a href="#" className="flex justify-center items-center mx-auto mb-4">
+          <div className="flex flex-col items-center mt-4 mb-4 sm:mt-0">
+            <div className="flex justify-center items-center mx-auto pb-4">
                 <img className="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
-            </a>
-            <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Copyright © 2024 La Sonrisa de Deva</a>
+            </div>
+            <p className="font-montserratRegular text-darkGrey text-md">Copyright © 2024 La Sonrisa de Deva</p>
           </div>
           <div className="flex flex-col justify-center sm:justify-end mt-4 sm:mt-0">
             <div className="flex items-center mt-4 sm:mt-0">
-                <a href="#" className="mx-1">
+                <a href="mailto:lasonrisadedeva@gmail.com">
                 <FaRegEnvelope className="text-lg text-darkGrey hover:text-primaryBlue" />
                 </a>
-                <a href="#" className="mx-1">
+                <a href="https://www.facebook.com/profile.php?id=100087800295743" className="mx-1">
                 <FaFacebookF className="text-lg text-darkGrey hover:text-primaryBlue" />
                 </a>
-                <a href="#" className="mx-1">
+                <a href="https://www.instagram.com/lasonrisadedeva/?hl=es" className="mx-1">
                 <FaInstagram className="text-lg text-darkGrey hover:text-primaryBlue" />
                 </a>
             </div>

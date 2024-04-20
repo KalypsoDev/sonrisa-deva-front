@@ -52,21 +52,44 @@ const EventPage = () => {
 
   const renderUpcomingEvents = () => {
     const slicedUpcoming = visibleUpcomingEvents.slice(upcomingIndex, upcomingIndex + 2);
-    return slicedUpcoming.map(event => (
-      <div key={event.id} className="w-full md:w-1/2 px-4"> 
-        <CardEvent event={event} />
+    const cardCount = slicedUpcoming.length;
+  
+    return (
+      <div className={`flex flex-wrap justify-center sm:justify-start -mx-4`}>
+        {slicedUpcoming.map(event => (
+          <div key={event.id} className={`w-full sm:w-1/2 lg:w-1/2 px-4 mb-4 ${cardCount === 1 ? 'sm:w-full' : ''}`}>
+            <CardEvent event={event} />
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
+  
 
+  
   const renderPastEvents = () => {
     const slicedPast = visiblePastEvents.slice(pastIndex, pastIndex + 2);
-    return slicedPast.map(event => (
-      <div key={event.id} className="w-full md:w-1/2 px-4"> 
-        <CardEvent event={event} />
+  
+    // Determinar si se debe centrar una tarjeta única en dispositivos pequeños
+    const shouldCenterSingleCard = slicedPast.length === 1;
+  
+    return (
+      <div className="flex justify-center sm:justify-start flex-wrap -mx-4">
+        {slicedPast.map(event => (
+          <div
+            key={event.id}
+            className={`w-full sm:w-1/2 px-4 mb-4 ${
+              shouldCenterSingleCard ? 'mx-auto sm:w-full' : ''
+            }`}
+          >
+            <CardEvent event={event} />
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
+  
+  
 
   const handleUpcomingNext = () => {
     if (upcomingIndex < visibleUpcomingEvents.length - 2) {
@@ -95,7 +118,7 @@ const EventPage = () => {
   return (
     <>
       <NavbarMolecule />
-      <section className="bg-backgroundBlue">
+      <section className="bg-backgroundBlue min-h-screen">
         <div className="container mx-auto py-8">
           <h1 className="text-2xl md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">AGENDA DE EVENTOS</h1>
           <p className="text-sm md:text-lg font-montserratRegular text-primaryBlue text-center mb-8">Si quieres realizar un evento solidario en apoyo a nuestra causa</p>

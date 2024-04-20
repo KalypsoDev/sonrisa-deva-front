@@ -5,12 +5,9 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <footer className="bg-white relative pt-4 drop-shadow-[0-6px_6px_rgba(0,130,202,0.3)]">
-      <div className="container flex flex-row justify-evenly mx-auto px-6">
-        <div className="flex justify-center sm:flex sm:justify-between sm:items-center">
-          <div className="flex justify-center sm:justify-start">
-            <div className="flex flex-col text-center sm:text-left">
-              <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Aviso legal</a>
-              <a href="#" className="font-montserratRegular text-darkGrey text-md hover:text-primaryBlue">Políticas de privacidad</a>
+            <div className="flex flex-col text-center">
+              <Link to="/aviso-legal" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Aviso legal</Link>
+              <Link to="/politicas-privacidad" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Políticas de privacidad</Link>
             </div>
           </div>
           <div className="flex flex-col items-center mt-4 mb-4 sm:mt-0">

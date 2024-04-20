@@ -108,7 +108,7 @@ const EventPage = () => {
             <FaCircleChevronRight className="text-primaryBlue text-3xl ml-2 cursor-pointer" onClick={handleUpcomingNext} />
           </div>
         </div>
-        <div className="flex justify-center w-full mb-8">
+        <div className="flex justify-center w-full mb-8 ">
           {renderUpcomingEvents()}
         </div>
 

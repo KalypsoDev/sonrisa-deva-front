@@ -66,7 +66,7 @@ const CardEvent = ({ event }) => {
         <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-75 z-50">
           <img
             className="object-contain fixed top-0 left-0 w-full h-full mx-auto"
-            src="https://monpetitparapluie.s3.eu-west-3.amazonaws.com/upload/mafalda.jpg"
+            src={imageSrc}
             alt=""
             onClick={handleImageClick}
           />

@@ -1,5 +1,6 @@
 import sonrisaDevaSmallLogo from "../../../assets/img/smallLogo.jpg";
 import { FaRegEnvelope, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="flex flex-col items-center mt-4 sm:mt-0">
-                <a href="#" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Acceso Administración</a>
+                <Link to="/inicio-sesion-admin" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Acceso Administración</Link>
             </div>
           </div>
         </div>

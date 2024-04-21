@@ -1,5 +1,5 @@
 import  {NavbarMolecule}  from "../../molecules/navbar/NavbarMolecule";
-import  {Footer}  from "../../molecules/footer/Footer";
+import  Footer  from "../../molecules/footer/Footer";
 
 
 export function HomePage() {

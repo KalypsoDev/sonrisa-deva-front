@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductForm from '../../molecules/productForm/ProductForm'
 import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule'
-import { Footer } from '../../molecules/footer/Footer'
+import  Footer  from '../../molecules/footer/Footer'
 
 const ProductFormPage = () => {
   return (

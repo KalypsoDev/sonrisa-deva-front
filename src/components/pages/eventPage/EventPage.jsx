@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CardEvent from '../../molecules/cardEvent/CardEvent';
 import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
-import { Footer } from '../../molecules/footer/Footer';
+import Footer  from '../../molecules/footer/Footer';
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 
 const EventPage = () => {

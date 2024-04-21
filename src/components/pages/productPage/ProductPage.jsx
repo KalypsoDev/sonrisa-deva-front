@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
-import { Footer } from '../../molecules/footer/Footer';
+import Footer from '../../molecules/footer/Footer';
 import CardProduct from '../../molecules/cardProduct/CardProduct';
 import Pagination from '../../atoms/pagination/Pagination';
 

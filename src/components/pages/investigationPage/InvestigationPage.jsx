@@ -7,7 +7,7 @@ const InvestigationPage = () => {
     return (
         <>
             <NavbarMolecule />
-            <section className="bg-backgroundBlue">
+            <section className="bg-backgroundBlue p-1.5">
                 <InvestigationCard />
             </section>
             <Footer />

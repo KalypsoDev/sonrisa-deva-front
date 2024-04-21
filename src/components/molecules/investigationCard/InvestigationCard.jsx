@@ -12,7 +12,7 @@ const InvestigationCard = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-4" style={shadowStyle}>
+            <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-6" style={shadowStyle}>
                 <div className="flex flex-col items-center justify-center bg-darkBlue rounded-t-lg md:rounded-l-lg h-72 md:h-auto md:w-56 md:flex-none md:justify-center">
                     <div className="w-44 flex items-center justify-center mb-5">
                         <img className="w-full md:h-auto" src="src\assets\img\FastSpain 1.png" alt="Fast Spain Logo" />
@@ -37,7 +37,7 @@ const InvestigationCard = () => {
                         </div>
                         <div className="flex justify-evenly">
                             <div className="flex justify-center mr-3">
-                                <div className={`bg-darkBlue dark:bg-blue-800 text-white border border-gray-200 rounded-lg shadow-md w-full p-5 flex flex-col items-center hover:transform hover:scale-105 transition-transform ${isHoveredCoin ? 'w-96' : ''}`} onMouseEnter={() => setIsHoveredCoin(true)} onMouseLeave={() => setIsHoveredCoin(false)}>
+                                <div className={`bg-darkBlue dark:bg-blue-800 text-white border border-gray-200 rounded-lg shadow-md w-full p-5 flex flex-col items-center hover:transform hover:scale-100 transition-transform ${isHoveredCoin ? 'w-96' : ''}`} onMouseEnter={() => setIsHoveredCoin(true)} onMouseLeave={() => setIsHoveredCoin(false)}>
                                     <div className="flex items-center justify-center mb-4 px-3 sm:px-14">
                                         {isHoveredCoin ? null : <FaCoins className='text-5xl' />}
                                     </div>
@@ -52,7 +52,7 @@ const InvestigationCard = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center ml-3">
-                                <div className={`bg-darkBlue dark:bg-blue-800 text-white border border-gray-200 rounded-lg shadow-md w-full p-5 flex flex-col items-center hover:transform hover:scale-105 transition-transform ${isHoveredHospital ? 'w-96' : ''}`} onMouseEnter={() => setIsHoveredHospital(true)} onMouseLeave={() => setIsHoveredHospital(false)}>
+                                <div className={`bg-darkBlue dark:bg-blue-800 text-white border border-gray-200 rounded-lg shadow-md w-full p-5 flex flex-col items-center hover:transform hover:scale-100 transition-transform ${isHoveredHospital ? 'w-96' : ''}`} onMouseEnter={() => setIsHoveredHospital(true)} onMouseLeave={() => setIsHoveredHospital(false)}>
                                     <div className="flex items-center justify-center mb-4 px-3 sm:px-14">
                                         {isHoveredHospital ? null : <FaHospital className='text-5xl' />}
                                     </div>

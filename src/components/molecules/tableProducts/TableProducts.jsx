@@ -9,78 +9,18 @@ const TableProducts = () => {
     const productsPerPage = 6;
 
     const sampleProducts = [
-        {
-            "name": "Producto 1",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 10,
-            "price": 25.99
-          },
-          {
-            "name": "Producto 2",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 5,
-            "price": 15.99
-          },
-          {
-            "name": "Producto 3",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 20,
-            "price": 39.99
-          },
-          {
-            "name": "Producto 4",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 8,
-            "price": 19.99
-          },
-          {
-            "name": "Producto 5",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 15,
-            "price": 29.99
-          },
-          {
-            "name": "Producto 6",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 12,
-            "price": 34.99
-          },
-          {
-            "name": "Producto 7",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 3,
-            "price": 9.99
-          },
-          {
-            "name": "Producto 8",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 18,
-            "price": 22.99
-          },
-          {
-            "name": "Producto 9",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 6,
-            "price": 17.99
-          },
-          {
-            "name": "Producto 10",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 25,
-            "price": 31.99
-          },
-          {
-            "name": "Producto 11",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 4,
-            "price": 12.99
-          },
-          {
-            "name": "Producto 12",
-            "image_url": "https://via.placeholder.com/250",
-            "stock": 9,
-            "price": 27.99
-          }
+        { "name": "Producto 1", "image_url": "https://via.placeholder.com/250", "stock": 10, "price": 25.99 },
+        { "name": "Producto 2", "image_url": "https://via.placeholder.com/250", "stock": 5, "price": 15.99 },
+        { "name": "Producto 3", "image_url": "https://via.placeholder.com/250", "stock": 20, "price": 39.99 },
+        { "name": "Producto 4", "image_url": "https://via.placeholder.com/250", "stock": 8, "price": 19.99 },
+        { "name": "Producto 5", "image_url": "https://via.placeholder.com/250", "stock": 15, "price": 29.99 },
+        { "name": "Producto 6", "image_url": "https://via.placeholder.com/250", "stock": 12, "price": 34.99 },
+        { "name": "Producto 7", "image_url": "https://via.placeholder.com/250", "stock": 3, "price": 9.99 },
+        { "name": "Producto 8", "image_url": "https://via.placeholder.com/250", "stock": 18, "price": 22.99 },
+        { "name": "Producto 9", "image_url": "https://via.placeholder.com/250", "stock": 6, "price": 17.99 },
+        { "name": "Producto 10", "image_url": "https://via.placeholder.com/250", "stock": 25, "price": 31.99 },
+        { "name": "Producto 11", "image_url": "https://via.placeholder.com/250", "stock": 4, "price": 12.99 },
+        { "name": "Producto 12", "image_url": "https://via.placeholder.com/250", "stock": 9, "price": 27.99 },
         ];
 
         useEffect(() => {

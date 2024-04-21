@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container flex flex-wrap flex-row justify-center md:justify-between max-w-screen-xl mx-auto">
         <div className="flex flex-col text-center justify-center mb-2 md:mb-0 md:justify-evenly justify-items-center">
           <Link to="/aviso-legal" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Aviso legal</Link>
-          <Link to="/politicas-privacidad" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Política de privacidad</Link>
+          <Link to="/politica-privacidad" className="font-montserratRegular text-darkGrey hover:text-primaryBlue mt-2">Política de privacidad</Link>
         </div>
         <div className="flex flex-col items-center mx-auto">
           <div className="flex justify-center mx-auto pb-4">

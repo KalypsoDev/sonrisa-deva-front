@@ -31,7 +31,7 @@ const Router = () => {
                   <Route path='/solicitar-producto' element={<ProductFormPage/>}></Route>
                   <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
                   <Route path='/aviso-legal' element={<LegalNoticePage/>}></Route>
-                  <Route path='/politicas-privacidad' element={<PrivacyPolicyPage/>}></Route>
+                  <Route path='/politica-privacidad' element={<PrivacyPolicyPage/>}></Route>
                   <Route path='/investigacion' element={<InvestigationPage/>}></Route>
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
           </Routes>

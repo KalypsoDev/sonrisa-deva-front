@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Isotipo from "../../../assets/isologo.png";
+import { Button } from "../../atoms/button/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -124,12 +125,10 @@ export function NavbarMolecule() {
                       Contacto
                     </a>
                   </li>
-                  <button
-                    type="button"
+                  <Button
+                    text="Colabora"
                     className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
-                  >
-                    Colabora
-                  </button>
+                  />
                 </ul>
               </div>
             </div>

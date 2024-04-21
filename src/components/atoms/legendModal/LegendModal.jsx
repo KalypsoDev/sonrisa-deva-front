@@ -16,7 +16,7 @@ const LegendModal = ({ isOpen, handleClose }) => {
                                 Leyenda de estados
                             </h3>
                             <button
-                                className="text-primaryBlue text-2xl hover:text-gray-800"
+                                className="text-primaryBlue text-2xl hover:primaryBlue"
                                 onClick={handleClose}
                             >
                                 <IoIosCloseCircle />

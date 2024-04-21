@@ -14,7 +14,7 @@ export function NavbarMolecule() {
 
   return (
     <>
-      <nav className="bg-white border-gray-200">
+      <nav className="bg-white border-gray-200 font-montserratRegular">
         <div className="flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
           <div className="flex flex-row justify-around items-center md:flex-row md:justify-between w-full xl:flex xl:flex-row">
             <div className="order-1 md:order-0 isologo">
@@ -26,7 +26,7 @@ export function NavbarMolecule() {
                 />
               </Link>
             </div>
-            <div className="order-0 md:order-1 hamburguerMenu text-md md:text-center">
+            <div className="order-0 md:order-1 hamburguerMenu md:w-4/5 w-auto text-md md:text-center">
               <button
                 onClick={toggleMenu}
                 type="button"
@@ -57,7 +57,7 @@ export function NavbarMolecule() {
                 } w-full md:block md:w-auto absolute top-full left-0 z-20 bg-white md:relative md:mt-0 md:bg-transparent`}
                 id="navbar-default"
               >
-                <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center">
+                <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center text-sm md:text-xs lg:text-base xl:text-lg md:justify-between">
                   <li>
                     <a
                       href="#"

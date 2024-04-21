@@ -102,8 +102,8 @@ export function NavbarMolecule() {
                     </a>
                   </li>
                   <li onClick={() => handleSectionClick("eventos")}>
-                    <a
-                      href="#"
+                    <Link
+                      to="/eventos"
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "eventos"
                           ? "active-text-color underline"
@@ -111,11 +111,11 @@ export function NavbarMolecule() {
                       }`}
                     >
                       Eventos
-                    </a>
+                    </Link>
                   </li>
                   <li onClick={() => handleSectionClick("contacto")}>
-                    <a
-                      href="#"
+                    <Link
+                      to="/formulario-contacto"
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "contacto"
                           ? "active-text-color underline"
@@ -123,12 +123,14 @@ export function NavbarMolecule() {
                       }`}
                     >
                       Contacto
-                    </a>
+                    </Link>
                   </li>
-                  <Button
-                    text="Colabora"
-                    className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
-                  />
+                  <Link to="/tienda-solidaria">
+                    <Button
+                      text="Colabora"
+                      className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
+                    />
+                  </Link>
                 </ul>
               </div>
             </div>

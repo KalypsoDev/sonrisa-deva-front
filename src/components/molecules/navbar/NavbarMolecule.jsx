@@ -152,3 +152,5 @@ export function NavbarMolecule() {
     </>
   );
 }
+
+export default NavbarMolecule;

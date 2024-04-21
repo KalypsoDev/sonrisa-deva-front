@@ -11,7 +11,6 @@ import ProductFormPage from '../components/pages/productFormPage/ProductFormPage
 import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
 import LegalNoticePage from '../components/pages/legalNoticePage/LegalNoticePage';
 import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPolicyPage';
-import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 
 const Router = () => {
     return (

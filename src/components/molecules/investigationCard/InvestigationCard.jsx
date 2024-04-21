@@ -6,10 +6,14 @@ const InvestigationCard = () => {
     const [isHoveredCoin, setIsHoveredCoin] = useState(false);
     const [isHoveredHospital, setIsHoveredHospital] = useState(false);
 
+    const shadowStyle = {
+        boxShadow: '11px 10px 4px rgba(233, 241, 245, 0.7)'
+      };
+
     return (
         <>
-            <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-4">
-                <div className={`flex flex-col items-center justify-center bg-darkBlue rounded-t-lg md:rounded-l-lg h-96 md:h-auto md:w-56 md:flex-none md:justify-center ${isHoveredHospital ? 'w-48' : ''}`}>
+            <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-4" style={shadowStyle}>
+                <div className="flex flex-col items-center justify-center bg-darkBlue rounded-t-lg md:rounded-l-lg h-72 md:h-auto md:w-56 md:flex-none md:justify-center">
                     <div className="w-44 flex items-center justify-center mb-5">
                         <img className="w-full md:h-auto" src="src\assets\img\FastSpain 1.png" alt="Fast Spain Logo" />
                     </div>

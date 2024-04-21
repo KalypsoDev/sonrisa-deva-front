@@ -20,7 +20,7 @@ export function NavbarMolecule() {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 font-montserratRegular">
+      <nav className="bg-white border-gray-200 font-montserratRegular drop-shadow-[0px_6px_6px_rgba(0,130,202,0.3)]">
         <div className="flex flex-wrap items-center justify-start md:justify-between mx-auto p-4 relative">
           <div className="flex flex-row justify-around items-center md:flex-row md:justify-between w-full xl:flex xl:flex-row">
             <div className="order-1 md:order-0 isologo">

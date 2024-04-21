@@ -59,12 +59,12 @@ const PrivacyPolicyPage = () => {
                 <h2 className="text-lg md:text-xl font-montserratBold text-left mb-2"> ¿Por qué recopilamos dicha información personal?</h2>
                 <p className="text-base md:text-lg font-montserratRegular text-left">
                 Recopilamos dicha información personal y no personal para los siguientes propósitos:</p>
-                <ul>
-                  <li>- Para proporcionar y operar los servicios</li>
-                  <li>- Para proporcionar a nuestros usuarios asistencia continua al cliente y soporte técnico</li>
-                  <li>- Para poder contactar a nuestros visitantes y usuarios con avisos generales y personalizados relacionados con el servicio y mensajes promocionales</li>
-                  <li>- Para crear datos estadísticos agregados y otra información no personal agregada o deducida, que podamos utilizar para proporcionar y mejorar nuestros servicios</li>
-                  <li>- Para cumplir con las leyes y regulaciones aplicables.</li>
+                <ul className="list-disc ml-6 text-base md:text-lg">
+                  <li>Para proporcionar y operar los servicios</li>
+                  <li>Para proporcionar a nuestros usuarios asistencia continua al cliente y soporte técnico</li>
+                  <li>Para poder contactar a nuestros visitantes y usuarios con avisos generales y personalizados relacionados con el servicio y mensajes promocionales</li>
+                  <li>Para crear datos estadísticos agregados y otra información no personal agregada o deducida, que podamos utilizar para proporcionar y mejorar nuestros servicios</li>
+                  <li>Para cumplir con las leyes y regulaciones aplicables.</li>
                 </ul>
             </div>
 
@@ -72,13 +72,13 @@ const PrivacyPolicyPage = () => {
                 <h2 className="text-lg md:text-xl font-montserratBold text-left mb-2"> ¿Cuáles son los derechos de los interesados?</h2>
                 <p className="text-base md:text-lg font-montserratRegular text-left">
                 Los derechos de protección de datos que podrán ejercer los interesados, cuando procedan, son:</p>
-                <ul>
-                  <li>- Derecho a solicitar el acceso a los datos personales relativos al interesado.</li>
-                  <li>- Derecho de rectificación o supresión.</li>
-                  <li>- Derecho de oposición.</li>
-                  <li>- Derecho a solicitar la limitación de su tratamiento.</li>
-                  <li>- Derecho a la portabilidad de los datos.</li>
-                  <li>- Derecho a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de datos.</li>
+                <ul className="list-disc ml-6 text-base md:text-lg">
+                  <li>Derecho a solicitar el acceso a los datos personales relativos al interesado.</li>
+                  <li>Derecho de rectificación o supresión.</li>
+                  <li>Derecho de oposición.</li>
+                  <li>Derecho a solicitar la limitación de su tratamiento.</li>
+                  <li>Derecho a la portabilidad de los datos.</li>
+                  <li>Derecho a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de datos.</li>
                 </ul>
             </div>
 

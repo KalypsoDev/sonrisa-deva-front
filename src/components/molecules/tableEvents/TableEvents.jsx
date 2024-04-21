@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
+import Pagination from '../../atoms/pagination/Pagination';
 
 
 const TableEvents = () => {
@@ -9,7 +10,22 @@ const TableEvents = () => {
         {title: 'Evento 3', image_url: 'https://via.placeholder.com/150', location: 'Ubicación 3', date: '27-04-2024', hour: '18:00', collection: '1000',  description: 'Descripción del Evento 3', },
         {title: 'Evento 4', image_url: 'https://via.placeholder.com/150', location: 'Ubicación 4', date: '28-04-2024', hour: '12:00', collection: '1200',  description: 'Descripción del Evento 4', },
         {title: 'Evento 5', image_url: 'https://via.placeholder.com/150', location: 'Ubicación 5', date: '29-04-2024', hour: '16:00', collection: '1500',  description: 'Descripción del Evento 5', },
+        {title: 'Evento 6', image_url: 'https://via.placeholder.com/150', location: 'Ubicación 6', date: '30-04-2024', hour: '12:00', collection: '1700',  description: 'Descripción del Evento 6', },
+        {title: 'Evento 7', image_url: 'https://via.placeholder.com/150', location: 'Ubicación 7', date: '01-05-2024', hour: '16:00', collection: '1900',  description: 'Descripción del Evento 7', },
     ];
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const perPage = 5;
+
+    // Lógica para calcular los eventos a mostrar en la página actual
+    const indexOfLastEvent = currentPage * perPage;
+    const indexOfFirstEvent = indexOfLastEvent - perPage;
+    const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
             <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
@@ -42,7 +58,7 @@ const TableEvents = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {events.map((event, index) => (
+                    {currentEvents.map((event, index) => (
                         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
                                 <a href="#" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
@@ -77,6 +93,12 @@ const TableEvents = () => {
                     ))}
                 </tbody>
             </table>
+            <Pagination
+                currentPage={currentPage}
+                perPage={perPage}
+                totalItems={events.length}
+                onPageChange={handlePageChange}
+            />
         </div>
     );
 };

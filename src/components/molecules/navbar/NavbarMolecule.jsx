@@ -126,7 +126,7 @@ export function NavbarMolecule() {
                   </li>
                   <button
                     type="button"
-                    className="button-color text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                    className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
                   >
                     Colabora
                   </button>

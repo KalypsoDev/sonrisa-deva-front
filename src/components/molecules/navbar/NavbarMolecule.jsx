@@ -3,13 +3,18 @@ import Isotipo from "../../../assets/isologo.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import "../../../../src/App.css";
+import "../../../../src/index.css";
 
 export function NavbarMolecule() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleSectionClick = (section) => {
+    setActiveSection(section);
   };
 
   return (
@@ -58,50 +63,70 @@ export function NavbarMolecule() {
                 id="navbar-default"
               >
                 <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center text-sm md:text-xs lg:text-base xl:text-lg md:justify-between">
-                  <li>
+                  <li onClick={() => handleSectionClick("quienSoy")}>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                        activeSection === "quienSoy"
+                          ? "active-text-color underline"
+                          : ""
+                      }`}
                       aria-current="page"
                     >
                       ¿Quién soy?
                     </a>
                   </li>
-                  <li>
+                  <li onClick={() => handleSectionClick("sindromeAngelman")}>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                        activeSection === "sindromeAngelman"
+                          ? "active-text-color underline"
+                          : ""
+                      }`}
                     >
                       Síndrome de Angelman
                     </a>
                   </li>
-                  <li>
+                  <li onClick={() => handleSectionClick("investigacion")}>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                        activeSection === "investigacion"
+                          ? "active-text-color underline"
+                          : ""
+                      }`}
                     >
                       Investigación
                     </a>
                   </li>
-                  <li>
+                  <li onClick={() => handleSectionClick("eventos")}>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                        activeSection === "eventos"
+                          ? "active-text-color underline"
+                          : ""
+                      }`}
                     >
                       Eventos
                     </a>
                   </li>
-                  <li>
+                  <li onClick={() => handleSectionClick("contacto")}>
                     <a
                       href="#"
-                      className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                        activeSection === "contacto"
+                          ? "active-text-color underline"
+                          : ""
+                      }`}
                     >
                       Contacto
                     </a>
                   </li>
                   <button
                     type="button"
-                    className="buttonColor text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                    className="button-color text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
                   >
                     Colabora
                   </button>

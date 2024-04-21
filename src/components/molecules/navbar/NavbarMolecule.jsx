@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Isotipo from "../../../assets/isologo.png";
 import { Button } from "../../atoms/button/Button";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "../../../../src/index.css";
 
 export function NavbarMolecule() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname.slice(1);
+    setActiveSection(currentPath);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleSectionClick = (section) => {
-    setActiveSection(section);
   };
 
   return (
@@ -64,9 +66,10 @@ export function NavbarMolecule() {
                 id="navbar-default"
               >
                 <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center text-sm md:text-xs lg:text-base xl:text-lg md:justify-between">
-                  <li onClick={() => handleSectionClick("quienSoy")}>
-                    <a
-                      href="#"
+                  <li>
+                    <Link
+                      to="/quienSoy"
+                      onClick={() => setActiveSection("quienSoy")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "quienSoy"
                           ? "active-text-color underline"
@@ -75,11 +78,12 @@ export function NavbarMolecule() {
                       aria-current="page"
                     >
                       ¿Quién soy?
-                    </a>
+                    </Link>
                   </li>
-                  <li onClick={() => handleSectionClick("sindromeAngelman")}>
-                    <a
-                      href="#"
+                  <li>
+                    <Link
+                      to="/sindromeAngelman"
+                      onClick={() => setActiveSection("sindromeAngelman")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "sindromeAngelman"
                           ? "active-text-color underline"
@@ -87,11 +91,12 @@ export function NavbarMolecule() {
                       }`}
                     >
                       Síndrome de Angelman
-                    </a>
+                    </Link>
                   </li>
-                  <li onClick={() => handleSectionClick("investigacion")}>
-                    <a
-                      href="#"
+                  <li>
+                    <Link
+                      to="/investigacion"
+                      onClick={() => setActiveSection("investigacion")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "investigacion"
                           ? "active-text-color underline"
@@ -99,11 +104,12 @@ export function NavbarMolecule() {
                       }`}
                     >
                       Investigación
-                    </a>
+                    </Link>
                   </li>
-                  <li onClick={() => handleSectionClick("eventos")}>
+                  <li>
                     <Link
                       to="/eventos"
+                      onClick={() => setActiveSection("eventos")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "eventos"
                           ? "active-text-color underline"
@@ -113,9 +119,18 @@ export function NavbarMolecule() {
                       Eventos
                     </Link>
                   </li>
-                  <li onClick={() => handleSectionClick("contacto")}>
+                  <div className="md:order-4 order-6">
+                    <Link to="/tienda-solidaria">
+                      <Button
+                        text="Colabora"
+                        className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
+                      />
+                    </Link>
+                  </div>
+                  <li className="md:order-5 order-5">
                     <Link
                       to="/formulario-contacto"
+                      onClick={() => setActiveSection("contacto")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
                         activeSection === "contacto"
                           ? "active-text-color underline"
@@ -125,12 +140,6 @@ export function NavbarMolecule() {
                       Contacto
                     </Link>
                   </li>
-                  <Link to="/tienda-solidaria">
-                    <Button
-                      text="Colabora"
-                      className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
-                    />
-                  </Link>
                 </ul>
               </div>
             </div>

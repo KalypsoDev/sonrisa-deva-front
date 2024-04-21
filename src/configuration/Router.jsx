@@ -9,6 +9,7 @@ import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdm
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
 import ProductFormPage from '../components/pages/productFormPage/ProductFormPage';
 import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
+import TherapiesPage from '../components/pages/therapiesPage/TherapiesPage';
 
 const Router = () => {
     return (
@@ -24,6 +25,7 @@ const Router = () => {
                   <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
                   <Route path='/solicitar-producto' element={<ProductFormPage/>}></Route>
                   <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
+                  <Route path='/terapias' element={<TherapiesPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

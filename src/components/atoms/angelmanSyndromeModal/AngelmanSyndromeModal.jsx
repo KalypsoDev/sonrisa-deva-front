@@ -13,13 +13,13 @@ const AngelmanSyndromeModal = ({ therapy, handleClose }) => {
               <h3 className="text-lg font-montserratBold text-primaryBlue dark:text-white">
                 {modalTitle}
               </h3>
-              <button className="text-primaryBlue text-2xl hover:text-gray-800" onClick={handleClose}>
+              <button className="text-primaryBlue text-2xl hover:text-primaryBlue" onClick={handleClose}>
                 <IoIosCloseCircle />
               </button>
             </div>
             <div className="p-4 md:p-5 space-y-4">
               <div className="flex items-center">
-                <p className="text-base font-montserratBold leading-relaxed text-darkGrey dark:text-gray-400">
+                <p className="text-base font-montserratRegular leading-relaxed text-darkGrey dark:text-gray-400">
                   {modalDescription}
                 </p>
               </div>

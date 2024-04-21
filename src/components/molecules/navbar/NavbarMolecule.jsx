@@ -68,10 +68,10 @@ export function NavbarMolecule() {
                 <ul className="flex flex-col p-4 rounded-lg bg-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white md:items-center text-sm md:text-xs lg:text-base xl:text-lg md:justify-between">
                   <li>
                     <Link
-                      to="/quienSoy"
-                      onClick={() => setActiveSection("quienSoy")}
+                      to="/quien-soy"
+                      onClick={() => setActiveSection("quien-soy")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
-                        activeSection === "quienSoy"
+                        activeSection === "quien-soy"
                           ? "active-text-color underline"
                           : ""
                       }`}
@@ -82,10 +82,10 @@ export function NavbarMolecule() {
                   </li>
                   <li>
                     <Link
-                      to="/sindromeAngelman"
-                      onClick={() => setActiveSection("sindromeAngelman")}
+                      to="/sindrome-angelman"
+                      onClick={() => setActiveSection("sindrome-angelman")}
                       className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
-                        activeSection === "sindromeAngelman"
+                        activeSection === "sindrome-angelman"
                           ? "active-text-color underline"
                           : ""
                       }`}

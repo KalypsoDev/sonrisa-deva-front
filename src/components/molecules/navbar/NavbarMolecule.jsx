@@ -119,7 +119,15 @@ export function NavbarMolecule() {
                       Eventos
                     </Link>
                   </li>
-                  <li>
+                  <div className="md:order-4 order-6">
+                    <Link to="/tienda-solidaria">
+                      <Button
+                        text="Colabora"
+                        className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
+                      />
+                    </Link>
+                  </div>
+                  <li className="md:order-5 order-5">
                     <Link
                       to="/formulario-contacto"
                       onClick={() => setActiveSection("contacto")}
@@ -132,12 +140,6 @@ export function NavbarMolecule() {
                       Contacto
                     </Link>
                   </li>
-                  <Link to="/tienda-solidaria">
-                    <Button
-                      text="Colabora"
-                      className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
-                    />
-                  </Link>
                 </ul>
               </div>
             </div>

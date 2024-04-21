@@ -9,6 +9,9 @@ import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdm
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
 import ProductFormPage from '../components/pages/productFormPage/ProductFormPage';
 import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
+import LegalNoticePage from '../components/pages/legalNoticePage/LegalNoticePage';
+import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPolicyPage';
+import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 
 const Router = () => {
     return (
@@ -24,6 +27,9 @@ const Router = () => {
                   <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
                   <Route path='/solicitar-producto' element={<ProductFormPage/>}></Route>
                   <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
+                  <Route path='/aviso-legal' element={<LegalNoticePage/>}></Route>
+                  <Route path='/politicas-privacidad' element={<PrivacyPolicyPage/>}></Route>
+                  <Route path='/investigacion' element={<InvestigationPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

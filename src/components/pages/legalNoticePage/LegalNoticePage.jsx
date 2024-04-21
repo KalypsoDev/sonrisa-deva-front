@@ -7,7 +7,7 @@ const LegalNoticePage = () => {
     <>
       <NavbarMolecule />
       <section className="bg-backgroundBlue">
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto p-4">
           <h1 className="text-2xl md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">AVISO LEGAL</h1>
           <div className="flex flex-col justify-center">
             <div className="mb-4">

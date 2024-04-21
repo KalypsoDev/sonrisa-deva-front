@@ -28,6 +28,7 @@ const TableEvents = () => {
 
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
+             <div className="overflow-y-auto">
             <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
                 <thead className="text-xs text-white bg-primaryLila dark:bg-gray-700 dark:text-gray-400">
                     <tr>
@@ -99,6 +100,7 @@ const TableEvents = () => {
                 totalItems={events.length}
                 onPageChange={handlePageChange}
             />
+        </div>
         </div>
     );
 };

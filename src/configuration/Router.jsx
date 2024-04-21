@@ -4,7 +4,7 @@ import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';
 import ProductPage from '../components/pages/productPage/ProductPage';
-import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
+import ContactFormPage from '../components/pages/contactFormPage/ContactFormPage';
 import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdminPage';
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
 import AngelmanSyndromePage from '../components/pages/angelmanSyndromePage/AngelmanSyndromePage';

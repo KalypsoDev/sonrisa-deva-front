@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { HomePage } from '../components/pages/homePage/HomePage';
+import HomePage from '../components/pages/homePage/HomePage';
 import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';

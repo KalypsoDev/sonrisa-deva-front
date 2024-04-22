@@ -108,6 +108,7 @@ const EventPage = () => {
               <CardEvent
                 title={event.title}
                 date={event.date || 'Por determinar'} // Mostrar "Por determinar" si no hay fecha
+                image_url={event.image_url}
                 hour={event.hour}
                 location={event.location}
                 collection={event.collection}
@@ -135,6 +136,7 @@ const EventPage = () => {
               <CardEvent
                 title={event.title}
                 date={event.date}
+                image_url={event.image_url}
                 hour={event.hour}
                 location={event.location}
                 collection={event.collection}

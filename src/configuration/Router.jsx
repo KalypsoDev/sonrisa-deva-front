@@ -7,8 +7,12 @@ import ProductPage from '../components/pages/productPage/ProductPage';
 import ContactFormPage from '../components/pages/contactForm/ContactFormPage';
 import NewEventAdminPage from '../components/pages/newEventAdminPage/NewEventAdminPage';
 import LoginAdminPage from '../components/pages/loginAdminPage/LoginAdminPage';
+import AngelmanSyndromePage from '../components/pages/angelmanSyndromePage/AngelmanSyndromePage';
 import ProductFormPage from '../components/pages/productFormPage/ProductFormPage';
 import TableProductsAdminPage from '../components/pages/tableProductsAdminPage/TableProductsAdminPage';
+import LegalNoticePage from '../components/pages/legalNoticePage/LegalNoticePage';
+import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPolicyPage';
+import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPage/OrderedProductsAdminPage';
 
 const Router = () => {
@@ -23,8 +27,12 @@ const Router = () => {
                   <Route path='/formulario-contacto' element={<ContactFormPage/>}></Route>
                   <Route path='/admin/agregar-evento' element={<NewEventAdminPage/>}></Route>
                   <Route path='/inicio-sesion-admin' element={<LoginAdminPage/>}></Route>
+                  <Route path='/sindrome-angelman' element={<AngelmanSyndromePage/>}></Route>
                   <Route path='/solicitar-producto' element={<ProductFormPage/>}></Route>
                   <Route path='/admin/productos' element={<TableProductsAdminPage/>}></Route>
+                  <Route path='/aviso-legal' element={<LegalNoticePage/>}></Route>
+                  <Route path='/politica-privacidad' element={<PrivacyPolicyPage/>}></Route>
+                  <Route path='/investigacion' element={<InvestigationPage/>}></Route>
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>

@@ -131,7 +131,7 @@ const FetchApi = {
         }
     },
 
-    getOrder: async () => {
+    getOrder: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/orders/${id}`);
             return response.data;
@@ -149,7 +149,7 @@ const FetchApi = {
         }
     },
 
-    getOrderProduct: async () => {
+    getOrderProduct: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/order-products/${id}`);
             return response.data;
@@ -167,7 +167,7 @@ const FetchApi = {
         }
     },
 
-    getCustomer: async () => {
+    getCustomer: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
             return response.data;

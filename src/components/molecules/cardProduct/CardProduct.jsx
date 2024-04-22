@@ -1,7 +1,6 @@
 import React from 'react';
 
-const CardProduct = ({ product, onAddToCart }) => {
-    const { name, description, price, imageSrc } = product;
+const CardProduct = ({ image_url, name, description, price }) => {
   
     const shadowStyle = {
       boxShadow: '11px 10px 4px rgba(233, 241, 245, 0.7)'
@@ -9,7 +8,7 @@ const CardProduct = ({ product, onAddToCart }) => {
   
     return (
       <div className="max-w-64 bg-white border rounded-[20px] shadow-md mx-auto mb-4" style={shadowStyle}>
-        <img className="rounded-t-lg w-full h-40" src={imageSrc} alt="Imagen de Producto" />
+        <img className="rounded-t-lg w-full h-40" src={image_url} alt="Imagen de Producto" />
         <div className="p-3">
           <h4 className="text-lg font-montserratBold text-darkBlue">{name}</h4>
           <div className='min-h-4'>

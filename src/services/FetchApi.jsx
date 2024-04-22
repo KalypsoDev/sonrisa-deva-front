@@ -146,6 +146,15 @@ const FetchApi = {
         }
     },
 
+    getOrderProduct: async () => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/order-products/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
     createOrderProduct: async () => {
         try {
             const response = await axios.post(`${BACKEND_API_URL}/order-products`);
@@ -155,17 +164,18 @@ const FetchApi = {
         }
     },
 
-    createCustomer: async () => {
+    getCustomer: async () => {
         try {
-            const response = await axios.post(`${BACKEND_API_URL}/customers`);
+            const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
             return response.data;
         } catch (error) {
             throw error;
         }
     },
-    getCustomer: async () => {
+
+    createCustomer: async () => {
         try {
-            const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
+            const response = await axios.post(`${BACKEND_API_URL}/customers`);
             return response.data;
         } catch (error) {
             throw error;

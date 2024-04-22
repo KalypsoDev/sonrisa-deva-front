@@ -7,8 +7,6 @@ import { IoCloseCircle } from "react-icons/io5";
 
 const CardEvent = ({ title, image_url, date, hour, location, collection }) => {
 
-
-  console.log('Datos del evento:', { title, image_url, date, hour, location, collection });
   const [isZoomed, setIsZoomed] = useState(false);
 
   const handleImageClick = () => {
@@ -20,11 +18,30 @@ const CardEvent = ({ title, image_url, date, hour, location, collection }) => {
       return 'Por determinar';
     } else {
       const dateObj = new Date(dateString);
-      return `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+      // Verifica si el resultado es un valor válido de fecha
+      if (isNaN(dateObj.getTime())) {
+        return 'Por determinar';
+      } else {
+        return `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+      }
+    }
+  };
+
+  const formatHour = (hourString) => {
+    if (!hourString || hourString.trim() === '') {
+      return 'Por determinar';
+    } else {
+      // Separar la hora y los minutos del string de la hora
+      const [hourPart, minutePart] = hourString.split(':');
+      // Devolver la hora formateada con minutos
+      return `${hourPart}:${minutePart}`;
     }
   };
 
   const formattedDate = formatDate(date);
+  const formattedHour = formatHour(hour);
+
+ 
 
 
   const shadowStyle = {
@@ -51,7 +68,7 @@ const CardEvent = ({ title, image_url, date, hour, location, collection }) => {
             </div>
             <div className="flex items-center my-2">
               <FaClock className="w-6 h-6 mr-2 text-darkBlue" />
-              <p className="font-montserratBold text-darkBlue dark:text-blue-950">Hora: {hour}</p>
+              <p className="font-montserratBold text-darkBlue dark:text-blue-950">Hora: {formattedHour}</p>
             </div>
             <div className="flex items-center my-2">
               <FaLocationDot className="w-6 h-6 mr-2 text-darkBlue" />

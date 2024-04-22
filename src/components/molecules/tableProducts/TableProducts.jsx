@@ -63,7 +63,7 @@ const TableProducts = () => {
                         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             {/* Celdas de cada fila */}
                             <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
-                                <a href="" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
+                                <a href="http://localhost:5173/admin/agregar-producto" target="_blank" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
                                 <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center"><FaTrashAlt /></a>
                             </td>
                             <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">

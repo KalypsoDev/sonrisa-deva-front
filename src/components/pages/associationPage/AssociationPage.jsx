@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
+import Navbar from '../../molecules/navbar/Navbar';
 import Footer from '../../molecules/footer/Footer';
 import AssociationCard from '../../molecules/associationCard/AssociationCard';
 import { FaRibbon } from "react-icons/fa";
@@ -10,7 +10,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 const AssociationPage = () => {
   return (
     <>
-      <NavbarMolecule />
+      <Navbar />
       <section className='bg-backgroundBlue pt-7 relative'>
         <div className="flex justify-items-center">
           <div className="flex flex-wrap md:flex-row md:justify-center">

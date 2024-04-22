@@ -8,7 +8,7 @@ const InstagramAPI = async () => {
     return posts;
   } catch (error) {
     console.error('Error fetching Instagram data:', error);
-    return []; 
+    return [];
   }
 };
 export default InstagramAPI;

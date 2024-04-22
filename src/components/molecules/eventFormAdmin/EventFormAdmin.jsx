@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
+const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) => {
     const [formData, setFormData] = useState({
         title: '',
         image_url: null,
@@ -152,7 +152,7 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
                 
             </div>
             <div>
-                <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5 mr-5">{title === 'AGREGAR EVENTO' ? 'Agregar' : 'Editar'}</button>
+            <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5 mr-5">{submitButtonText}</button>
                 <button type="button" onClick={onCancel} className="text-primaryLila bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
             </div>
         </form>

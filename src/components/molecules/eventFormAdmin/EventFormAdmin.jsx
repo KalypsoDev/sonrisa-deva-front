@@ -13,11 +13,12 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
 
     useEffect(() => {
         if (event) {
+            const formattedDate = event.date.includes('-') ? event.date : convertDateFormat(event.date);
             setFormData({
                 title: event.title || '',
                 image_url: event.image_url || null,
                 location: event.location || '',
-                date: event.date || '',
+                date: formattedDate || '',
                 hour: event.hour || '',
                 collection: event.collection || '',
                 description: event.description || '',
@@ -35,7 +36,19 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        const convertedFormData = {
+            ...formData,
+            date: convertDateFormat(formData.date)
+        };
+        onSubmit(convertedFormData);
+    };
+
+    const convertDateFormat = (date) => {
+        const parts = date.split('-');
+        if (parts.length === 3) {
+            return `${parts[2]}-${parts[1]}-${parts[0]}`;
+        }
+        return date;
     };
 
     return (

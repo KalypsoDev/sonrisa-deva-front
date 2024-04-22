@@ -172,6 +172,34 @@ const FetchApi = {
         }
     },
 
+    updateShippedOrder: async (id) => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await axios.put(`${BACKEND_API_URL}/order-products/orders/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    updateCancelledOrder: async (id) => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await axios.put(`${BACKEND_API_URL}/orders/cancelled/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
 
 }
 

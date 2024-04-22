@@ -21,9 +21,19 @@ const TableEvents = () => {
                 console.error('Error al obtener los eventos:', error);
             }
         };
-
         fetchEvents();
     }, []);
+
+    const handleDeleteEvent = async (eventId) => {
+        try {
+            await FetchApi.deleteEvent(eventId);
+            // Actualizar la lista de eventos después de eliminar
+            const updatedEvents = events.filter(event => event.id !== eventId);
+            setEvents(updatedEvents);
+        } catch (error) {
+            console.error('Error al eliminar el evento:', error);
+        }
+    };
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -80,8 +90,8 @@ const TableEvents = () => {
                         {currentEvents.map((event, index) => (
                             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
-                                    <a href="#" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
-                                    <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center"><FaTrashAlt /></a>
+                                    <a href="http://localhost:5173/admin/agregar-evento" target="_blank" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
+                                    <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center" onClick={() => handleDeleteEvent(event.id)}><FaTrashAlt /></a>
                                 </td>
                                 <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
                                     {event.title}

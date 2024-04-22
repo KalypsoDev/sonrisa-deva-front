@@ -128,6 +128,15 @@ const FetchApi = {
         }
     },
 
+    getOrder: async () => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/orders/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
     createOrder: async () => {
         try {
             const response = await axios.post(`${BACKEND_API_URL}/orders`);
@@ -136,6 +145,7 @@ const FetchApi = {
             throw error;
         }
     },
+
     createOrderProduct: async () => {
         try {
             const response = await axios.post(`${BACKEND_API_URL}/order-products`);
@@ -161,7 +171,6 @@ const FetchApi = {
             throw error;
         }
     },
-
 
 
 }

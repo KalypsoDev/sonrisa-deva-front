@@ -1,4 +1,4 @@
-import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
+import Navbar from '../../molecules/navbar/Navbar';
 import Footer from '../../molecules/footer/Footer';
 
 const LegalNoticePage = () => {
@@ -6,7 +6,7 @@ const LegalNoticePage = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
-        <NavbarMolecule />
+        <Navbar />
         <section className="flex-grow bg-backgroundBlue">
           <div className="container flex flex-col items-center mx-auto p-4 h-full">
             <h1 className="text-2xl p-4 md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">AVISO LEGAL</h1>

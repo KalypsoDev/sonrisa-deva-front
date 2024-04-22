@@ -12,9 +12,10 @@ const TableOrders = () => {
   const [iconToShow, setIconToShow] = useState({});
 
   useEffect(() => {
-    const fetchOrders = async () => {
+    const fetchOrders = async (id) => {
+        console.log('Valor de id:', id);
       try {
-        const ordersData = await FetchApi.getOrderProduct(); // Llama a la función para obtener los pedidos desde la API
+        const ordersData = await FetchApi.getOrderProduct(id); // Llama a la función para obtener los pedidos desde la API
         setFilteredOrders(ordersData); // Almacena los pedidos en el estado local
       } catch (error) {
         console.error('Error al obtener los pedidos:', error);

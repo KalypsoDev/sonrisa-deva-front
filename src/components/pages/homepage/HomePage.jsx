@@ -1,13 +1,15 @@
-import  Navbar  from "../../molecules/navbar/Navbar";
-import  Footer  from "../../molecules/footer/Footer";
-
+import Navbar from "../../molecules/navbar/Navbar";
+import Footer from "../../molecules/footer/Footer";
+import InstagramPosts from "../../molecules/instagramPosts/InstagramPosts";
 
 export function HomePage() {
   return (
     <>
-        <Navbar></Navbar>
-        <h1 className="font-montserratBold">Ésta es la home page</h1>
-        <Footer></Footer>
+      <Navbar />
+      <section className="bg-backgroundBlue p-1.5">
+        <InstagramPosts />
+      </section>
+      <Footer />
     </>
   );
 }

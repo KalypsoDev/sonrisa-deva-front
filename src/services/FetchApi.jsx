@@ -145,6 +145,22 @@ const FetchApi = {
         }
     },
 
+    createCustomer: async () => {
+        try {
+            const response = await axios.post(`${BACKEND_API_URL}/customers`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+    getCustomer: async () => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
 
 
 

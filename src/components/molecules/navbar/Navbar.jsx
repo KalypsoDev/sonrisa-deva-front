@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import "../../../../src/index.css";
 
-export function NavbarMolecule() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const location = useLocation();
@@ -152,3 +152,5 @@ export function NavbarMolecule() {
     </>
   );
 }
+
+export default Navbar;

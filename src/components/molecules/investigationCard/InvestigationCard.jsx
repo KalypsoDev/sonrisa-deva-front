@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaCoins } from "react-icons/fa";
 import { FaHospital } from "react-icons/fa6";
+import FastSpainLogo from "../../../assets/img/FastSpainLogo.png";
 
 const InvestigationCard = () => {
     const [isHoveredCoin, setIsHoveredCoin] = useState(false);
@@ -15,7 +16,7 @@ const InvestigationCard = () => {
             <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-6" style={shadowStyle}>
                 <div className="flex flex-col items-center justify-center bg-darkBlue rounded-t-lg md:rounded-l-lg h-72 md:h-auto md:w-56 md:flex-none md:justify-center">
                     <div className="w-44 flex items-center justify-center mb-5">
-                        <img className="w-full md:h-auto" src="src\assets\img\FastSpain 1.png" alt="Fast Spain Logo" />
+                        <img className="w-full md:h-auto" src={FastSpainLogo} alt="Fast Spain Logo" />
                     </div>
                     <p className="text-white font-montserratRegular text-center px-4 py-2 md:text-left">FAST es una fundación, sin ánimo de lucro, que trabaja para curar el síndrome de Angelman. Su objetivo es llevar un tratamiento seguro y eficaz a la práctica médica actual lo más rápido posible.</p>
                 </div>

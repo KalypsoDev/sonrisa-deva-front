@@ -15,6 +15,9 @@ import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPoli
 import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPage/OrderedProductsAdminPage';
 import AssociationPage from '../components/pages/associationPage/AssociationPage';
+import AboutMePage from '../components/pages/aboutMePage/AboutMePage';
+
+
 
 const Router = () => {
     return (
@@ -36,6 +39,8 @@ const Router = () => {
                   <Route path='/investigacion' element={<InvestigationPage/>}></Route>
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
                   <Route path='/asociacion' element={<AssociationPage/>}></Route>
+                  <Route path='/acerca-de-mi' element={<AboutMePage/>}></Route>
+
           </Routes>
       </BrowserRouter>
     )

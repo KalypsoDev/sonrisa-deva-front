@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../../atoms/button/Button';
 
 const ProductForm = () => {
   return (
     <div className="bg-darkBlue font-montserratRegular dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-4">
       <div className="p-4">
         <form action="#">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="font-montserratRegular text-base text-darkGrey grid gap-4 sm:grid-cols-2">
             <div>
             <div className="w-full">
               <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">Nombre</label>
@@ -77,18 +79,10 @@ const ProductForm = () => {
             </div>
           </div>
           <div className="text-center mt-6">
-          <button
-            type="submit"
-            className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-redBin rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
-          >
-            Volver
-          </button>
-          <button
-            type="submit"
-            className="inline-flex items-center ml-4 px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-primaryBlue bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
-          >
-            Enviar
-          </button>
+          <Link to="/tienda-solidaria">
+          <Button type="button" className="font-montserratBold inline-flex items-center ml-0 px-6 py-2.5 mt-0 sm:mt-0 text-sm font-base text-center text-white bg-redBin rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800" text="Volver" />
+          </Link>
+          <Button type="submit" className="font-montserratBold inline-flex items-center ml-0 px-6 py-2.5 mt-0 sm:mt-0 text-sm font-base text-center text-primaryBlue bg-white rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800 ml-4" text="Enviar" />
           </div>
         </form>
       </div>

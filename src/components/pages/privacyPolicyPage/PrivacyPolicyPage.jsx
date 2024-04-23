@@ -1,11 +1,11 @@
-import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
+import Navbar from '../../molecules/navbar/Navbar';
 import Footer from '../../molecules/footer/Footer';
 
 const PrivacyPolicyPage = () => {
 
   return (
     <>
-      <NavbarMolecule />
+      <Navbar />
       <section className="bg-backgroundBlue">
         <div className="container mx-auto p-4">
           <h1 className="text-2xl md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">POLÍTICA DE PRIVACIDAD</h1>

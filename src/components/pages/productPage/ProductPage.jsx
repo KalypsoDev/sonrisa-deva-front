@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
+import Navbar from '../../molecules/navbar/Navbar';
 import Footer from '../../molecules/footer/Footer';
 import CardProduct from '../../molecules/cardProduct/CardProduct';
 import Pagination from '../../atoms/pagination/Pagination';
@@ -40,7 +40,7 @@ const ProductPage = () => {
 
   return (
     <>
-      <NavbarMolecule />
+      <Navbar />
       <section className="bg-backgroundBlue">
         <div className="container mx-auto py-8">
           <h1 className="text-2xl md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">TIENDA SOLIDARIA</h1>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CardEvent from '../../molecules/cardEvent/CardEvent';
-import { NavbarMolecule } from '../../molecules/navbar/NavbarMolecule';
-import Footer from '../../molecules/footer/Footer';
+import Navbar from '../../molecules/navbar/Navbar';
+import Footer  from '../../molecules/footer/Footer';
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 import FetchApi from '../../../services/FetchApi';
 
@@ -78,7 +78,7 @@ const EventPage = () => {
 
   return (
     <>
-      <NavbarMolecule />
+      <Navbar />
       <section className="bg-backgroundBlue min-h-screen">
         <div className="container mx-auto py-8">
           <h1 className="text-2xl md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">

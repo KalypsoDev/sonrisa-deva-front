@@ -2,7 +2,7 @@ import  Navbar  from "../../molecules/navbar/Navbar";
 import  Footer  from "../../molecules/footer/Footer";
 import CardWithIcon from "../../atoms/cardWithIcon/CardWithIcon";
 import { FaRegEnvelope } from "react-icons/fa";
-import { PiButterflyDuotone } from "react-icons/pi";
+import { PiButterflyFill } from "react-icons/pi";
 import { Link } from "react-router-dom"
 
 const WhoAmIPage = () => {
@@ -16,8 +16,8 @@ const WhoAmIPage = () => {
               backgroundColor="darkBlue"
               color="white"
               title="Sobre Deva"
-              Icon={PiButterflyDuotone}
-              colorIcon="white"
+              Icon={PiButterflyFill}
+              iconColor="white"
             />
           </Link>
           <Link to="/asociacion">

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import deva7 from "../../../assets/img/deva7.png";
-// import sAngelmanDeva from "../../../assets/img/sAngelmanDeva.jpg";
-// import sindromeAngelmanDeva from "../../../assets/img/sindromeAngelmanDeva.jpg";
 import { FaPlusCircle } from "react-icons/fa";
 import { FaChartPie } from "react-icons/fa6";
 import { FaDna } from "react-icons/fa6";

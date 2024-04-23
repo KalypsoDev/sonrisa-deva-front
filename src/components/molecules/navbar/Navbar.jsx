@@ -123,6 +123,7 @@ const Navbar = () => {
                     <Link to="/tienda-solidaria">
                       <Button
                         text="Colabora"
+                        type="button"
                         className="bg-primaryBlue drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
                       />
                     </Link>

@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.button-color {
-    background-color: #0082CA;
-}
-
-.active-text-color {
-    color: #0082CA;
-}
-
-.text-color:hover {
-    color: #0082CA;
-}
 
 @layer base {
 

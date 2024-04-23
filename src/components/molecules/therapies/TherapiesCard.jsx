@@ -1,5 +1,5 @@
 import React from 'react';
-import deva9 from "../../../assets/img/deva9.jpg";
+import deva9a from "../../../assets/img/deva9a.jpg";
 import { FaPlusCircle } from "react-icons/fa";
 
 const TherapiesCard = () => {
@@ -9,37 +9,37 @@ const TherapiesCard = () => {
 
     return (
         <>
-            <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-4xl hover:bg-gray-100 m-20 mx-auto" style={shadowStyle}>
+            <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-3xl hover:bg-gray-100 m-6 mx-auto" style={shadowStyle}>
 
-                <div className="flex flex-col items-center w-fit rounded-t-lg md:rounded-l-lg h-72 md:h-auto md:w-80 md:flex-none md:justify-center">
-                    <img className="rounded-lg w-full md:h-auto" src={deva9} alt="Deva Therapies" />
-                </div>
+                <img className="w-full object-cover rounded-t-lg h-full md:h-auto md:w-56 md:rounded-none md:rounded-s-lg" src={deva9a} alt="Imagen Deva" />
 
-                <div className="flex flex-col w-full justify-evenly md:pb-4 leading-normal">
-                    <div className="text-center mb-14">
-                        <h1 className="text-2xl font-montserratBold text-primaryBlue">TERAPIAS</h1>
-                    </div>
+                <div className="cardContent">
+                    <h1 className="justify-center text-center text-2xl font-montserratBold text-primaryBlue my-4 tracking-tight">TERAPIAS</h1>
 
-                    <div className="md:flex flex-col-2 w-full justify-center">
-                        <div className="text-darkGrey mb-1 p-2">
-                            <ul className="font-montserratRegular text-base">
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Fisioterapia</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Logopedia(miofuncional)</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Integración sensorial</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Psicología</li>
-                            </ul>
+                    <div className="allTherapies font-montserratRegular text-base text-darkGrey">
+                        <div className="md:flex flex-col-2">
+
+                            <div className="text-darkGrey mb-1 flex flex-wrap">
+                                <ul className="font-montserratRegular text-base">
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Fisioterapia</li>
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Logopedia(miofuncional)</li>
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Integración sensorial</li>
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Psicología</li>
+                                </ul>
+                            </div>
+                            <div className="text-darkGrey mb-2">
+                                <ul className="">
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Logopedia (CAA)</li>
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Hipoterapia</li>
+                                    <li className="flex p-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Terapia ocupacional</li>
+                                    <li className="flex pt-4 ml-4"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Intensivo Fisioterapia Therasuit</li>
+                                </ul>
+                            </div>
+                            
                         </div>
-                        <div className="text-darkGrey mb-2 p-2">
-                            <ul className="">
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Logopedia (CAA)</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Hipoterapia</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Terapia ocupacional</li>
-                                <li className="flex pb-8"><span className="text-primaryLila text-2xl px-1"><FaPlusCircle /></span> Intensivo Fisioterapia Therasuit</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

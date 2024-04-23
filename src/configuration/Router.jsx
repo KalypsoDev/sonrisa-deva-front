@@ -17,6 +17,7 @@ import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPa
 import AssociationPage from '../components/pages/associationPage/AssociationPage';
 import WhoAmIPage from '../components/pages/whoAmIPage/WhoAmIPage';
 import AboutDevaPage from '../components/pages/aboutDevaPage/AboutDevaPage';
+import CooperatePage from '../components/pages/cooperatePage/CooperatePage';
 
 const Router = () => {
     return (
@@ -40,6 +41,7 @@ const Router = () => {
                   <Route path='/asociacion' element={<AssociationPage/>}></Route>
                   <Route path='/quien-soy' element={<WhoAmIPage/>}></Route>
                   <Route path='/sobre-deva' element={<AboutDevaPage/>}></Route>
+                  <Route path='/colabora' element={<CooperatePage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

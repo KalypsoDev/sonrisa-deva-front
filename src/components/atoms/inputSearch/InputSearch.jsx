@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InputSearch = ({ data, onDataFiltered }) => {
+const InputSearch = ({ data, onDataFiltered, searchField }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearchChange = (e) => {
@@ -8,7 +8,7 @@ const InputSearch = ({ data, onDataFiltered }) => {
     setSearchTerm(searchText);
 
     const filteredData = data.filter(item =>
-      item.name.toLowerCase().includes(searchText)
+      item[searchField].toLowerCase().includes(searchText)
     );
 
     onDataFiltered(filteredData);
@@ -26,7 +26,7 @@ const InputSearch = ({ data, onDataFiltered }) => {
         <input
           type="text"
           id="table-search"
-          className="block pt-2 ps-10 text-sm text-darkGrey border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-primaryBlue focus:border-primaryBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="font-montserratRegular block pt-2 ps-10 text-sm text-darkGrey border border-gray-300 rounded-lg w-1/2 sm:w-48 bg-gray-50 focus:ring-primaryBlue focus:border-primaryBlue"
           placeholder="Búsqueda"
           value={searchTerm}
           onChange={handleSearchChange}
@@ -37,3 +37,4 @@ const InputSearch = ({ data, onDataFiltered }) => {
 };
 
 export default InputSearch;
+

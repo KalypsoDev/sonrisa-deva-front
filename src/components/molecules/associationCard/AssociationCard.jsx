@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AssociationCard = ({ icon, title, description, additionalText }) => {
-    // Verifica si la descripción es un arreglo de elementos de lista
     const isList = Array.isArray(description);
 
     return (

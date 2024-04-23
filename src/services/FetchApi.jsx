@@ -88,6 +88,15 @@ const FetchApi = {
         }
     },
 
+    getProductId: async (id) => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/products/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
     createProduct: async (formData) => {
         try {
             const token = localStorage.getItem('token');
@@ -103,11 +112,22 @@ const FetchApi = {
         }
     },
     
-    updateProduct: async (id) => {
+    updateProduct: async (id, productData) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/products/${id}`, {
+            const formData = new FormData();
+            formData.append('name', productData.name);
+            formData.append('stock', productData.stock);
+            formData.append('price', productData.price);
+            formData.append('description', productData.description);
+            
+            if (productData.image) {
+                formData.append('image_url', productData.image);
+            }
+            
+            const response = await axios.post(`${BACKEND_API_URL}/products/${id}`, formData, {
                 headers: {
+                    'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`
                 }
             });
@@ -116,6 +136,9 @@ const FetchApi = {
             throw error;
         }
     },
+    
+    
+    
 
     deleteProduct: async (id) => {
         try {

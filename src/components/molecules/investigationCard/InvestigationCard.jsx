@@ -46,7 +46,7 @@ const InvestigationCard = () => {
                                 <li className="font-montserratRegular mb-2">
                                     <div className='flex items-center'>
                                         <span className="font-montserratRegular text-3xl w-6 md:w-8 text-end">7</span>
-                                        <span className="ml-4">PENDIENTE DE PONER</span>
+                                        <span className="ml-4">están en etapas intermedias</span>
                                     </div>
                                 </li>
 

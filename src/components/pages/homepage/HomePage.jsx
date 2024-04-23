@@ -1,13 +1,20 @@
-import  {NavbarMolecule}  from "../../molecules/navbar/NavbarMolecule";
-import  {Footer}  from "../../molecules/footer/Footer";
+import React from 'react'
+import  Navbar  from "../../molecules/navbar/Navbar";
+import  Footer  from "../../molecules/footer/Footer";
+import  Carousel  from "../../molecules/carousel/Carousel";
+import InstagramPosts from "../../molecules/instagramPosts/InstagramPosts";
 
-
-export function HomePage() {
+const HomePage = () => {
   return (
     <>
-        <NavbarMolecule></NavbarMolecule>
-        <h1 className="font-montserratBold">Ésta es la home page</h1>
-        <Footer></Footer>
+      <Navbar />
+      <section className="bg-backgroundBlue p-1.5">
+	      <Carousel />
+        <InstagramPosts />
+      </section>
+      <Footer />
     </>
-  );
+  )
 }
+
+export default HomePage

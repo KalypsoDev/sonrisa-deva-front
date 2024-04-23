@@ -12,7 +12,7 @@ const CooperatePage = () => {
         <section className="flex-grow bg-backgroundBlue">
           <div className="container flex flex-col items-center mx-auto p-4 h-full">
             <h1 className="text-2xl p-4 md:text-3xl font-montserratBold text-center text-primaryBlue mb-4">COLABORA</h1>
-            <div className="flex flex-col justify-center items-center gap-6 md:flex-row p-4 mx-auto md:max-w-4xl">
+            <div className="flex flex-col justify-center items-center gap-6 md:flex-row pb-4 mx-auto md:max-w-4xl">
               <Link to="/donacion">
                 <CardWithIcon
                   backgroundColor="darkBlue"

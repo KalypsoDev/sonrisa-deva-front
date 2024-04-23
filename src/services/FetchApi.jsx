@@ -37,13 +37,14 @@ const FetchApi = {
         }
     },
 
-    createEvent: async (userData) => {
+    createEvent: async (formData) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/events`, userData, {
+            const response = await axios.post(`${BACKEND_API_URL}/events`, formData, {
                 headers: {
+                    'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`
-                }
+                },
             });
             return response.data;
         } catch (error) {
@@ -130,7 +131,7 @@ const FetchApi = {
         }
     },
 
-    getOrder: async () => {
+    getOrder: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/orders/${id}`);
             return response.data;
@@ -148,7 +149,7 @@ const FetchApi = {
         }
     },
 
-    getOrderProduct: async () => {
+    getOrderProduct: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/order-products/${id}`);
             return response.data;
@@ -166,7 +167,7 @@ const FetchApi = {
         }
     },
 
-    getCustomer: async () => {
+    getCustomer: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
             return response.data;

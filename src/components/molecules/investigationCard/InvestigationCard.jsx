@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaCoins } from "react-icons/fa";
 import { FaHospital } from "react-icons/fa6";
+import FastSpainLogo from "../../../assets/img/FastSpainLogo.png";
 
 const InvestigationCard = () => {
     const [isHoveredCoin, setIsHoveredCoin] = useState(false);
@@ -15,24 +16,24 @@ const InvestigationCard = () => {
             <div className="flex flex-col md:flex-row mx-auto bg-white border-gray-200 rounded-lg shadow-md md:max-w-4xl m-6" style={shadowStyle}>
                 <div className="flex flex-col items-center justify-center bg-darkBlue rounded-t-lg md:rounded-l-lg h-72 md:h-auto md:w-56 md:flex-none md:justify-center">
                     <div className="w-44 flex items-center justify-center mb-5">
-                        <img className="w-full md:h-auto" src="src\assets\img\FastSpain 1.png" alt="Fast Spain Logo" />
+                        <img className="w-full md:h-auto" src={FastSpainLogo} alt="Fast Spain Logo" />
                     </div>
-                    <p className="text-white font-montserratRegular text-center px-4 py-2 md:text-left">FAST es una fundación, sin ánimo de lucro, que trabaja para curar el síndrome de Angelman. Su objetivo es llevar un tratamiento seguro y eficaz a la práctica médica actual lo más rápido posible.</p>
+                    <p className="text-white font-montserratRegular text-center test-base px-4 py-2 md:text-left">FAST es una fundación, sin ánimo de lucro, que trabaja para curar el síndrome de Angelman. Su objetivo es llevar un tratamiento seguro y eficaz a la práctica médica actual lo más rápido posible.</p>
                 </div>
                 <div className="flex flex-col justify-between p-4 leading-normal w-full">
                     <div className="text-center mb-4">
-                        <h5 className="text-2xl justify-center font-montserratBold text-primaryBlue">
+                        <h1 className="text-2xl justify-center font-montserratBold text-primaryBlue">
                             INVESTIGACIÓN
-                        </h5>
+                        </h1>
                     </div>
                     <div className="flex flex-col w-full">
                         <div className="text-darkGrey mb-4 p-2">
-                            <p className="font-montserratRegular text-lg mb-2">Actualmente hay <span className="font-montserratRegular text-3xl px-1">24</span> programas de investigación en curso:</p>
+                            <p className="font-montserratRegular test-base mb-2">Actualmente hay <span className="font-montserratRegular text-3xl px-1">24</span> programas de investigación en curso:</p>
                             <ul className="">
-                                <li className="font-montserratRegular"><span className="font-montserratRegular text-3xl px-1">4</span> son ya ensayos clínicos en marcha con humanos</li>
-                                <li className="font-montserratRegular"><span className="font-montserratRegular text-3xl px-1">10</span> están en fases avanzadas de estudios con animales u organoides (neuronas desarrolladas a partir de muestras de pacientes)</li>
-                                <li className="font-montserratRegular"><span className="font-montserratRegular text-3xl px-1">7</span></li>
-                                <li className="font-montserratRegular"><span className="font-montserratRegular text-3xl px-1">3</span> están en la etapa inicial de exploración básica</li>
+                                <li className="font-montserratRegular test-base"><span className="font-montserratRegular text-3xl px-1">4</span> son ya ensayos clínicos en marcha con humanos</li>
+                                <li className="font-montserratRegular test-base"><span className="font-montserratRegular text-3xl px-1">10</span> están en fases avanzadas de estudios con animales u organoides (neuronas desarrolladas a partir de muestras de pacientes)</li>
+                                <li className="font-montserratRegular test-base"><span className="font-montserratRegular text-3xl px-1">7</span> están en etapas intermedias</li>
+                                <li className="font-montserratRegular test-base"><span className="font-montserratRegular text-3xl px-1">3</span> están en la etapa inicial de exploración básica</li>
                             </ul>
                         </div>
                         <div className="flex justify-evenly">
@@ -69,7 +70,7 @@ const InvestigationCard = () => {
 
                         </div>
                         <div className="text-darkGrey  font-montserratRegular p-2 mt-4">
-                            <p className="text-lg">Desde la Asociación <span className='text-primaryBlue'>La Sonrisa de Deva</span> apoyamos el avance de la investigación para lograr la tan ansiada cura. Si quieres saber lo que llevamos donado a FAST en el año vigente, <a href="https://www.cureangelman.es/donations/deva-diaz-rodriguez" target="_blank" className='underline font-montserratBold hover:text-primaryBlue'>clica aquí</a>.</p>
+                            <p className="test-base">Desde la Asociación <span className='text-primaryBlue'>La Sonrisa de Deva</span> apoyamos el avance de la investigación para lograr la tan ansiada cura. Si quieres saber lo que llevamos donado a FAST en el año vigente, <a href="https://www.cureangelman.es/donations/deva-diaz-rodriguez" target="_blank" className='underline font-montserratBold hover:text-primaryBlue'>clica aquí</a>.</p>
                         </div>
                     </div>
                 </div>

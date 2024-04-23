@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Isotipo from "../../../assets/isologo.png";
-import { Button } from "../../atoms/button/Button";
+import  Button  from "../../atoms/button/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
@@ -70,9 +70,9 @@ const Navbar = () => {
                     <Link
                       to="/quien-soy"
                       onClick={() => setActiveSection("quien-soy")}
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 hover:text-primaryBlue ${
                         activeSection === "quien-soy"
-                          ? "active-text-color underline"
+                          ? "text-primaryBlue underline"
                           : ""
                       }`}
                       aria-current="page"
@@ -84,9 +84,9 @@ const Navbar = () => {
                     <Link
                       to="/sindrome-angelman"
                       onClick={() => setActiveSection("sindrome-angelman")}
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 hover:text-primaryBlue ${
                         activeSection === "sindrome-angelman"
-                          ? "active-text-color underline"
+                          ? "text-primaryBlue underline"
                           : ""
                       }`}
                     >
@@ -97,9 +97,9 @@ const Navbar = () => {
                     <Link
                       to="/investigacion"
                       onClick={() => setActiveSection("investigacion")}
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 hover:text-primaryBlue ${
                         activeSection === "investigacion"
-                          ? "active-text-color underline"
+                          ? "text-primaryBlue underline"
                           : ""
                       }`}
                     >
@@ -110,9 +110,9 @@ const Navbar = () => {
                     <Link
                       to="/eventos"
                       onClick={() => setActiveSection("eventos")}
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 hover:text-primaryBlue ${
                         activeSection === "eventos"
-                          ? "active-text-color underline"
+                          ? "text-primaryBlue underline"
                           : ""
                       }`}
                     >
@@ -123,7 +123,8 @@ const Navbar = () => {
                     <Link to="/tienda-solidaria">
                       <Button
                         text="Colabora"
-                        className="button-color drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
+                        type="button"
+                        className="bg-primaryBlue drop-shadow-xl text-white hover:bg-sky-700 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-2 transition duration-300 ease-in-out"
                       />
                     </Link>
                   </div>
@@ -131,9 +132,9 @@ const Navbar = () => {
                     <Link
                       to="/formulario-contacto"
                       onClick={() => setActiveSection("contacto")}
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-color ${
-                        activeSection === "contacto"
-                          ? "active-text-color underline"
+                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 hover:text-primaryBlue ${
+                        activeSection === "formulario-contacto"
+                          ? "text-primaryBlue underline"
                           : ""
                       }`}
                     >

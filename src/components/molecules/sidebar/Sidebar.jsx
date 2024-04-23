@@ -2,6 +2,7 @@ import React from 'react'
 import sonrisaDevaSmallLogo from "../../../assets/img/smallLogo.jpg";
 import { FaGlobe } from "react-icons/fa";
 import { MdOutlineDashboard } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
@@ -19,55 +20,55 @@ const Sidebar = () => {
                 <div className="h-full px-2 py-3 overflow-y-auto bg-primaryLila">
 
                     <div className="flex justify-center p-3">
-                        <a href="#" className="flex items-center p-3 text-white font-montserratBold text-lg">
+                        <h2 className="flex items-center p-3 text-white font-montserratBold text-lg">
                             <span className="flex flex-col items-center">
                                 <span className="whitespace-nowrap">Panel de</span>
                                 <span className="whitespace-nowrap">Administración</span>
                             </span>
-                        </a>
+                        </h2>
                     </div>
 
-                    <a href="#" className="flex justify-center mb-6">
+                    <Link to="/admin" className="flex justify-center mb-6">
                         <img className="rounded-full w-24 h-24 border-2 border-primaryBlue" src={sonrisaDevaSmallLogo} alt="Sonrisa de Deva Logo" />
-                    </a>
+                    </Link>
 
                     <div>
-                        <a href="#" className="flex items-center mb-2 p-2 text-white font-montserratRegular text-base">
+                        <Link to="/admin" className="flex items-center mb-2 p-2 text-white font-montserratRegular text-base">
                             <MdOutlineDashboard />
                             <span className="flex-1 ms-2 whitespace-nowrap">Gestión de la página</span>
-                        </a>
+                        </Link>
                     </div>
 
                     <ul className="font-montserratRegular text-sm">
-                    
+
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white">
+                            <Link to="/admin/productos-solicitados" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Productos solicitados</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white">
+                            <Link to="/admin/eventos" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Agenda de eventos</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white">
+                            <Link to="/admin/agregar-producto" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Agregar productos</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center p-1 text-white">
+                            <Link to="/admin/productos" className="flex items-center p-1 text-white">
                                 <span className="flex-1 ms-8 whitespace-nowrap">Gestión de productos</span>
-                            </a>
+                            </Link>
                         </li>
-    
+
                     </ul>
 
                     <div>
-                        <a href="#" className="flex items-center mt-2 p-2 text-white font-montserratRegular text-base">
+                        <Link to="/" target="_blank" className="flex items-center mt-2 p-2 text-white font-montserratRegular text-base">
                             <FaGlobe />
                             <span className="flex-1 ms-2 whitespace-nowrap">Ir a mi página</span>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="flex justify-center">
@@ -75,7 +76,7 @@ const Sidebar = () => {
                             Cerrar sesión
                         </button>
                     </div>
-                    
+
                 </div>
 
             </aside>

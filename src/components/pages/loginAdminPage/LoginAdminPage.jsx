@@ -1,14 +1,20 @@
 import React from 'react'
-import LoginFormAdmin from '../../molecules/loginFormAdmin/LoginFormAdmin'
 import Navbar from '../../molecules/navbar/Navbar';
+import LoginFormAdmin from '../../molecules/loginFormAdmin/LoginFormAdmin'
+import Footer from '../../molecules/footer/Footer';
+
 
 const LoginAdminPage = () => {
   return (
     <>
-    <Navbar></Navbar>
-    <LoginFormAdmin/>
+      <Navbar />
+      <section className="bg-backgroundBlue p-1.5 pb-8 pt-6">
+        <LoginFormAdmin />
+      </section>
+      <Footer />
     </>
   )
 }
 
 export default LoginAdminPage
+

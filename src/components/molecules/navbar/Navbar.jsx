@@ -120,7 +120,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <div className="md:order-4 order-6">
-                    <Link to="/tienda-solidaria">
+                    <Link to="/colabora">
                       <Button
                         text="Colabora"
                         type="button"

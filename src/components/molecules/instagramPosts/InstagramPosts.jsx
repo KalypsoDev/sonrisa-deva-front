@@ -17,9 +17,9 @@ const InstagramPosts = () => {
     fetchInstagramData();
   }, []);
 
-  return (
+  return (  
     <>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 p-12 mt-20">
         {instagramPosts.map(post => (
           <div key={post.id}>
             <img

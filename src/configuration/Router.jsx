@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { HomePage } from '../components/pages/homePage/HomePage';
+import HomePage from '../components/pages/homePage/HomePage';
 import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';
@@ -14,6 +14,7 @@ import LegalNoticePage from '../components/pages/legalNoticePage/LegalNoticePage
 import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPolicyPage';
 import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPage/OrderedProductsAdminPage';
+import AssociationPage from '../components/pages/associationPage/AssociationPage';
 
 const Router = () => {
     return (
@@ -34,6 +35,7 @@ const Router = () => {
                   <Route path='/politica-privacidad' element={<PrivacyPolicyPage/>}></Route>
                   <Route path='/investigacion' element={<InvestigationPage/>}></Route>
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
+                  <Route path='/asociacion' element={<AssociationPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

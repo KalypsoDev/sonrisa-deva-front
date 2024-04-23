@@ -16,6 +16,7 @@ import InvestigationPage from '../components/pages/investigationPage/Investigati
 import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPage/OrderedProductsAdminPage';
 import AssociationPage from '../components/pages/associationPage/AssociationPage';
 import TableEventsAdminPage from '../components/pages/tableEventsAdminPage/TableEventsAdminPage';
+import EditProductAdminPage from '../components/pages/editProductAdminPage/EditProductAdminPage';
 
 const Router = () => {
     return (
@@ -38,6 +39,7 @@ const Router = () => {
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
                   <Route path='/asociacion' element={<AssociationPage/>}></Route>
                   <Route path='/admin/eventos' element={<TableEventsAdminPage/>}></Route>
+                  <Route path='/admin/editar-producto/:id' element={<EditProductAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

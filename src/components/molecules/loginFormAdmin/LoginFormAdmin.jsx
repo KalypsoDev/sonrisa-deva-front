@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaEnvelope } from "react-icons/fa";
 import { FaLock  } from "react-icons/fa";
-
+import Button from "../../atoms/button/Button"
 
 const LoginFormAdmin = () => {
     return (
@@ -26,9 +26,9 @@ const LoginFormAdmin = () => {
             </div>
         </div>
         
-        <div>
-            <button type="submit" className="text-darkBlue bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Iniciar sesión</button>
-        </div>
+        <div className="text-center">
+        <Button type="button" className="font-montserratBold inline-flex items-center ml-0 px-6 py-2.5 mt-0 sm:mt-0 text-sm font-base text-center text-primaryBlue bg-white rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800" text="Iniciar sesión" />
+      </div>
     </form > 
     )
 }

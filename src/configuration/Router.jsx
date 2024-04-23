@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { HomePage } from '../components/pages/homePage/HomePage';
+import HomePage from '../components/pages/homePage/HomePage';
 import PanelAdminPage from '../components/pages/panelAdminPage/PanelAdminPage';
 import NewProductAdminPage from '../components/pages/newProductAdminPage/NewProductAdminPage';
 import EventPage from '../components/pages/eventPage/EventPage';
@@ -14,6 +14,12 @@ import LegalNoticePage from '../components/pages/legalNoticePage/LegalNoticePage
 import PrivacyPolicyPage from '../components/pages/privacyPolicyPage/PrivacyPolicyPage';
 import InvestigationPage from '../components/pages/investigationPage/InvestigationPage';
 import OrderedProductsAdminPage from '../components/pages/orderedProductsAdminPage/OrderedProductsAdminPage';
+import AssociationPage from '../components/pages/associationPage/AssociationPage';
+import TableEventsAdminPage from '../components/pages/tableEventsAdminPage/TableEventsAdminPage';
+import WhoAmIPage from '../components/pages/whoAmIPage/WhoAmIPage';
+import AboutDevaPage from '../components/pages/aboutDevaPage/AboutDevaPage';
+import CooperatePage from '../components/pages/cooperatePage/CooperatePage';
+import DonationPage from '../components/pages/donationPage/DonationPage';
 import TherapiesPage from '../components/pages/therapiesPage/TherapiesPage';
 
 const Router = () => {
@@ -35,6 +41,12 @@ const Router = () => {
                   <Route path='/politica-privacidad' element={<PrivacyPolicyPage/>}></Route>
                   <Route path='/investigacion' element={<InvestigationPage/>}></Route>
                   <Route path='/admin/productos-solicitados' element={<OrderedProductsAdminPage/>}></Route>
+                  <Route path='/asociacion' element={<AssociationPage/>}></Route>
+                  <Route path='/admin/eventos' element={<TableEventsAdminPage/>}></Route>
+                  <Route path='/quien-soy' element={<WhoAmIPage/>}></Route>
+                  <Route path='/sobre-deva' element={<AboutDevaPage/>}></Route>
+                  <Route path='/colabora' element={<CooperatePage/>}></Route>
+                  <Route path='/donacion' element={<DonationPage/>}></Route>
                   <Route path='/terapias' element={<TherapiesPage/>}></Route>
           </Routes>
       </BrowserRouter>

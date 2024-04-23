@@ -3,6 +3,7 @@ import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import InputSearch from '../../atoms/inputSearch/InputSearch';
 import Pagination from '../../atoms/pagination/Pagination';
 import FetchApi from '../../../services/FetchApi';
+import { Link } from 'react-router-dom';
 
 const TableProducts = () => {
     const [products, setProducts] = useState([]);
@@ -70,7 +71,7 @@ const TableProducts = () => {
                     {currentProducts.map((product, index) => (
                         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
-                                <a href="http://localhost:5173/admin/agregar-producto" target="_blank" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
+                                <Link to={`/admin/editar-producto/${product.id}`} target="_blank" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></Link>
                                 <a href="#" onClick={() => handleDeleteProduct(product.id)} className="text-xl text-redBin dark:text-red-500 flex items-center justify-center"><FaTrashAlt /></a>
                             </td>
                             <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">

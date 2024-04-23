@@ -26,7 +26,7 @@ const InputSearch = ({ data, onDataFiltered, searchField }) => {
         <input
           type="text"
           id="table-search"
-          className="block pt-2 ps-10 text-sm text-darkGrey border border-gray-300 rounded-lg w-1/2 sm:w-48 bg-gray-50 focus:ring-primaryBlue focus:border-primaryBlue"
+          className="font-montserratRegular block pt-2 ps-10 text-sm text-darkGrey border border-gray-300 rounded-lg w-1/2 sm:w-48 bg-gray-50 focus:ring-primaryBlue focus:border-primaryBlue"
           placeholder="Búsqueda"
           value={searchTerm}
           onChange={handleSearchChange}

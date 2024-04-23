@@ -8,7 +8,7 @@ const LoginAdminPage = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-backgroundBlue p-1.5 pb-8 pt-6">
+      <section className="bg-backgroundBlue p-1.5">
         <LoginFormAdmin />
       </section>
       <Footer />

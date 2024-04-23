@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, } from 'react';
+import { Link } from 'react-router-dom';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import Pagination from '../../atoms/pagination/Pagination';
 import FetchApi from '../../../services/FetchApi';
@@ -57,8 +58,8 @@ const TableEvents = () => {
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
             <div className="overflow-y-auto">
-                <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
-                    <thead className="text-xs text-white bg-primaryLila dark:bg-gray-700 dark:text-gray-400">
+                <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey">
+                    <thead className="text-xs text-white bg-primaryLila">
                         <tr>
                             <th scope="col" className="px-8 py-3">
                                 Acciones
@@ -88,12 +89,12 @@ const TableEvents = () => {
                     </thead>
                     <tbody>
                         {currentEvents.map((event, index) => (
-                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <tr key={index} className="bg-white border-b hover:bg-gray-50">
                                 <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
-                                    <a href="http://localhost:5173/admin/agregar-evento" target="_blank" className="text-xl text-greenPen dark:text-red-500 flex items-center justify-center"><FaPencilAlt /></a>
-                                    <a href="#" className="text-xl text-redBin dark:text-red-500 flex items-center justify-center" onClick={() => handleDeleteEvent(event.id)}><FaTrashAlt /></a>
+                                    <Link to="/admin/agregar-evento" target="_blank" className="text-xl text-greenPen flex items-center justify-center"><FaPencilAlt /></Link>
+                                    <a href="#" className="text-xl text-redBin flex items-center justify-center" onClick={() => handleDeleteEvent(event.id)}><FaTrashAlt /></a>
                                 </td>
-                                <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
+                                <td className="px-4 py-2 font-semibold text-darkGrey">
                                     {event.title}
                                 </td>
                                 <td className="px-4 py-2">
@@ -109,13 +110,13 @@ const TableEvents = () => {
                                 <td className="px-4 py-2">
                                     {event.location}
                                 </td>
-                                <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
+                                <td className="px-4 py-2 font-semibold text-darkGrey">
                                     {event.collection} €
                                 </td>
-                                <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
+                                <td className="px-4 py-2 font-semibold text-darkGrey">
                                     {event.date}
                                 </td>
-                                <td className="px-4 py-2 font-semibold text-darkGrey dark:text-white">
+                                <td className="px-4 py-2 font-semibold text-darkGrey">
                                     {event.hour}
                                 </td>
                             </tr>

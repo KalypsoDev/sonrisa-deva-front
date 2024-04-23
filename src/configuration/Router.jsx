@@ -18,6 +18,8 @@ import AssociationPage from '../components/pages/associationPage/AssociationPage
 import TableEventsAdminPage from '../components/pages/tableEventsAdminPage/TableEventsAdminPage';
 import WhoAmIPage from '../components/pages/whoAmIPage/WhoAmIPage';
 import AboutDevaPage from '../components/pages/aboutDevaPage/AboutDevaPage';
+import CooperatePage from '../components/pages/cooperatePage/CooperatePage';
+import DonationPage from '../components/pages/donationPage/DonationPage';
 
 const Router = () => {
     return (
@@ -42,6 +44,8 @@ const Router = () => {
                   <Route path='/admin/eventos' element={<TableEventsAdminPage/>}></Route>
                   <Route path='/quien-soy' element={<WhoAmIPage/>}></Route>
                   <Route path='/sobre-deva' element={<AboutDevaPage/>}></Route>
+                  <Route path='/colabora' element={<CooperatePage/>}></Route>
+                  <Route path='/donacion' element={<DonationPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

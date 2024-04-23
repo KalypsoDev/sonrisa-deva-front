@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import deva7 from "../../../assets/img/deva7.png";
+// import sAngelmanDeva from "../../../assets/img/sAngelmanDeva.jpg";
+// import sindromeAngelmanDeva from "../../../assets/img/sindromeAngelmanDeva.jpg";
 import { FaPlusCircle } from "react-icons/fa";
 import { FaChartPie } from "react-icons/fa6";
 import { FaDna } from "react-icons/fa6";
@@ -15,14 +17,18 @@ const AngelmanSyndrome = () => {
     setSelectedSymptom({ modalTitle, modalDescription });
   };
   
+  const shadowStyle = {
+    boxShadow: '11px 10px 4px rgba(233, 241, 245, 0.7)'
+  };
+
   return (
     <>
-      <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-20">
-        <img className="object-cover rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={deva7} alt="" />
+      <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-3xl hover:bg-gray-100 m-20 mx-auto" style={shadowStyle}>
+        <img className="w-full object-cover rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={deva7} alt="Imagen Deva" />
 
           <div className="cardContent">
 
-            <h5 className="flex justify-center text-lg font-montserratBold  mb-2 tracking-tight text-primaryBlue dark:text-white">¿QUÉ ES EL SÍNDROME DE ANGELMAN?</h5>
+            <h1 className="flex justify-center text-center text-lg font-montserratBold mt-4 mb-2 tracking-tight text-primaryBlue">¿QUÉ ES EL SÍNDROME DE ANGELMAN?</h1>
            
             <div className="groupTherapies">
               

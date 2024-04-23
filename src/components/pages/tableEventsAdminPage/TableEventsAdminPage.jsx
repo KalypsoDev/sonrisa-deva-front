@@ -1,7 +1,6 @@
 import React from "react";
 import TableEvents from "../../molecules/tableEvents/TableEvents";
 import Sidebar from "../../molecules/sidebar/Sidebar";
-import InputSearch from "../../atoms/inputSearch/InputSearch";
 import Button from "../../atoms/button/Button";
 import { Link } from "react-router-dom";
 

@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom';
 import FetchApi from '../../../services/FetchApi';
 import Button from '../../atoms/button/Button';
 import { Link } from "react-router-dom";
+import useSweetAlerts from '../../../services/useSweetAlerts';
 
 const EditEventFormAdmin = ({ title }) => {
     const { id } = useParams();
     const [event, setEvent] = useState(null);
+    const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
         const fetchEvent = async () => {
@@ -81,6 +83,8 @@ const EditEventFormAdmin = ({ title }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        showLoadingAlert("Actualizando Evento", "Por favor, espera...");
+
         try {
             if (!event) {
                 console.error('El evento es undefined.');
@@ -94,8 +98,10 @@ const EditEventFormAdmin = ({ title }) => {
             };
 
             await FetchApi.updateEvent(id, formattedEvent);
+            showSuccessAlert("¡Evento actualizado con éxito!");
         } catch (error) {
             console.error('Error al actualizar el evento:', error);
+            showErrorAlert("¡Error al actualizar el evento!");
         }
     };
 

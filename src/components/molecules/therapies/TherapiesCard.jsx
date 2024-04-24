@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import deva9a from "../../../assets/img/deva9a.jpg";
+import deva9 from "../../../assets/img/deva9.jpg";
 import { FaPlusCircle } from "react-icons/fa";
 import AngelmanSyndromeModal from '../../atoms/angelmanSyndromeModal/AngelmanSyndromeModal';
 
@@ -18,7 +18,7 @@ const TherapiesCard = () => {
         <>
             <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row max-w-3xl m-6 mx-auto" style={shadowStyle}>
 
-                <img className="w-full object-cover rounded-t-lg h-full md:h-auto md:w-56 md:rounded-none md:rounded-s-lg" src={deva9a} alt="Imagen Deva" />
+                <img className="w-full object-cover rounded-t-lg h-full md:h-auto md:w-56 md:rounded-none md:rounded-s-lg" src={deva9} alt="Imagen Deva" />
 
                 <div className="cardContent">
                     <h1 className="justify-center text-center text-2xl font-montserratBold text-primaryBlue my-4 tracking-tight">TERAPIAS</h1>

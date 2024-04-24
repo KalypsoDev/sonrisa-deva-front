@@ -37,6 +37,15 @@ const FetchApi = {
         }
     },
 
+    getEventId: async (id) => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/events/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
     createEvent: async (formData) => {
         try {
             const token = localStorage.getItem('token');
@@ -51,11 +60,24 @@ const FetchApi = {
             throw error;
         }
     },
-    updateEvent: async (id) => {
+    updateEvent: async (id, eventData) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/events/${id}`, {
+            const formData = new FormData();
+            formData.append('title', eventData.title);
+            formData.append('location', eventData.location);
+            formData.append('date', eventData.date);
+            formData.append('hour', eventData.hour);
+            formData.append('collection', eventData.collection);
+            formData.append('description', eventData.description);
+
+            if (eventData.image) {
+                formData.append('image_url', eventData.image);
+            }
+
+            const response = await axios.post(`${BACKEND_API_URL}/events/${id}`, formData, {
                 headers: {
+                    'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`
                 }
             });
@@ -64,6 +86,7 @@ const FetchApi = {
             throw error;
         }
     },
+
 
     deleteEvent: async (id) => {
         try {
@@ -111,7 +134,7 @@ const FetchApi = {
             throw error;
         }
     },
-    
+
     updateProduct: async (id, productData) => {
         try {
             const token = localStorage.getItem('token');
@@ -120,11 +143,11 @@ const FetchApi = {
             formData.append('stock', productData.stock);
             formData.append('price', productData.price);
             formData.append('description', productData.description);
-            
+
             if (productData.image) {
                 formData.append('image_url', productData.image);
             }
-            
+
             const response = await axios.post(`${BACKEND_API_URL}/products/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -136,9 +159,7 @@ const FetchApi = {
             throw error;
         }
     },
-    
-    
-    
+
 
     deleteProduct: async (id) => {
         try {

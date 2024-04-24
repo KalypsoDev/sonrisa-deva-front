@@ -4,7 +4,7 @@ import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
 import useSweetAlerts from '../../../services/useSweetAlerts';
 
-const NewProductAdminPage = () => {
+const NewProductAdminPage = ({ isAuthenticated }) => {
 
     const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
@@ -28,12 +28,20 @@ const NewProductAdminPage = () => {
 
     return (
         <>
-            <Sidebar />
-            <ProductFormAdmin
-                title="AGREGAR PRODUCTO"
-                onSubmit={handleSubmit}
-                onCancel={handleCancel}
-            />
+            {isAuthenticated ? (
+                <section>
+                    <Sidebar />
+                    <ProductFormAdmin
+                        title="AGREGAR PRODUCTO"
+                        onSubmit={handleSubmit}
+                        onCancel={handleCancel}
+                    />
+                </section>
+            ) : (
+                <div className='text-white bg-red-600 p-10 text-center font-montserratBold font'>
+                    No estás autorizado para acceder a esta página.
+                </div>
+            )}
         </>
     );
 };

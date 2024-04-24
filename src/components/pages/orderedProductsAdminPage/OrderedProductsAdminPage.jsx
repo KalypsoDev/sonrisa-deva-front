@@ -1,7 +1,7 @@
 import React from 'react';
 import TableOrders from '../../molecules/tableOrders/TableOrders';
 
-const OrderedProductsAdminPage = ({isAuthenticated}) => {
+const OrderedProductsAdminPage = ({ isAuthenticated }) => {
   return (
     <>
       {

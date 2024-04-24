@@ -3,7 +3,7 @@ import EventFormAdmin from '../../molecules/eventFormAdmin/EventFormAdmin';
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
 
-const NewEventAdminPage = ({isAuthenticated}) => {
+const NewEventAdminPage = ({ isAuthenticated }) => {
   const handleSubmit = async (formData) => {
     try {
       const newEvent = await FetchApi.createEvent(formData);

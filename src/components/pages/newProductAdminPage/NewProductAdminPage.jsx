@@ -3,7 +3,7 @@ import ProductFormAdmin from '../../molecules/productFormAdmin/ProductFormAdmin'
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
 
-const NewProductAdminPage = ({isAuthenticated}) => {
+const NewProductAdminPage = ({ isAuthenticated }) => {
     const handleSubmit = async (formData) => {
         try {
             const newProduct = await FetchApi.createProduct(formData);

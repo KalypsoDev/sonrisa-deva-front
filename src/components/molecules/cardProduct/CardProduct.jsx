@@ -14,7 +14,7 @@ const CardProduct = ({ image_url, name, description, price }) => {
           <div className='min-h-4'>
             <p className="text-xs mb-1 text-darkGrey font-montserratRegular">{description}</p>
           </div>
-          <h5 className="mb-3 text-lg text-darkBlue font-montserratBold">DONATIVO: {price}</h5>
+          <h5 className="mb-3 text-lg text-darkBlue font-montserratBold">DONATIVO: {price} €</h5>
           <div className='flex justify-center'>
             <button onClick={() => onAddToCart(product)} className="inline-flex items-center px-3 py-2 font-monserratBold text-center text-white bg-darkBlue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
               Lo quiero

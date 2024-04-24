@@ -3,10 +3,14 @@ import FetchApi from '../../../services/FetchApi';
 import { useParams } from 'react-router-dom';
 import Button from '../../atoms/button/Button';
 import { Link } from "react-router-dom";
+import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const EditProductFormAdmin = ({ title }) => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const navigate = useNavigate(); 
+    const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -60,16 +64,24 @@ const EditProductFormAdmin = ({ title }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        showLoadingAlert("Actualizando Producto", "Por favor, espera...");
+
         try {
             if (product) {
 
                 console.log(product);
                 await FetchApi.updateProduct(id, product);
+                showSuccessAlert("¡Producto actualizado con éxito!", 
+                "Aceptar",
+                () => navigate('/admin/productos'));
             } else {
                 console.error('El objeto product es undefined.');
             }
         } catch (error) {
             console.error('Error al actualizar el producto:', error);
+            showErrorAlert("¡Error al actualizar el producto!", 
+            "Aceptar",
+            () => navigate('/admin/productos'));
         }
     };
 

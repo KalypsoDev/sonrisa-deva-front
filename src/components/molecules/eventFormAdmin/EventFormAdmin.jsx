@@ -40,7 +40,7 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
             ...formData,
             date: convertDateFormat(formData.date)
         };
-        onSubmit(convertedFormData);
+        onSubmit(e, convertedFormData);
     };
 
     const convertDateFormat = (date) => {

@@ -4,12 +4,16 @@ import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import Pagination from '../../atoms/pagination/Pagination';
 import InputSearch from '../../atoms/inputSearch/InputSearch';
 import FetchApi from '../../../services/FetchApi';
+import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const TableEvents = () => {
     const [events, setEvents] = useState([]);
     const [filteredEvents, setFilteredEvents] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const perPage = 5;
+    const navigate = useNavigate(); 
+    const { showConfirmationAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -40,14 +44,31 @@ const TableEvents = () => {
     };
 
     const handleDeleteEvent = async (eventId) => {
-        try {
+
+        const confirmed = await showConfirmationAlert(
+            "¿Quieres eliminar este evento?");
+
+        if (confirmed) {
+
+            try {
+        
             await FetchApi.deleteEvent(eventId);
+
+            showSuccessAlert("¡Evento eliminado con éxito!", "Aceptar", () => navigate('/admin/eventos'));
+
+
             const updatedEvents = events.filter(event => event.id !== eventId);
             setEvents(updatedEvents);
-            setFilteredEvents(updatedEvents); 
+            setFilteredEvents(updatedEvents);
         } catch (error) {
             console.error('Error al eliminar el evento:', error);
+            showErrorAlert("¡Error al borrar el evento!",
+            "Aceptar",
+            () => navigate('/admin/eventos'));
         }
+    } else {
+        navigate('/admin/eventos');
+      }
     };
 
     const handleDataFiltered = (filteredData) => {

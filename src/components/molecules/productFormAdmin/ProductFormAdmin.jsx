@@ -31,7 +31,7 @@ const ProductFormAdmin = ({ title, onSubmit, product }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        onSubmit(e, formData);
     };
 
     return (

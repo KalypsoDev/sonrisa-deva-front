@@ -4,12 +4,16 @@ import InputSearch from '../../atoms/inputSearch/InputSearch';
 import Pagination from '../../atoms/pagination/Pagination';
 import FetchApi from '../../../services/FetchApi';
 import { Link } from 'react-router-dom';
+import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const TableProducts = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 6;
+    const navigate = useNavigate(); 
+    const { showConfirmationAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -26,15 +30,29 @@ const TableProducts = () => {
     }, []);
 
     const handleDeleteProduct = async (productId) => {
-        try {
-            await FetchApi.deleteProduct(productId);
-            const updatedProducts = products.filter(product => product.id !== productId);
-            setProducts(updatedProducts);
-            setFilteredProducts(updatedProducts);
+    
+    const confirmed = await showConfirmationAlert(
+            "¿Quieres eliminar este producto?");
+
+        if (confirmed) {
+
+              try {
+                  await FetchApi.deleteProduct(productId);
+                  showSuccessAlert("¡Producto eliminado con éxito!", "Aceptar", () => navigate('/admin/productos'));
+                  const updatedProducts = products.filter(product => product.id !== productId);
+                  setProducts(updatedProducts);
+                  setFilteredProducts(updatedProducts);
         } catch (error) {
-            console.error('Error al eliminar el producto:', error);
-        }
-    };
+                  console.error('Error al eliminar el producto:', error);
+                  showErrorAlert("¡Error al borrar el producto!", 
+                  "Aceptar",
+                  () => navigate('/admin/productos'));
+            }
+
+        } else {
+            navigate('/admin/productos');
+            }
+      };
 
     const handleDataFiltered = (filteredData) => {
         setFilteredProducts(filteredData);

@@ -23,7 +23,7 @@ const NewProductAdminPage = () => {
         <div className="w-1/4 md:w-1/4">
             <Sidebar />
             </div>
-            <div className="w-3/4 md:w-3/4">
+            <div className="w-3/4 md:w-3/4 mr-16">
             <ProductFormAdmin
                 title="AGREGAR PRODUCTO"
                 onSubmit={handleSubmit}

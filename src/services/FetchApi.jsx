@@ -37,11 +37,47 @@ const FetchApi = {
         }
     },
 
-    createEvent: async (userData) => {
+    getEventId: async (id) => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/events/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    createEvent: async (formData) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/events`, userData, {
+            const response = await axios.post(`${BACKEND_API_URL}/events`, formData, {
                 headers: {
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${token}`
+                },
+            });
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+    updateEvent: async (id, eventData) => {
+        try {
+            const token = localStorage.getItem('token');
+            const formData = new FormData();
+            formData.append('title', eventData.title);
+            formData.append('location', eventData.location);
+            formData.append('date', eventData.date);
+            formData.append('hour', eventData.hour);
+            formData.append('collection', eventData.collection);
+            formData.append('description', eventData.description);
+
+            if (eventData.image) {
+                formData.append('image_url', eventData.image);
+            }
+
+            const response = await axios.post(`${BACKEND_API_URL}/events/${id}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`
                 }
             });
@@ -50,19 +86,7 @@ const FetchApi = {
             throw error;
         }
     },
-    updateEvent: async (id) => {
-        try {
-            const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/events/${id}`, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            return response.data;
-        } catch (error) {
-            throw error;
-        }
-    },
+
 
     deleteEvent: async (id) => {
         try {
@@ -87,11 +111,46 @@ const FetchApi = {
         }
     },
 
-    createProduct: async (userData) => {
+    getProductId: async (id) => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/products/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    createProduct: async (formData) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/products`, userData, {
+            const response = await axios.post(`${BACKEND_API_URL}/products`, formData, {
                 headers: {
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${token}`
+                },
+            });
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    updateProduct: async (id, productData) => {
+        try {
+            const token = localStorage.getItem('token');
+            const formData = new FormData();
+            formData.append('name', productData.name);
+            formData.append('stock', productData.stock);
+            formData.append('price', productData.price);
+            formData.append('description', productData.description);
+
+            if (productData.image) {
+                formData.append('image_url', productData.image);
+            }
+
+            const response = await axios.post(`${BACKEND_API_URL}/products/${id}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`
                 }
             });
@@ -100,19 +159,7 @@ const FetchApi = {
             throw error;
         }
     },
-    updateProduct: async (id) => {
-        try {
-            const token = localStorage.getItem('token');
-            const response = await axios.post(`${BACKEND_API_URL}/products/${id}`, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            return response.data;
-        } catch (error) {
-            throw error;
-        }
-    },
+
 
     deleteProduct: async (id) => {
         try {
@@ -128,7 +175,7 @@ const FetchApi = {
         }
     },
 
-    getOrder: async () => {
+    getOrder: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/orders/${id}`);
             return response.data;
@@ -146,7 +193,7 @@ const FetchApi = {
         }
     },
 
-    getOrderProduct: async () => {
+    getOrderProduct: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/order-products/${id}`);
             return response.data;
@@ -164,7 +211,7 @@ const FetchApi = {
         }
     },
 
-    getCustomer: async () => {
+    getCustomer: async (id) => {
         try {
             const response = await axios.get(`${BACKEND_API_URL}/customers/${id}`);
             return response.data;

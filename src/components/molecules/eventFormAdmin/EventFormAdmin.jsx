@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Button from '../../atoms/button/Button';
+import { Link } from "react-router-dom";
 
-const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
+const EventFormAdmin = ({ title, onSubmit, event }) => {
     const [formData, setFormData] = useState({
         title: '',
         image_url: null,
@@ -13,11 +15,12 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
 
     useEffect(() => {
         if (event) {
+            const formattedDate = event.date.includes('-') ? event.date : convertDateFormat(event.date);
             setFormData({
                 title: event.title || '',
                 image_url: event.image_url || null,
                 location: event.location || '',
-                date: event.date || '',
+                date: formattedDate || '',
                 hour: event.hour || '',
                 collection: event.collection || '',
                 description: event.description || '',
@@ -35,7 +38,19 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        const convertedFormData = {
+            ...formData,
+            date: convertDateFormat(formData.date)
+        };
+        onSubmit(convertedFormData);
+    };
+
+    const convertDateFormat = (date) => {
+        const parts = date.split('-');
+        if (parts.length === 3) {
+            return `${parts[2]}-${parts[1]}-${parts[0]}`;
+        }
+        return date;
     };
 
     return (
@@ -139,8 +154,17 @@ const EventFormAdmin = ({ title, onSubmit, onCancel, event }) => {
                 
             </div>
             <div>
-                <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5 mr-5">{title === 'AGREGAR EVENTO' ? 'Agregar' : 'Editar'}</button>
-                <button type="button" onClick={onCancel} className="text-primaryLila bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
+            <Button
+                    type="submit"
+                    className="text-white font-montserratBold bg-darkBlue text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                    text="Agregar" />
+                <Link to="/admin/eventos">
+                    <Button
+                        type="submit"
+                        className="text-white font-montserratBold bg-redBin text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                        text="Cancelar"
+                    />
+                </Link>
             </div>
         </form>
     );

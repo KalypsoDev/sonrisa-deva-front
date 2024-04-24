@@ -127,7 +127,6 @@ const EditProductFormAdmin = ({ title }) => {
                             value={product.description}
                             onChange={(e) => handleFieldChange('description', e.target.value)}
                             className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg resize-none"
-                            required
                         />
                     </div>
                 </div>
@@ -153,7 +152,7 @@ const EditProductFormAdmin = ({ title }) => {
                 <Button
                     type="submit"
                     className="text-white font-montserratBold bg-darkBlue text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
-                    text="Editar" />
+                    text="Actualizar" />
                 <Link to="/admin/productos">
                     <Button
                         type="submit"

@@ -25,6 +25,7 @@ import AboutMePage from '../components/pages/aboutMePage/AboutMePage';
 
 import TherapiesPage from '../components/pages/therapiesPage/TherapiesPage';
 import EditProductAdminPage from '../components/pages/editProductAdminPage/EditProductAdminPage';
+import EditEventAdminPage from '../components/pages/editEventAdminPage/EditEventAdminPage';
 
 const Router = () => {
     return (
@@ -55,6 +56,7 @@ const Router = () => {
 
                   <Route path='/terapias' element={<TherapiesPage/>}></Route>
                   <Route path='/admin/editar-producto/:id' element={<EditProductAdminPage/>}></Route>
+                  <Route path='/admin/editar-evento/:id' element={<EditEventAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

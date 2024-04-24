@@ -1,12 +1,12 @@
 import React from 'react';
 import { IoIosCloseCircle } from 'react-icons/io';
 
-const AngelmanSyndromeModal = ({ therapy, handleClose }) => {
-  const { modalTitle, modalDescription } = therapy || {};
+const AngelmanSyndromeModal = ({ therapyOrSymptom, handleClose }) => {
+  const { modalTitle, modalDescription } = therapyOrSymptom || {};
 
   return (
     <>
-      {therapy && (
+      {therapyOrSymptom && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <div className="bg-white w-full max-w-md p-6 rounded-lg">
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">

@@ -5,7 +5,6 @@ import { FaChartPie } from "react-icons/fa6";
 import { FaDna } from "react-icons/fa6";
 import { FaBrain } from "react-icons/fa6";
 import { FaPencil } from "react-icons/fa6";
-
 import AngelmanSyndromeModal from '../../atoms/angelmanSyndromeModal/AngelmanSyndromeModal';
 
 const AngelmanSyndrome = () => {
@@ -84,7 +83,7 @@ const AngelmanSyndrome = () => {
           </div>
         </div>
       </div>
-      <AngelmanSyndromeModal therapy={selectedSymptom} handleClose={() => setSelectedSymptom(null)} />
+      <AngelmanSyndromeModal therapyOrSymptom={selectedSymptom} handleClose={() => setSelectedSymptom(null)} />
     </>
   )
 }

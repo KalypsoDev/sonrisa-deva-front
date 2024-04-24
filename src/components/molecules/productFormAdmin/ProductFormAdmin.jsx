@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Button from '../../atoms/button/Button';
+import { Link } from "react-router-dom";
 
-const ProductFormAdmin = ({ title, onSubmit, onCancel, product }) => {
+const ProductFormAdmin = ({ title, onSubmit, product }) => {
     const [formData, setFormData] = useState({
         name: '',
         stock: '',
@@ -107,8 +109,17 @@ const ProductFormAdmin = ({ title, onSubmit, onCancel, product }) => {
                 </div>
             </div>
             <div>
-                <button type="submit" className="text-white font-montserratBold bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5">{title === 'AGREGAR PRODUCTO' ? 'Agregar' : 'Editar'}</button>
-                <button type="button" onClick={onCancel} className="text-primaryLila font-montserratBold bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
+            <Button
+                    type="submit"
+                    className="text-white font-montserratBold bg-darkBlue text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                    text="Agregar" />
+                <Link to="/admin/productos">
+                    <Button
+                        type="submit"
+                        className="text-white font-montserratBold bg-redBin text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                        text="Cancelar"
+                    />
+                </Link>
             </div>
         </form>
     );

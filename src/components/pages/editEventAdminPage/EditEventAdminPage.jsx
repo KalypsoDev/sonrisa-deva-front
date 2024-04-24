@@ -1,8 +1,13 @@
-import React from 'react'
+import EditEventFormAdmin from '../../molecules/editEventFormAdmin/EditEventFormAdmin'
+import Sidebar from '../../molecules/sidebar/Sidebar'
 
 const EditEventAdminPage = () => {
   return (
-    <div>EditEventAdminPage</div>
+    <>
+      <Sidebar />
+      <EditEventFormAdmin
+        title={"Editar Evento"} />
+    </>
   )
 }
 

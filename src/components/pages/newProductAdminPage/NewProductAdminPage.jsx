@@ -15,10 +15,10 @@ const NewProductAdminPage = () => {
         try {
             const newProduct = await FetchApi.createProduct(formData);
             console.log('Producto agregado con éxito:', newProduct);
-            showSuccessAlert("¡Agregado!", "El producto ha sido agregado con éxito.");
+            showSuccessAlert("¡Producto agregado con éxito!");
         } catch (error) {
             console.error('Error al agregar el producto:', error);
-            showErrorAlert("Error", "No se pudo agregar el producto.");
+            showErrorAlert("¡Error al agregar el producto!");
         }
     };
 

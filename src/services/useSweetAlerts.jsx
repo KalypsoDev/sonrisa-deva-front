@@ -6,16 +6,34 @@ const useSweetAlerts = () => {
       return Swal.fire(options);
     }, []);
   
-    const showSuccessAlert = useCallback((title, message, timer = 3000) => {
+    const showSuccessAlert = useCallback((title, confirmButtonText = "Aceptar") => {
       return showAlert({
         icon: "success",
         title: title,
-        text: message,
-        timer: timer,
-        showConfirmButton: false,
+        showConfirmButton: true,
+        confirmButtonText: confirmButtonText,
+        customClass: {
+          title: 'font-montserratBold, text-2xl',
+          confirmButton: 'bg-primaryLila font-montserratBold text-white rounded-lg text-lg shadow-4xl px-6 py-2',
+        },
+        buttonsStyling: false,
       });
     }, [showAlert]);
-
+  
+    // const showConfirmationAlert = (title, text, confirmButtonText) => {
+    //   return showAlert({
+    //     title: title,
+    //     text: text,
+    //     icon: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonColor: "#3085d6",
+    //     cancelButtonColor: "#d33",
+    //     confirmButtonText: confirmButtonText,
+    //   }).then((result) => {
+    //     return result.isConfirmed;
+    //   });
+    // };
+  
     const showLoadingAlert = useCallback((title, text, timer = 3000) => {
       return showAlert({
         title: title,
@@ -23,23 +41,34 @@ const useSweetAlerts = () => {
         timer: timer,
         timerProgressBar: true,
         showConfirmButton: false,
+        customClass: {
+          title: 'font-montserratBold, text-2xl',
+          text: 'font-montserratBold text-lg',
+        },
         didOpen: () => {
           Swal.showLoading();
         },
       });
     }, [showAlert]);
   
-    const showErrorAlert = useCallback((title, text) => {
+    const showErrorAlert = useCallback((title, confirmButtonText = "Aceptar") => {
       return showAlert({
+        icon: "error",
         title: title,
-        text: text,
-        icon: "error"
+        showConfirmButton: true,
+        confirmButtonText: confirmButtonText,
+        customClass: {
+          title: 'font-montserratBold, text-2xl',
+          confirmButton: 'bg-primaryLila font-montserratBold text-white rounded-lg text-lg shadow-4xl px-6 py-2',
+        },
+        buttonsStyling: false,
       });
     }, [showAlert]);
       
     return {
       showAlert,
       showSuccessAlert,
+    //   showConfirmationAlert,
       showLoadingAlert,
       showErrorAlert
     };

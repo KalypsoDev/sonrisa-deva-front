@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const TableProducts = () => {
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 6;
 
@@ -15,6 +16,7 @@ const TableProducts = () => {
             try {
                 const productsData = await FetchApi.getProducts();
                 setProducts(productsData);
+                setFilteredProducts(productsData);
             } catch (error) {
                 console.error('Error al obtener productos:', error);
             }
@@ -24,27 +26,34 @@ const TableProducts = () => {
     }, []);
 
     const handleDeleteProduct = async (productId) => {
-      try {
-          await FetchApi.deleteProduct(productId);
-          const updatedProducts = products.filter(product => product.id !== productId);
-          setProducts(updatedProducts);
-      } catch (error) {
-          console.error('Error al eliminar el producto:', error);
-      }
-  };
-  
+        try {
+            await FetchApi.deleteProduct(productId);
+            const updatedProducts = products.filter(product => product.id !== productId);
+            setProducts(updatedProducts);
+            setFilteredProducts(updatedProducts);
+        } catch (error) {
+            console.error('Error al eliminar el producto:', error);
+        }
+    };
+
+    const handleDataFiltered = (filteredData) => {
+        setFilteredProducts(filteredData);
+    };
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
-            <InputSearch />
+            <InputSearch
+            data={products}
+            onDataFiltered={handleDataFiltered}
+            searchField="name" />
             <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
 
                 <thead className="text-xs text-white bg-primaryLila dark:bg-gray-700 dark:text-gray-400">
@@ -99,7 +108,7 @@ const TableProducts = () => {
             <Pagination
                 currentPage={currentPage}
                 perPage={productsPerPage}
-                totalItems={products.length}
+                totalItems={filteredProducts.length}
                 onPageChange={handlePageChange}
             />
         </div>

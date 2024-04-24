@@ -4,10 +4,12 @@ import FetchApi from '../../../services/FetchApi';
 import Button from '../../atoms/button/Button';
 import { Link } from "react-router-dom";
 import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const EditEventFormAdmin = ({ title }) => {
     const { id } = useParams();
     const [event, setEvent] = useState(null);
+    const navigate = useNavigate(); 
     const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
@@ -98,10 +100,14 @@ const EditEventFormAdmin = ({ title }) => {
             };
 
             await FetchApi.updateEvent(id, formattedEvent);
-            showSuccessAlert("¡Evento actualizado con éxito!");
+            showSuccessAlert("¡Evento actualizado con éxito!", 
+            "Aceptar",
+            () => navigate('/admin/eventos'));
         } catch (error) {
             console.error('Error al actualizar el evento:', error);
-            showErrorAlert("¡Error al actualizar el evento!");
+            showErrorAlert("¡Error al actualizar el evento!", 
+            "Aceptar",
+            () => navigate('/admin/eventos'));
         }
     };
 

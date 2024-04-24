@@ -3,9 +3,11 @@ import EventFormAdmin from '../../molecules/eventFormAdmin/EventFormAdmin';
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
 import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const NewEventAdminPage = ({ isAuthenticated }) => {
 
+  const navigate = useNavigate(); 
   const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
   const handleSubmit = async (e, formData) => {
@@ -15,10 +17,14 @@ const NewEventAdminPage = ({ isAuthenticated }) => {
     try {
       const newEvent = await FetchApi.createEvent(formData);
       console.log('Evento agregado con éxito:', newEvent);
-      showSuccessAlert("¡Evento agregado con éxito!");
+      showSuccessAlert("¡Evento agregado con éxito!", 
+      "Aceptar",
+      () => navigate('/admin/eventos'));
     } catch (error) {
       console.error('Error al agregar el evento:', error);
-      showErrorAlert("¡Error al agregar el evento!");
+      showErrorAlert("¡Error al agregar el evento!", 
+      "Aceptar",
+      () => navigate('/admin/agregar-evento'));
     }
   };
 

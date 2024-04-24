@@ -3,9 +3,11 @@ import ProductFormAdmin from '../../molecules/productFormAdmin/ProductFormAdmin'
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
 import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const NewProductAdminPage = ({ isAuthenticated }) => {
 
+    const navigate = useNavigate(); 
     const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     const handleSubmit = async (e, formData) => {
@@ -15,10 +17,14 @@ const NewProductAdminPage = ({ isAuthenticated }) => {
         try {
             const newProduct = await FetchApi.createProduct(formData);
             console.log('Producto agregado con éxito:', newProduct);
-            showSuccessAlert("¡Producto agregado con éxito!");
+            showSuccessAlert("¡Producto agregado con éxito!", 
+            "Aceptar",
+            () => navigate('/admin/productos'));
         } catch (error) {
             console.error('Error al agregar el producto:', error);
-            showErrorAlert("¡Error al agregar el producto!");
+            showErrorAlert("¡Error al agregar el producto!", 
+            "Aceptar",
+            () => navigate('/admin/agregar-producto'));
         }
     };
 

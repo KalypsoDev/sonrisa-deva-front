@@ -6,7 +6,7 @@ const useSweetAlerts = () => {
       return Swal.fire(options);
     }, []);
   
-    const showSuccessAlert = useCallback((title, confirmButtonText = "Aceptar") => {
+    const showSuccessAlert = useCallback((title, confirmButtonText = "Aceptar", onConfirm) => {
       return showAlert({
         icon: "success",
         title: title,
@@ -17,6 +17,9 @@ const useSweetAlerts = () => {
           confirmButton: 'bg-primaryLila font-montserratBold text-white rounded-lg text-lg shadow-4xl px-6 py-2',
         },
         buttonsStyling: false,
+        didClose: () => {
+          if (onConfirm) onConfirm();
+        }
       });
     }, [showAlert]);
   
@@ -51,7 +54,7 @@ const useSweetAlerts = () => {
       });
     }, [showAlert]);
   
-    const showErrorAlert = useCallback((title, confirmButtonText = "Aceptar") => {
+    const showErrorAlert = useCallback((title, confirmButtonText = "Aceptar", onConfirm) => {
       return showAlert({
         icon: "error",
         title: title,
@@ -62,6 +65,9 @@ const useSweetAlerts = () => {
           confirmButton: 'bg-primaryLila font-montserratBold text-white rounded-lg text-lg shadow-4xl px-6 py-2',
         },
         buttonsStyling: false,
+        didClose: () => {
+          if (onConfirm) onConfirm();
+        }
       });
     }, [showAlert]);
       

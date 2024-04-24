@@ -2,14 +2,23 @@ import React from 'react';
 import EventFormAdmin from '../../molecules/eventFormAdmin/EventFormAdmin';
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
+import useSweetAlerts from '../../../services/useSweetAlerts';
 
 const NewEventAdminPage = () => {
-  const handleSubmit = async (formData) => {
+
+  const { showLoadingAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
+
+  const handleSubmit = async (e, formData) => {
+    e.preventDefault();
+    showLoadingAlert("Agregando Evento", "Por favor, espera...");
+
     try {
       const newEvent = await FetchApi.createEvent(formData);
-      console.log('Evento creado exitosamente:', newEvent);
+      console.log('Evento agregado con éxito:', newEvent);
+      showSuccessAlert("¡Evento agregado con éxito!");
     } catch (error) {
-      console.error('Error al crear el evento:', error);
+      console.error('Error al agregar el evento:', error);
+      showErrorAlert("¡Error al agregar el evento!");
     }
   };
 

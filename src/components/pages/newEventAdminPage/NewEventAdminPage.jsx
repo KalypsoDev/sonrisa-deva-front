@@ -19,16 +19,25 @@ const NewEventAdminPage = () => {
 
   return (
     <>
+    
+          <div className='flex flex-row'>
+    <div className="w-1/4 md:w-1/4">
       <Sidebar />
-      <div className='mt-7'>
-        <h1 className='font-montserratBold text-center text-2xl'>AGENDA DE EVENTOS</h1>
+      </div>
+    
+          <div className="w-3/4 md:w-3/4 mr-16">
+          <h1 className=" font-montserratBold text-2xl text-darkGrey text-center mt-2 mb-4 pt-8">
+            AGENDA DE EVENTOS
+          </h1>
         <EventFormAdmin
           title="PLANIFICAR UN EVENTO"
           submitButtonText="Agregar"
           onSubmit={handleSubmit}
           onCancel={handleCancel}
         />
-      </div>
+         </div>
+         </div>
+    
     </>
   );
 };

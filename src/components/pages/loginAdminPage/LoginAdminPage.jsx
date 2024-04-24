@@ -4,7 +4,7 @@ import LoginFormAdmin from '../../molecules/loginFormAdmin/LoginFormAdmin'
 import Footer from '../../molecules/footer/Footer';
 
 
-const LoginAdminPage = () => {
+const LoginAdminPage = ({ }) => {
   return (
     <>
       <Navbar />

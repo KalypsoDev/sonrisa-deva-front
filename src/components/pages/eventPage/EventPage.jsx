@@ -18,15 +18,12 @@ const EventPage = () => {
     const fetchEvents = async () => {
       try {
         const eventsData = await FetchApi.getEvents();
-        console.log('Eventos obtenidos:', eventsData);
         setEvents(eventsData);
       } catch (error) {
         console.error('Error al obtener eventos:', error);
     if (error.response && error.response.data && error.response.data.error) {
-      // Mostrar mensaje de error específico al usuario
       alert(`Error al obtener eventos: ${error.response.data.error}`);
     } else {
-      // Mostrar mensaje genérico de error
       alert('Error al obtener eventos. Por favor, inténtalo de nuevo más tarde.');
     }
       }
@@ -40,7 +37,6 @@ const EventPage = () => {
       const today = new Date();
       const upcoming = events.filter(event => {
         const eventDate = event.date ? new Date(event.date) : null;
-        // Mostrar eventos sin fecha definida ("Por determinar") como próximos eventos
         return !eventDate || eventDate >= today;
       });
 
@@ -118,7 +114,7 @@ const EventPage = () => {
             <div key={event.id} className="w-full sm:w-1/2 px-4 mb-4">
               <CardEvent
                 title={event.title}
-                date={event.date || 'Por determinar'} // Mostrar "Por determinar" si no hay fecha
+                date={event.date || 'Por determinar'}
                 image_url={event.image_url}
                 hour={event.hour}
                 location={event.location}

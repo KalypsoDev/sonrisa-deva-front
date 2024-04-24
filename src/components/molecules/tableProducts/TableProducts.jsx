@@ -26,7 +26,6 @@ const TableProducts = () => {
     const handleDeleteProduct = async (productId) => {
       try {
           await FetchApi.deleteProduct(productId);
-          // Eliminar el producto de la lista después de borrarlo
           const updatedProducts = products.filter(product => product.id !== productId);
           setProducts(updatedProducts);
       } catch (error) {

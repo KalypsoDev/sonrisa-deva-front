@@ -37,6 +37,15 @@ const FetchApi = {
         }
     },
 
+    getEventId: async (id) => {
+        try {
+            const response = await axios.get(`${BACKEND_API_URL}/events/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+
     createEvent: async (formData) => {
         try {
             const token = localStorage.getItem('token');
@@ -138,8 +147,6 @@ const FetchApi = {
     },
     
     
-    
-
     deleteProduct: async (id) => {
         try {
             const token = localStorage.getItem('token');

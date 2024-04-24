@@ -6,15 +6,10 @@ import FetchApi from '../../../services/FetchApi';
 const NewEventAdminPage = ({ isAuthenticated }) => {
   const handleSubmit = async (formData) => {
     try {
-      const newEvent = await FetchApi.createEvent(formData);
-      console.log('Evento creado exitosamente:', newEvent);
+      await FetchApi.createEvent(formData);
     } catch (error) {
       console.error('Error al crear el evento:', error);
     }
-  };
-
-  const handleCancel = () => {
-    console.log('Creación de evento cancelada');
   };
 
   return (
@@ -28,7 +23,6 @@ const NewEventAdminPage = ({ isAuthenticated }) => {
               title="PLANIFICAR UN EVENTO"
               submitButtonText="Agregar"
               onSubmit={handleSubmit}
-              onCancel={handleCancel}
             />
           </div>
         </section>

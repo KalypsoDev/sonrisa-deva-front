@@ -29,7 +29,7 @@ const ProductFormAdmin = ({ title, onSubmit, onCancel, product }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        onSubmit(e, formData);
     };
 
     return (

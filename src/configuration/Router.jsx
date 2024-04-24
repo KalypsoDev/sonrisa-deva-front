@@ -20,6 +20,10 @@ import WhoAmIPage from '../components/pages/whoAmIPage/WhoAmIPage';
 import AboutDevaPage from '../components/pages/aboutDevaPage/AboutDevaPage';
 import CooperatePage from '../components/pages/cooperatePage/CooperatePage';
 import DonationPage from '../components/pages/donationPage/DonationPage';
+import AboutMePage from '../components/pages/aboutMePage/AboutMePage';
+
+
+import TherapiesPage from '../components/pages/therapiesPage/TherapiesPage';
 import EditProductAdminPage from '../components/pages/editProductAdminPage/EditProductAdminPage';
 
 const Router = () => {
@@ -47,6 +51,9 @@ const Router = () => {
                   <Route path='/sobre-deva' element={<AboutDevaPage/>}></Route>
                   <Route path='/colabora' element={<CooperatePage/>}></Route>
                   <Route path='/donacion' element={<DonationPage/>}></Route>
+                  <Route path='/acerca-de-mi' element={<AboutMePage/>}></Route>
+
+                  <Route path='/terapias' element={<TherapiesPage/>}></Route>
                   <Route path='/admin/editar-producto/:id' element={<EditProductAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>

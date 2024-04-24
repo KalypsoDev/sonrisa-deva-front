@@ -4,11 +4,15 @@ import InputSearch from '../../atoms/inputSearch/InputSearch';
 import Pagination from '../../atoms/pagination/Pagination';
 import FetchApi from '../../../services/FetchApi';
 import { Link } from 'react-router-dom';
+import useSweetAlerts from '../../../services/useSweetAlerts';
+import { useNavigate } from 'react-router-dom';
 
 const TableProducts = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 6;
+    const navigate = useNavigate(); 
+    const { showConfirmationAlert, showSuccessAlert, showErrorAlert } = useSweetAlerts();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -24,15 +28,31 @@ const TableProducts = () => {
     }, []);
 
     const handleDeleteProduct = async (productId) => {
-      try {
-          await FetchApi.deleteProduct(productId);
-          // Eliminar el producto de la lista después de borrarlo
-          const updatedProducts = products.filter(product => product.id !== productId);
-          setProducts(updatedProducts);
-      } catch (error) {
-          console.error('Error al eliminar el producto:', error);
-      }
-  };
+    
+    const confirmed = await showConfirmationAlert(
+            "¿Quieres eliminar este producto?");
+
+        if (confirmed) {
+
+            try {
+                await FetchApi.deleteProduct(productId);
+                // Aquí, mostraría una alerta de éxito y luego redirige.
+                showSuccessAlert("¡Producto eliminado con éxito!", "Aceptar", () => navigate('/admin/productos'));
+                // Eliminar el producto de la lista después de borrarlo
+                const updatedProducts = products.filter(product => product.id !== productId);
+                setProducts(updatedProducts);
+            } catch (error) {
+                console.error('Error al eliminar el producto:', error);
+                showErrorAlert("¡Error al borrar el producto!", 
+                "Aceptar",
+                () => navigate('/admin/productos'));
+            }
+
+        } else {
+            // Aquí manejas el "cancelar" que redirige al usuario.
+            navigate('/admin/productos');
+          }
+    };
   
 
     const handlePageChange = (pageNumber) => {

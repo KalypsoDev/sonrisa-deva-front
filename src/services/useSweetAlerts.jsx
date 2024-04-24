@@ -23,19 +23,24 @@ const useSweetAlerts = () => {
       });
     }, [showAlert]);
   
-    // const showConfirmationAlert = (title, text, confirmButtonText) => {
-    //   return showAlert({
-    //     title: title,
-    //     text: text,
-    //     icon: "warning",
-    //     showCancelButton: true,
-    //     confirmButtonColor: "#3085d6",
-    //     cancelButtonColor: "#d33",
-    //     confirmButtonText: confirmButtonText,
-    //   }).then((result) => {
-    //     return result.isConfirmed;
-    //   });
-    // };
+    const showConfirmationAlert = (title, confirmButtonText = "Aceptar", cancelButtonText = "Cancelar") => {
+      return showAlert({
+        title: title,
+        icon: "warning",
+        showConfirmButton: true,
+        confirmButtonText: confirmButtonText,
+        cancelButtonText: cancelButtonText,
+        showCancelButton: true,
+        customClass: {
+          title: 'font-montserratBold, text-2xl',
+          confirmButton: 'bg-primaryLila font-montserratBold text-white rounded-lg text-lg shadow-4xl m-2 px-6 py-2',
+          cancelButton: 'bg-redBin font-montserratBold text-white rounded-lg text-lg shadow-4xl m-2 px-6 py-2',
+        },
+        buttonsStyling: false,
+      }).then((result) => {
+        return result.isConfirmed;
+      });
+    };
   
     const showLoadingAlert = useCallback((title, text, timer = 3000) => {
       return showAlert({
@@ -74,7 +79,7 @@ const useSweetAlerts = () => {
     return {
       showAlert,
       showSuccessAlert,
-    //   showConfirmationAlert,
+      showConfirmationAlert,
       showLoadingAlert,
       showErrorAlert
     };

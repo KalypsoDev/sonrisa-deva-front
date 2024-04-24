@@ -9,3 +9,4 @@ const Button = ({ text, className, type}) => {
 }
 
 export default Button
+

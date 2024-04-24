@@ -24,6 +24,7 @@ import AboutMePage from '../components/pages/aboutMePage/AboutMePage';
 
 
 import TherapiesPage from '../components/pages/therapiesPage/TherapiesPage';
+import EditProductAdminPage from '../components/pages/editProductAdminPage/EditProductAdminPage';
 
 const Router = () => {
     return (
@@ -53,6 +54,7 @@ const Router = () => {
                   <Route path='/acerca-de-mi' element={<AboutMePage/>}></Route>
 
                   <Route path='/terapias' element={<TherapiesPage/>}></Route>
+                  <Route path='/admin/editar-producto/:id' element={<EditProductAdminPage/>}></Route>
           </Routes>
       </BrowserRouter>
     )

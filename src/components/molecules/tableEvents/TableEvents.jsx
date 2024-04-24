@@ -105,7 +105,7 @@ const TableEvents = () => {
                             {currentEvents.map((event, index) => (
                                 <tr key={index} className="bg-white border-b hover:bg-gray-50">
                                     <td className="px-4 py-2 flex items-center justify-center space-x-4 mt-10">
-                                        <Link to="/admin/agregar-evento" target="_blank" className="text-xl text-greenPen flex items-center justify-center"><FaPencilAlt /></Link>
+                                        <Link to={`/admin/editar-evento/${event.id}`} target="_blank" className="text-xl text-greenPen flex items-center justify-center"><FaPencilAlt /></Link>
                                         <a href="#" className="text-xl text-redBin flex items-center justify-center" onClick={() => handleDeleteEvent(event.id)}><FaTrashAlt /></a>
                                     </td>
                                     <td className="px-4 py-2 font-semibold text-darkGrey">

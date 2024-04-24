@@ -17,10 +17,10 @@ const TableEvents = () => {
                 const eventsData = await FetchApi.getEvents();
                 const formattedEvents = eventsData.map(event => ({
                     ...event,
-                    date: event.date ? formatDate(event.date) : '', // Formatear la fecha o devolver cadena vacía si no hay fecha
+                    date: event.date ? formatDate(event.date) : '', 
                 }));
                 setEvents(formattedEvents);
-                setFilteredEvents(formattedEvents); // Inicialmente, los eventos filtrados son todos los eventos
+                setFilteredEvents(formattedEvents); 
             } catch (error) {
                 console.error('Error al obtener los eventos:', error);
             }
@@ -31,7 +31,7 @@ const TableEvents = () => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         if (isNaN(date.getTime())) {
-            return ''; // Si la fecha no es válida, devuelve una cadena vacía
+            return ''; 
         }
         const day = date.getDate().toString().padStart(2, '0');
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -44,7 +44,7 @@ const TableEvents = () => {
             await FetchApi.deleteEvent(eventId);
             const updatedEvents = events.filter(event => event.id !== eventId);
             setEvents(updatedEvents);
-            setFilteredEvents(updatedEvents); // Actualizar también los eventos filtrados
+            setFilteredEvents(updatedEvents); 
         } catch (error) {
             console.error('Error al eliminar el evento:', error);
         }

@@ -85,7 +85,6 @@ const ProductFormAdmin = ({ title, onSubmit, product }) => {
                             value={formData.description}
                             onChange={handleChange}
                             className="bg-white border border-opacity-20 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg resize-none"
-                            required
                         />
                     </div>
 

@@ -9,7 +9,7 @@ const EditProductAdminPage = ({ isAuthenticated }) => {
                 <section>
                     <Sidebar />
                     <EditProductFormAdmin
-                        title="Editar Producto"
+                        title="Actualizar producto"
                     />
                 </section>
             ) : (

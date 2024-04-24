@@ -10,7 +10,6 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
         date: '',
         hour: '',
         collection: '',
-        description: '',
     });
 
     useEffect(() => {
@@ -23,7 +22,6 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                 date: formattedDate || '',
                 hour: event.hour || '',
                 collection: event.collection || '',
-                description: event.description || '',
             });
         }
     }, [event]);
@@ -59,7 +57,7 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
             <hr className="w-full my-3 border-gray-300" />
             <div className="flex flex-col sm:flex-row w-full font-montserratRegular">
                 <div className="flex flex-col w-full sm:w-2/3 justify-center">
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="title" className="block mb-1 text-lg text-white">Título del evento</label>
                         <input
                             type="text"
@@ -71,7 +69,7 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="location" className="block mb-1 text-lg text-white">Ubicación del evento</label>
                         <input
                             type="text"
@@ -83,7 +81,7 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="hour" className="block mb-1 text-lg text-white">Hora del evento</label>
                         <input
                             type="time"
@@ -95,7 +93,7 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center relative">
+                    <div className="mb-4 w-full sm:w-4/5 text-center relative">
                         <label htmlFor="date" className="block mb-1 text-lg text-white">Fecha del evento</label>
                         <div className="relative">
                             <input
@@ -108,18 +106,6 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                                 required
                             />
                         </div>
-                    </div>
-                    
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
-                        <label htmlFor="description" className="block mb-1 text-lg text-white">Descripción del evento</label>
-                        <textarea
-                            id="description"
-                            name="description"
-                            value={formData.description}
-                            onChange={handleChange}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
-                            required
-                        />
                     </div>
                 </div>
                 <div className="flex flex-col w-full sm:w-1/2 items-center mb-1 sm:mb-0">
@@ -147,7 +133,6 @@ const EventFormAdmin = ({ title, onSubmit, event }) => {
                             value={formData.collection}
                             onChange={handleChange}
                             className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
-                            required
                         />
                     </div>
                 </div>

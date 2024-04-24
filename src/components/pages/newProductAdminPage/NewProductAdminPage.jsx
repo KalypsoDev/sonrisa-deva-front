@@ -2,7 +2,7 @@ import React from 'react';
 import ProductFormAdmin from '../../molecules/productFormAdmin/ProductFormAdmin';
 import Sidebar from '../../molecules/sidebar/Sidebar';
 import FetchApi from '../../../services/FetchApi';
-import useSweetAlerts from '../../atoms/sweetAlerts/SweetAlerts';
+import useSweetAlerts from '../../../services/useSweetAlerts';
 
 const NewProductAdminPage = () => {
 

@@ -16,7 +16,6 @@ const useSweetAlerts = () => {
       });
     }, [showAlert]);
 
-  
     const showLoadingAlert = useCallback((title, text, timer = 3000) => {
       return showAlert({
         title: title,

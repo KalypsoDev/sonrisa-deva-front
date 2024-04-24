@@ -18,7 +18,6 @@ const CardEvent = ({ title, image_url, date, hour, location, collection }) => {
       return 'Por determinar';
     } else {
       const dateObj = new Date(dateString);
-      // Verifica si el resultado es un valor válido de fecha
       if (isNaN(dateObj.getTime())) {
         return 'Por determinar';
       } else {
@@ -31,9 +30,7 @@ const CardEvent = ({ title, image_url, date, hour, location, collection }) => {
     if (!hourString || hourString.trim() === '') {
       return 'Por determinar';
     } else {
-      // Separar la hora y los minutos del string de la hora
       const [hourPart, minutePart] = hourString.split(':');
-      // Devolver la hora formateada con minutos
       return `${hourPart}:${minutePart}`;
     }
   };

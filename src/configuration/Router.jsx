@@ -31,14 +31,11 @@ const Router = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    console.log('Token:', token);
     if (token) {
       setIsAuthenticated(true);
-      console.log('User authenticated');
     }
   }, []);
 
-  console.log('isAuthenticated:', isAuthenticated);
 
 
   return (

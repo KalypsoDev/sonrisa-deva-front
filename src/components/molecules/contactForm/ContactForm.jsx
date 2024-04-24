@@ -5,7 +5,7 @@ const ContactForm = () => {
   return (
     <form className="bg-darkBlue font-montserratRegular rounded-lg shadow-lg p-6 max-w-4xl mx-auto my-4">
       <div className="font-montserratRegular text-base text-darkGrey grid justify-items-center sm:grid-cols-2 gap-8 p-4">
-        <div className="inputsRightSide w-full">
+        <div className="inputsRightSide w-full font-montserratRegular text-base">
           <div className="mb-4">
             <label htmlFor="name" className="block mb-4 text-sm font-base text-white">Nombre</label>
             <input

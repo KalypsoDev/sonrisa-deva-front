@@ -69,7 +69,6 @@ const FetchApi = {
             formData.append('date', eventData.date);
             formData.append('hour', eventData.hour);
             formData.append('collection', eventData.collection);
-            formData.append('description', eventData.description);
 
             if (eventData.image) {
                 formData.append('image_url', eventData.image);

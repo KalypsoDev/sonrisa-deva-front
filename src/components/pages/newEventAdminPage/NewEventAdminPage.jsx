@@ -28,10 +28,6 @@ const NewEventAdminPage = ({ isAuthenticated }) => {
     }
   };
 
-  const handleCancel = () => {
-    console.log('Creación de evento cancelada');
-  };
-
   return (
     <>
       {isAuthenticated ? (
@@ -43,7 +39,6 @@ const NewEventAdminPage = ({ isAuthenticated }) => {
               title="PLANIFICAR UN EVENTO"
               submitButtonText="Agregar"
               onSubmit={handleSubmit}
-              onCancel={handleCancel}
             />
           </div>
         </section>

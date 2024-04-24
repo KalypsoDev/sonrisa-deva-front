@@ -139,7 +139,6 @@ const EditProductFormAdmin = ({ title }) => {
                             value={product.description}
                             onChange={(e) => handleFieldChange('description', e.target.value)}
                             className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg resize-none"
-                            required
                         />
                     </div>
                 </div>

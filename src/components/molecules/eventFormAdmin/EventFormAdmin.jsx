@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Button from '../../atoms/button/Button';
+import { Link } from "react-router-dom";
 
-const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) => {
+const EventFormAdmin = ({ title, onSubmit, event }) => {
     const [formData, setFormData] = useState({
         title: '',
         image_url: null,
@@ -8,7 +10,6 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
         date: '',
         hour: '',
         collection: '',
-        description: '',
     });
 
     useEffect(() => {
@@ -21,7 +22,6 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                 date: formattedDate || '',
                 hour: event.hour || '',
                 collection: event.collection || '',
-                description: event.description || '',
             });
         }
     }, [event]);
@@ -57,7 +57,7 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
             <hr className="w-full my-3 border-gray-300" />
             <div className="flex flex-col sm:flex-row w-full font-montserratRegular">
                 <div className="flex flex-col w-full sm:w-2/3 justify-center">
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="title" className="block mb-1 text-lg text-white">Título del evento</label>
                         <input
                             type="text"
@@ -69,7 +69,7 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="location" className="block mb-1 text-lg text-white">Ubicación del evento</label>
                         <input
                             type="text"
@@ -81,7 +81,7 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
+                    <div className="mb-4 w-full sm:w-4/5 text-center">
                         <label htmlFor="hour" className="block mb-1 text-lg text-white">Hora del evento</label>
                         <input
                             type="time"
@@ -93,7 +93,7 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                             required
                         />
                     </div>
-                    <div className="mb-1 w-full sm:w-4/5 text-center relative">
+                    <div className="mb-4 w-full sm:w-4/5 text-center relative">
                         <label htmlFor="date" className="block mb-1 text-lg text-white">Fecha del evento</label>
                         <div className="relative">
                             <input
@@ -106,18 +106,6 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                                 required
                             />
                         </div>
-                    </div>
-                    
-                    <div className="mb-1 w-full sm:w-4/5 text-center">
-                        <label htmlFor="description" className="block mb-1 text-lg text-white">Descripción del evento</label>
-                        <textarea
-                            id="description"
-                            name="description"
-                            value={formData.description}
-                            onChange={handleChange}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
-                            required
-                        />
                     </div>
                 </div>
                 <div className="flex flex-col w-full sm:w-1/2 items-center mb-1 sm:mb-0">
@@ -145,15 +133,23 @@ const EventFormAdmin = ({ title, submitButtonText, onSubmit, onCancel, event }) 
                             value={formData.collection}
                             onChange={handleChange}
                             className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
-                            required
                         />
                     </div>
                 </div>
                 
             </div>
             <div>
-            <button type="submit" className="text-white bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5 mr-5">{submitButtonText}</button>
-                <button type="button" onClick={onCancel} className="text-primaryLila bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-montserratBold rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
+            <Button
+                    type="submit"
+                    className="text-white font-montserratBold bg-darkBlue text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                    text="Agregar" />
+                <Link to="/admin/eventos">
+                    <Button
+                        type="submit"
+                        className="text-white font-montserratBold bg-redBin text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
+                        text="Cancelar"
+                    />
+                </Link>
             </div>
         </form>
     );

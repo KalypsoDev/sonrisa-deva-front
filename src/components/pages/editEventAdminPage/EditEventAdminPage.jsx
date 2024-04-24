@@ -8,7 +8,7 @@ const EditEventAdminPage = ({ isAuthenticated }) => {
         <section>
           <Sidebar />
           <EditEventFormAdmin
-            title={"Editar Evento"} />
+            title={"Actualizar evento"} />
         </section>
       ) : (
         <div className='text-white bg-red-600 p-10 text-center font-montserratBold font'>

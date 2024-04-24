@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const TableProducts = () => {
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 6;
     const navigate = useNavigate(); 
@@ -19,6 +20,7 @@ const TableProducts = () => {
             try {
                 const productsData = await FetchApi.getProducts();
                 setProducts(productsData);
+                setFilteredProducts(productsData);
             } catch (error) {
                 console.error('Error al obtener productos:', error);
             }
@@ -34,38 +36,42 @@ const TableProducts = () => {
 
         if (confirmed) {
 
-            try {
-                await FetchApi.deleteProduct(productId);
-                // Aquí, mostraría una alerta de éxito y luego redirige.
-                showSuccessAlert("¡Producto eliminado con éxito!", "Aceptar", () => navigate('/admin/productos'));
-                // Eliminar el producto de la lista después de borrarlo
-                const updatedProducts = products.filter(product => product.id !== productId);
-                setProducts(updatedProducts);
-            } catch (error) {
-                console.error('Error al eliminar el producto:', error);
-                showErrorAlert("¡Error al borrar el producto!", 
-                "Aceptar",
-                () => navigate('/admin/productos'));
+              try {
+                  await FetchApi.deleteProduct(productId);
+                  showSuccessAlert("¡Producto eliminado con éxito!", "Aceptar", () => navigate('/admin/productos'));
+                  const updatedProducts = products.filter(product => product.id !== productId);
+                  setProducts(updatedProducts);
+                  setFilteredProducts(updatedProducts);
+        } catch (error) {
+                  console.error('Error al eliminar el producto:', error);
+                  showErrorAlert("¡Error al borrar el producto!", 
+                  "Aceptar",
+                  () => navigate('/admin/productos'));
             }
 
         } else {
-            // Aquí manejas el "cancelar" que redirige al usuario.
             navigate('/admin/productos');
-          }
+            }
+      };
+
+    const handleDataFiltered = (filteredData) => {
+        setFilteredProducts(filteredData);
     };
-  
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-
     return (
         <div className="overflow-x-auto shadow-md sm:rounded-lg font-montserratRegular">
-            <InputSearch />
+            <InputSearch
+            data={products}
+            onDataFiltered={handleDataFiltered}
+            searchField="name" />
             <table className="w-full max-w-full text-sm text-center rtl:text-right text-darkGrey dark:text-gray-400">
 
                 <thead className="text-xs text-white bg-primaryLila dark:bg-gray-700 dark:text-gray-400">
@@ -120,7 +126,7 @@ const TableProducts = () => {
             <Pagination
                 currentPage={currentPage}
                 perPage={productsPerPage}
-                totalItems={products.length}
+                totalItems={filteredProducts.length}
                 onPageChange={handlePageChange}
             />
         </div>

@@ -26,7 +26,7 @@ const LoginFormAdmin = () => {
 
             setTimeout(() => {
               navigate("/admin");
-            }, 2000);
+            }, 100);
 
         } catch (error) {
             console.error('Error al loguear usuario:', error);

@@ -47,7 +47,7 @@ const TherapiesCard = () => {
                     </div>
                 </div>
             </div >
-            <AngelmanSyndromeModal therapy={selectedTherapy} handleClose={() => setSelectedTherapy(null)} />
+            <AngelmanSyndromeModal therapyOrSymptom={selectedTherapy} handleClose={() => setSelectedTherapy(null)} />
         </>
     )
 }

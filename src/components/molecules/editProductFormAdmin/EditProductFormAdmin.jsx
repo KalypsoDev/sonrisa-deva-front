@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Button from '../../atoms/button/Button';
 import { Link } from "react-router-dom";
 
-const EditProductFormAdmin = (tu ) => {
+const EditProductFormAdmin = ({ title }) => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
 
@@ -79,7 +79,7 @@ const EditProductFormAdmin = (tu ) => {
 
     return (
         <form onSubmit={handleSubmit} className="max-w-4xl mx-auto rounded-lg p-6 px-10 bg-primaryLila shadow-2xl sm:rounded-xl border-gray-600 my-7 flex flex-col items-center">
-            <h1 className="text-center text-2xl font-montserratBold text-white rounded-lg p-3">Editar Producto</h1>
+            <h1 className="text-center text-2xl font-montserratBold text-white rounded-lg p-3">{title}</h1>
             <hr className="w-full my-3 border-gray-300" />
             <div className="flex flex-col sm:flex-row w-full">
                 <div className="flex flex-col w-full sm:w-2/3 justify-center">
@@ -159,7 +159,7 @@ const EditProductFormAdmin = (tu ) => {
                         type="submit"
                         className="text-white font-montserratBold bg-redBin text-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-2 mt-5 mr-5"
                         text="Cancelar"
-                        />
+                    />
                 </Link>
             </div>
         </form>

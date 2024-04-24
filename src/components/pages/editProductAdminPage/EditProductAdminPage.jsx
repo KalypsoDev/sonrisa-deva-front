@@ -1,6 +1,4 @@
-
 import Sidebar from '../../molecules/sidebar/Sidebar'
-
 import EditProductFormAdmin from '../../molecules/editProductFormAdmin/EditProductFormAdmin';
 
 const EditProductAdminPage = () => {
@@ -9,7 +7,7 @@ const EditProductAdminPage = () => {
         <>
             <Sidebar />
             <EditProductFormAdmin
-                title="Editar"
+                title="Editar Producto"
             />
         </>
     );

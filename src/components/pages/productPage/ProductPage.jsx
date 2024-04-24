@@ -34,9 +34,6 @@ const ProductPage = () => {
     setCurrentPage(pageNumber);
   };
 
-  const handleAddToCart = (product) => {
-    console.log('Producto añadido al carrito:', product);
-  };
 
   return (
     <>
@@ -52,7 +49,6 @@ const ProductPage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
             {currentProducts.map((product) => {
-              console.log('Producto con imagen:', product.image_url);
               return (
                 <div key={product.id}>
                   <CardProduct
@@ -60,7 +56,6 @@ const ProductPage = () => {
                     name={product.name}
                     description={product.description}
                     price={product.price}
-                    onAddToCart={handleAddToCart}
                   />
                 </div>
               );

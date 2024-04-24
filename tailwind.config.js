@@ -6,10 +6,24 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryBlue: '#0082CA',
+        backgroundBlue: '#CCE4F0',
+        darkBlue: '#044677',
+        primaryLila: '#9C90B7',
+        greenPen: '#3DB39E',
+        redBin: '#BA0000',
+        mustardBox: '#DD8F19',
+        darkGrey: '#222222',
+      },
+      fontFamily: {
+        montserratBold: ["Montserrat-Bold", "sans-serif"],
+        montserratRegular: ["Montserrat-Regular", "sans-serif"],
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')
   ],
 }
-

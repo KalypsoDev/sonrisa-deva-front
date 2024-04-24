@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import FetchApi from '../../../services/FetchApi';
 import { useParams } from 'react-router-dom';
+import Button from '../../atoms/button/Button';
 
-const EditProductFormAdmin = ({ onCancel }) => {
+const EditProductFormAdmin = (tu ) => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
 
@@ -32,37 +33,37 @@ const EditProductFormAdmin = ({ onCancel }) => {
 
     const handleImageChange = (e) => {
         const { name, files } = e.target;
-    
+
         if (files && files.length > 0) {
             const selectedFile = files[0];
-    
+
             const reader = new FileReader();
             reader.onload = function (event) {
                 const fileUrl = event.target.result;
-    
+
                 setProduct(prevProduct => ({
                     ...prevProduct,
                     image: selectedFile,
                     image_url: fileUrl
                 }));
             };
-            reader.readAsDataURL(selectedFile); 
-        }else {
+            reader.readAsDataURL(selectedFile);
+        } else {
             setProduct(prevState => ({
                 ...prevState,
                 [name]: value
             }));
         }
     };
-    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             if (product) {
-                
+
                 console.log(product);
-                await FetchApi.updateProduct(id, product); 
+                await FetchApi.updateProduct(id, product);
             } else {
                 console.error('El objeto product es undefined.');
             }
@@ -89,7 +90,7 @@ const EditProductFormAdmin = ({ onCancel }) => {
                             name="name"
                             value={product.name}
                             onChange={(e) => handleFieldChange('name', e.target.value)}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
+                            className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
                             required
                         />
                     </div>
@@ -101,7 +102,7 @@ const EditProductFormAdmin = ({ onCancel }) => {
                             name="stock"
                             value={product.stock}
                             onChange={(e) => handleFieldChange('stock', e.target.value)}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
+                            className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
                             required
                         />
                     </div>
@@ -113,7 +114,7 @@ const EditProductFormAdmin = ({ onCancel }) => {
                             name="price"
                             value={product.price}
                             onChange={(e) => handleFieldChange('price', e.target.value)}
-                            className="bg-white border border-opacity-20 border-gray-300 text-dark text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
+                            className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-dark text-sm text-center rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg"
                             required
                         />
                     </div>
@@ -124,7 +125,7 @@ const EditProductFormAdmin = ({ onCancel }) => {
                             name="description"
                             value={product.description}
                             onChange={(e) => handleFieldChange('description', e.target.value)}
-                            className="bg-white border border-opacity-20 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg resize-none"
+                            className="bg-white border border-opacity-20 border-gray-300 text-darkGrey text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:text-lg resize-none"
                             required
                         />
                     </div>
@@ -142,14 +143,26 @@ const EditProductFormAdmin = ({ onCancel }) => {
                         id="image_url"
                         name="image_url"
                         onChange={handleImageChange}
-                        className="block w-full mb-3 mt-2 text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-white border-gray-500 placeholder-gray-400"
+                        className="block w-full mb-3 mt-2 text-sm border rounded-lg cursor-pointer text-darkGrey focus:outline-none bg-white border-gray-500 placeholder-gray-400"
                         accept="image/*"
                     />
                 </div>
             </div>
             <div>
-                <button type="submit" className="text-white font-montserratBold bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5">Guardar Cambios</button>
-                <button type="button" onClick={onCancel} className="text-primaryLila font-montserratBold bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button>
+
+                <Button
+                    type="submit"
+                    className="text-white font-montserratBold bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5"
+                    text="Editar" />
+                <Link to="/admin/productos">
+                    <Button
+                        type="submit"
+                        className="text-white font-montserratBold bg-redBin focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5"
+                        text="Cancelar"
+                        />
+                </Link>
+                {/* <button type="submit" className="text-white font-montserratBold bg-darkBlue hover:bg-primaryBlue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5 mr-5">Guardar Cambios</button> */}
+                {/* <button type="button" onClick={onCancel} className="text-primaryLila font-montserratBold bg-white hover:text-white hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-2 mt-5">Cancelar</button> */}
             </div>
         </form>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../molecules/navbar/Navbar';
 import Footer from '../../molecules/footer/Footer';
 import AssociationCard from '../../molecules/associationCard/AssociationCard';
+import asociacionDeva from "../../../assets/img/asociacion-deva.png";
 import { FaRibbon } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { FaBullseye } from "react-icons/fa6";
@@ -36,7 +37,7 @@ const AssociationPage = () => {
               />
 
             </div>
-            <img src="src\assets\img\asociacion-deva.png" alt="Imagen Deva" className="border-4 border-primaryBlue rounded-full h-48 w-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10" />
+            <img src={asociacionDeva} alt="Imagen Deva" className="border-4 border-primaryBlue rounded-full h-48 w-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10" />
             <div className="w-full md:w-1/2 flex justify-end relative mt-28 md:mt-0 text-start">
               <AssociationCard
                 icon={<FaHandHoldingHeart className='text-6xl text-primaryBlue' />}
